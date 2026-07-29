@@ -8091,4 +8091,1792 @@ figure {
   justify-self: center;
 }
 
+/* --- Premium About Section Layout --- */
+.premium-about-features {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ffffff; /* Clean canvas layout background */
+  box-sizing: border-box;
+}
+
+.features-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Responsive Flex/Grid System --- */
+.features-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+/* --- Left Column: Image Box Design --- */
+.features-image-box {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.featured-display-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.features-image-box:hover .featured-display-img {
+  transform: scale(1.03); /* Soft parallax feeling on mouse over */
+}
+
+/* --- Right Column: Clean Accordion / Tab System --- */
+.features-content-box {
+  width: 100%;
+}
+
+.interactive-accordion-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-row {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 24px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordion-row:first-child {
+  padding-top: 0;
+}
+
+/* --- Accordion Header Row --- */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.accordion-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* --- Modern Interactive Circle Button --- */
+.interactive-circle-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f7fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-icon.icon-white {
+  opacity: 0;
+  transform: translate(-10px, 10px);
+}
+
+/* --- Interactive Hover states --- */
+.accordion-row:hover .accordion-title,
+.accordion-row.active .accordion-title {
+  color: #10b981; /* Matches green climate resilience branding theme */
+}
+
+.accordion-row:hover .interactive-circle-btn,
+.accordion-row.active .interactive-circle-btn {
+  background-color: #10b981;
+}
+
+.accordion-row:hover .btn-icon.icon-black,
+.accordion-row.active .btn-icon.icon-black {
+  opacity: 0;
+  transform: translate(10px, -10px);
+}
+
+.accordion-row:hover .btn-icon.icon-white,
+.accordion-row.active .btn-icon.icon-white {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* --- Content Field Layout --- */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.accordion-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 16px 0 0 0;
+}
+
+/* Force expanding on default/active element */
+.accordion-row.active .accordion-body {
+  max-height: 120px;
+  opacity: 1;
+}
+
+
+/* --- Media Queries (Tablets & Desktops) --- */
+@media (min-width: 768px) {
+  .premium-about-features {
+    padding: 90px 0;
+  }
+  
+  .accordion-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .features-wrapper {
+    flex-direction: row; /* Converts layout to 2 columns on desktop split */
+    gap: 64px;
+  }
+
+  .features-image-box {
+    width: 48%; /* Absolute balanced sizing proportions */
+  }
+
+  .features-content-box {
+    width: 52%;
+  }
+}
+
+/* --- Impact Section Base Layout --- */
+.premium-impact-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f8fafc; /* Crisp offset background to frame your images */
+  box-sizing: border-box;
+}
+
+.impact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Section Heading Typography --- */
+.impact-header-block {
+  max-width: 850px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.impact-section-main-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.85rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* --- Structural Row Configurations --- */
+.impact-grid-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 56px; /* Uniform clean separation between your core pillars */
+}
+
+.impact-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Static Image Layout Blocks --- */
+.impact-image-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10; /* Maintains high quality framing on mobile screens */
+}
+
+.static-impact-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Content Column Details --- */
+.impact-info-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pillar-index {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #10b981; /* Brand green theme accent indicator color */
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.pillar-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 14px 0;
+  line-height: 1.3;
+}
+
+.pillar-description {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+/* Tablet Optimization */
+@media (min-width: 768px) {
+  .premium-impact-section {
+    padding: 80px 0;
+  }
+  
+  .impact-section-main-title {
+    font-size: 2.3rem;
+  }
+  
+  .impact-card-row {
+    padding: 32px;
+    gap: 32px;
+  }
+  
+  .pillar-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop Optimization */
+@media (min-width: 992px) {
+  .premium-impact-section {
+    padding: 100px 0;
+  }
+
+  .impact-section-main-title {
+    font-size: 2.75rem;
+  }
+
+  .impact-grid-feed {
+    gap: 40px; /* Reduces container gap because card heights match up neatly */
+  }
+
+  .impact-card-row {
+    flex-direction: row; /* Horizontal split desktop layout config */
+    align-items: stretch;
+    padding: 40px;
+    gap: 56px;
+    background-color: transparent; /* Seamless blend on wider desktop screens */
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .impact-card-row:last-child {
+    border-bottom: none;
+  }
+
+  /* Automatically mirror every alternate section row for dynamic layout */
+  .impact-card-row.reverse-layout {
+    flex-direction: row-reverse;
+  }
+
+  .impact-image-box {
+    width: 45%;
+    aspect-ratio: 4 / 3; /* Deeper framing layout on standard laptops */
+  }
+
+  .impact-info-box {
+    width: 55%;
+  }
+}
+/* --- Premium Contact Section Base Layout --- */
+.premium-contact-section {
+  width: 100%;
+  padding: 100px 0 60px 0; /* Extra initial padding on mobile to clear standard mobile headers */
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: block !important; /* Forces block display rules over template conflicts */
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Section Heading Typography & Separation Fixes --- */
+.contact-title-block {
+  margin-bottom: 40px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.contact-main-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: calc(1.8rem + 1vw) !important; /* Dynamically resizes down cleanly on narrow mobile devices */
+  line-height: 1.3 !important;             /* Frees the bounded tracking block so wrapped text rows never clip */
+  font-weight: 700;
+  color: #0f172a !important;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  height: auto !important;                 /* Forces open the webflow container box constraints */
+  overflow: visible !important;            /* Guarantees no hidden layout box masking effects */
+  visibility: visible !important;
+}
+
+
+/* --- Layout Grid Mechanics --- */
+.contact-grid-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.contact-form-panel, 
+.contact-info-sidebar {
+  width: 100%;
+}
+
+/* --- Input Grid Architecture --- */
+.form-inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.form-field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* --- Input Labels & Element Skins --- */
+.field-label {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-input, 
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-input:focus, 
+.form-textarea:focus {
+  background-color: #ffffff;
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* --- Premium Form Action Call Button --- */
+.form-submit-btn {
+  width: 100%;
+  padding: 16px 32px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #10b981;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #059669;
+}
+
+.form-submit-btn:active {
+  transform: scale(0.99);
+}
+
+/* --- Right Column: Contact Info Styling --- */
+.contact-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #f8fafc;
+  padding: 32px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.info-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.info-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.info-text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-item-headline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.info-interactive-link {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.info-interactive-link:hover {
+  text-decoration: underline;
+}
+
+.info-address-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #475569;
+  font-style: normal;
+}
+
+/* --- Media Queries (Tablets & Large Screen Adjustments) --- */
+@media (min-width: 768px) {
+  .premium-contact-section {
+    padding: 130px 0 90px 0; /* Safely offsets fixed absolute webflow nav menus on tablet layouts */
+  }
+
+  .contact-main-heading {
+    font-size: 3rem;
+  }
+  
+  .form-field-row {
+    flex-direction: row;
+  }
+  
+  .form-submit-btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .premium-contact-section {
+    padding: 165px 0 100px 0; /* Complete safe clearance space for tall fixed desktop top navigation headers */
+  }
+
+  .contact-grid-layout {
+    flex-direction: row;
+    gap: 80px;
+    align-items: flex-start;
+  }
+
+  .contact-form-panel {
+    width: 60%;
+  }
+
+  .contact-info-sidebar {
+    width: 40%;
+    padding: 40px;
+  }
+}
+
+/* --- Force spacing on the main container section --- */
+.premium-contact-section {
+  padding-top: 140px !important; /* Pushes the entire content layout down past the invisible navbar */
+  margin-top: 0 !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important; /* Places it cleanly underneath the nav bar layers */
+}
+
+/* --- Clean and isolate the title container block --- */
+.contact-title-block {
+  margin-top: 20px !important;
+  margin-bottom: 32px !important;
+  padding: 0 !important;
+  display: block !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* --- Un-crop the header typography rules --- */
+.contact-main-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2rem !important;        /* Balanced text scale for mobile viewports */
+  line-height: 1.4 !important;       /* Gives lines wide breathing room to eliminate clipping */
+  height: auto !important;           /* Prevents rigid template bounding boxes from hiding letters */
+  overflow: visible !important;      /* Destroys any active overflow clip mechanics */
+  display: block !important;
+  color: #0f172a !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- Target Webflow's default section template class just in case --- */
+.section.inner-page {
+  padding-top: 140px !important; /* Safety fallback if old template classes are overriding our elements */
+}
+
+/* --- Premium Services Intro Section Layout --- */
+.premium-services-intro {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ffffff; /* Clean white canvas layout background */
+  box-sizing: border-box;
+}
+
+.services-intro-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Content Wrapper Alignment --- */
+.services-intro-wrapper {
+  max-width: 850px; /* Restricts line-length for optimal editorial readability */
+  text-align: left; /* Aligns with our premium left-aligned design language */
+}
+
+/* --- Accent Tagline Styling --- */
+.services-intro-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Signature climate-resilience brand green accent */
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* --- Header Typography Architecture --- */
+.services-intro-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a; /* Premium Slate/Navy Dark text used across sections */
+  letter-spacing: -0.03em;
+  margin: 0 0 18px 0;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* --- Subtext Context Block Styling --- */
+.services-intro-subtext {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #475569; /* Soft secondary gray for balanced typography hierarchy */
+  margin: 0;
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+/* Tablet Viewports */
+@media (min-width: 768px) {
+  .premium-services-intro {
+    padding: 80px 0;
+  }
+  
+  .services-intro-heading {
+    font-size: 2.5rem;
+  }
+  
+  .services-intro-subtext {
+    font-size: 1.15rem;
+  }
+}
+
+/* Desktop Viewports */
+@media (min-width: 992px) {
+  .premium-services-intro {
+    padding: 100px 0 60px 0; /* Balanced vertical grid separation space */
+  }
+
+  .services-intro-heading {
+    font-size: 3.25rem; /* Large, modern punchy scale for laptop screens */
+  }
+}
+
+/* --- Premium Trust Section Layout --- */
+.premium-trust-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f8fafc; /* Subtle offset background to separate sections cleanly */
+  box-sizing: border-box;
+}
+
+.trust-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Section Heading Block Styles --- */
+.trust-header-block {
+  max-width: 850px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.trust-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Signature Brand Green indicator */
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.trust-main-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a; /* Consistent core text color code selection */
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.trust-subtext {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* --- Static Responsive Grid Architecture --- */
+.trust-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default single column stacking for mobile viewports */
+  gap: 24px;
+}
+
+.trust-grid-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Image Frame Sizing Bounds --- */
+.trust-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Unified proportional image boxes */
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.trust-static-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Card Details Panel --- */
+.trust-card-meta {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.trust-card-number {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #10b981;
+  background-color: #f0fdf4;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.trust-card-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* --- Grid Layout Viewport Breakpoints --- */
+
+/* Tablet Viewports */
+@media (min-width: 640px) {
+  .trust-gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns split layout grid style */
+  }
+}
+
+@media (min-width: 768px) {
+  .premium-trust-section {
+    padding: 80px 0;
+  }
+
+  .trust-main-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop Viewports */
+@media (min-width: 992px) {
+  .premium-trust-section {
+    padding: 100px 0;
+  }
+
+  .trust-gallery-grid {
+    grid-template-columns: repeat(4, 1fr); /* Premium 4 columns horizontal layout display */
+    gap: 20px;
+  }
+}
+
+/* --- Premium Feedback Section Layout --- */
+.premium-feedback-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ffffff; /* Seamless alignment clean background */
+  box-sizing: border-box;
+}
+
+.feedback-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Section Heading Typography --- */
+.feedback-header-block {
+  max-width: 850px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.feedback-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Signature RISE theme emerald color code accent */
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.feedback-main-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a; /* Clean premium slate dark color matching other headers */
+  letter-spacing: -0.02em;
+  margin: 0;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* --- Responsive Layout Grid System --- */
+.feedback-masonry-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Native 1-column stack configuration for phone screens */
+  gap: 24px;
+}
+
+/* --- Testimonial Card Styling --- */
+.feedback-testimonial-card {
+  background-color: #f8fafc; /* Crisp offset card fill color */
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  border-color: #cbd5e1;
+}
+
+/* --- Typography Quote Anchor Accent --- */
+.quote-icon-anchor {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: #10b981; /* Accent styling color indicator */
+  opacity: 0.25;
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.feedback-quote-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 24px 0;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+}
+
+/* --- User Profile Meta Container Rows --- */
+.feedback-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+.avatar-frame {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #cbd5e1;
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.user-meta-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-profile-name {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.user-profile-role {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+/* Tablet Viewports */
+@media (min-width: 768px) {
+  .premium-feedback-section {
+    padding: 80px 0;
+  }
+
+  .feedback-main-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop Viewports */
+@media (min-width: 992px) {
+  .premium-feedback-section {
+    padding: 100px 0;
+  }
+
+  .feedback-masonry-grid {
+    grid-template-columns: repeat(2, 1fr); /* Premium 2-column balanced desktop side-by-side grid */
+    gap: 32px;
+  }
+}
+
+/* --- Premium About Hero Base Layout --- */
+.premium-about-hero {
+  width: 100%;
+  padding: 120px 0 60px 0; /* Extra top clearance natively on phone screens */
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.about-hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Alignment Wrapper --- */
+.about-hero-wrapper {
+  max-width: 880px; /* Editorial line limitation control */
+  text-align: left;
+}
+
+/* --- Accent Tagline Styling --- */
+.about-hero-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Core RISE brand theme green */
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* --- Un-crop Header Typography Rules --- */
+.about-hero-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: calc(2rem + 1vw) !important; /* Smooth responsive fluid layout text sizing scale */
+  line-height: 1.25 !important;           /* Wide line tracking separation protects text wrapping */
+  font-weight: 700;
+  color: #0f172a !important;              /* High readability deep slate canvas text */
+  letter-spacing: -0.03em;
+  margin: 0 0 32px 0 !important;
+  padding: 0 !important;
+  height: auto !important;                /* Eliminates template structural height box masks */
+  overflow: visible !important;           /* Destroys hidden row clipping bounds completely */
+  display: block !important;
+}
+
+/* --- Premium CTA Link Sizing --- */
+.about-hero-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.primary-button-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #10b981;
+  color: #ffffff !important;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.primary-button-accent:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+}
+
+.button-accent-arrow {
+  transition: transform 0.2s ease;
+}
+
+.primary-button-accent:hover .button-accent-arrow {
+  transform: translateX(4px); /* Interactive visual push cue on mouse hover */
+}
+
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+/* Tablet Viewports */
+@media (min-width: 768px) {
+  .premium-about-hero {
+    padding: 150px 0 80px 0; /* Expanded clearance space formatting for tablet screens */
+  }
+}
+
+/* Desktop Viewports */
+@media (min-width: 992px) {
+  .premium-about-hero {
+    padding: 185px 0 100px 0; /* Luxury deep clearance protection framework past tall nav tracking structures */
+  }
+}
+
+/* --- Force push the entire container lower on mobile displays --- */
+.premium-about-hero {
+  padding-top: 170px !important;  /* Pushes everything down to completely clear hidden navbar constraints */
+  margin-top: 0 !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* --- Un-crop the green tag tracking boundaries --- */
+.about-hero-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;    /* Frees vertical tracking so characters never slice */
+  height: auto !important;         /* Breaks through rigid utility template height limits */
+  overflow: visible !important;    /* Ensures no overflow masking styles can chop off letters */
+  display: inline-block !important;
+  margin-bottom: 12px !important;
+  padding: 0 !important;
+  visibility: visible !important;
+}
+
+/* --- Keep the main header title perfectly aligned beneath it --- */
+.about-hero-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: calc(1.8rem + 1vw) !important;
+  line-height: 1.3 !important;
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+  margin-top: 8px !important;
+}
+
+/* --- Premium Corporate Mission & Metric Section Base Layout --- */
+.premium-mission-stats-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* --- Unlocked Image Display Container (Fixes the half-cut picture) --- */
+.mission-fullwidth-display-box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mission-hero-static-img {
+  width: 100%;
+  height: auto !important;         /* Completely releases height restrictions */
+  max-height: none !important;     /* Eliminates any clipping boundaries */
+  object-fit: contain !important;  /* Ensures your graphic scales fully down on phones */
+  border-radius: 12px;
+  display: block;
+}
+
+/* --- Standard Structural Grid Containers --- */
+.mission-stats-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.mission-stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* --- Refined Typography Hierarchy (Fixes oversized massive text block) --- */
+.mission-statement-card {
+  max-width: 900px;
+  text-align: left;
+}
+
+.mission-pill-indicator {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Signature Brand Accent green */
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.mission-heading-intro {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.mission-statement-paragraph {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.1rem !important;    /* Highly readable premium scale across viewports */
+  line-height: 1.65 !important;    /* Spacious formatting lines to avoid cognitive load */
+  color: #475569 !important;       /* Soft dark secondary color for deep legibility */
+  font-weight: 400 !important;     /* Removes the harsh blocky bold styling layout feel */
+  margin: 0;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Brand styling accent word highlighter */
+.brand-text-highlight {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* --- Bottom Feature Panel: Split Grid System Mechanics --- */
+.mission-split-grid-row {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.mission-split-media-frame, 
+.mission-split-content-panel {
+  width: 100%;
+}
+
+.mission-split-media-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.mission-split-static-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Metrics Metric Performance Cards Grid Architecture --- */
+.mission-split-content-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.metrics-grid-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metric-card-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.metric-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.metric-number-display {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.metric-plus-accent {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #10b981;
+  line-height: 1;
+}
+
+.metric-label-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475569;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- Action Control Button Trigger Styles --- */
+.mission-action-footer {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mission-primary-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #10b981;
+  color: #ffffff !important;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.mission-primary-action-btn:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+}
+
+.action-btn-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.mission-primary-action-btn:hover .action-btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+@media (min-width: 768px) {
+  .premium-mission-stats-section {
+    padding: 80px 0;
+  }
+
+  .mission-fullwidth-display-box {
+    margin-bottom: 56px;
+  }
+
+  .mission-heading-intro {
+    font-size: 2.25rem;
+  }
+
+  .mission-statement-paragraph {
+    font-size: 1.2rem !important;
+  }
+
+  .metrics-grid-feed {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .metric-card-box {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .premium-mission-stats-section {
+    padding: 100px 0;
+  }
+
+  .mission-heading-intro {
+    font-size: 2.75rem;
+  }
+
+  .mission-split-grid-row {
+    flex-direction: row;
+    gap: 64px;
+    align-items: stretch;
+  }
+
+  .mission-split-media-frame {
+    width: 48%;
+  }
+
+  .mission-split-content-panel {
+    width: 52%;
+    justify-content: space-between;
+  }
+
+  .metrics-grid-feed {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .metric-card-box {
+    width: 100%;
+    padding: 28px;
+  }
+}
+
+/* --- Premium Corporate Team Section Layout --- */
+.premium-team-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f8fafc; /* Professional secondary canvas tint background framing */
+  box-sizing: border-box;
+}
+
+.team-grid-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Section Title Block Styles --- */
+.team-section-header {
+  max-width: 850px;
+  margin-bottom: 32px; /* Tightened breathing room to pull content up */
+  text-align: left;
+}
+
+.team-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Signature RISE brand green color accent indicator */
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.team-main-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.85rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a; /* Consistent core text color code across components */
+  letter-spacing: -0.02em;
+  margin: 0;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* --- Stable Modern Grid Architecture --- */
+.team-profiles-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Safe clean singular block column stacking for phone devices */
+  gap: 24px;
+}
+
+/* --- Profile Card Base Components --- */
+.team-member-profile-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-member-profile-card:hover {
+  transform: translateY(-4px); /* Sophisticated interactive lift action animation */
+  box-shadow: 0 12px 20px -5px rgba(15, 23, 42, 0.06);
+  border-color: #cbd5e1;
+}
+
+/* --- Picture Window Proportion Control --- */
+.portrait-photo-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Changes layout to square format so portraits never scale too tall */
+  overflow: hidden;
+  background-color: #cbd5e1;
+}
+
+.static-member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps heads beautifully aligned across cards without distortion */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.team-member-profile-card:hover .static-member-img {
+  transform: scale(1.03); /* Smooth zooming cue on hovering cards */
+}
+
+/* --- Profile Card Footer Typography Panel --- */
+.portrait-meta-details {
+  padding: 16px; /* Optimized smaller padding bounds to keep cards ultra compact */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+
+.member-profile-fullname {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.member-profile-role-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #64748b; /* Soft slate gray text scale subhead standard */
+  line-height: 1.3;
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+/* Tablet Optimization Media Queries */
+@media (min-width: 550px) {
+  .team-profiles-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns split alignment standard for wide mobile/tablets */
+    gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .premium-team-section {
+    padding: 60px 0;
+  }
+
+  .team-main-title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Desktop Optimization Media Queries (Forces exact viewport fitment) */
+@media (min-width: 992px) {
+  .premium-team-section {
+    padding: 80px 0; /* Tightened section margins to maximize vertical screens fold space */
+  }
+
+  .team-main-title {
+    font-size: 2.5rem;
+  }
+
+  .team-profiles-grid {
+    grid-template-columns: repeat(4, 1fr); /* Snaps all 4 members side-by-side into a single row */
+    gap: 20px; /* Snug row gap properties prevent structural layout clipping bounds */
+  }
+
+  .portrait-photo-frame {
+    aspect-ratio: 4 / 3.8; /* Custom precise horizontal rectangle landscape cut to pull vertical elements way up */
+  }
+
+  .member-profile-fullname {
+    font-size: 1.15rem; /* Downscaled font weight footprint slightly to fit perfectly on 1080p web screen windows */
+  }
+  
+  .member-profile-role-title {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-profiles-grid {
+    gap: 24px; /* Slightly opens up horizontal separation paths strictly on high-res widescreen monitors */
+  }
+  
+  .portrait-photo-frame {
+    aspect-ratio: 4 / 4.2; /* Restores elegant editorial proportions when wide screen pixel bounds grow safe */
+  }
+  
+  .member-profile-fullname {
+    font-size: 1.25rem;
+  }
+}
+
+/* --- Premium Services List Layout Base --- */
+.premium-services-list-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ffffff; /* Smooth clean background matching system */
+  box-sizing: border-box;
+}
+
+.services-list-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- Section Heading Typography --- */
+.services-list-header {
+  max-width: 850px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.services-list-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981; /* Core brand emerald green color accent */
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.services-list-main-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.85rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #0f172a; /* Consistent core text color code selection across panels */
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: capitalize;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* --- Structural Row Configurations --- */
+.services-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 56px; /* Uniform clean separation between core service rows */
+}
+
+.service-display-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Static Image Layout Blocks --- */
+.service-media-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10; /* Maintains ideal proportions across all phones */
+}
+
+.static-service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Content Column Details --- */
+.service-info-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-index-number {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.service-item-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 14px 0;
+  line-height: 1.3;
+}
+
+.service-item-description {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+
+/* Tablet Viewports */
+@media (min-width: 768px) {
+  .premium-services-list-section {
+    padding: 80px 0;
+  }
+  
+  .services-list-main-title {
+    font-size: 2.3rem;
+  }
+  
+  .service-display-row {
+    padding: 32px;
+    gap: 32px;
+  }
+  
+  .service-item-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop Viewports */
+@media (min-width: 992px) {
+  .premium-services-list-section {
+    padding: 100px 0;
+  }
+
+  .services-list-main-title {
+    font-size: 2.75rem;
+  }
+
+  .services-list-grid {
+    gap: 40px;
+  }
+
+  .service-display-row {
+    flex-direction: row; /* Converts structural panels side-by-side on desktop */
+    align-items: stretch;
+    padding: 40px;
+    gap: 56px;
+    background-color: transparent; /* Seamless blend on wider desktop screens */
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .service-display-row:last-child {
+    border-bottom: none;
+  }
+
+  /* Automatically mirror every alternate section row for dynamic layout */
+  .service-display-row.reverse-row-layout {
+    flex-direction: row-reverse;
+  }
+
+  .service-media-box {
+    width: 45%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .service-info-box {
+    width: 55%;
+  }
+}
 
