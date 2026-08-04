@@ -9880,3 +9880,579 @@ figure {
   }
 }
 
+/* ==========================================================================
+   PRODUCTION REFINED MEGA MENU ENGINE
+   ========================================================================== */
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000 !important;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mega-menu-trigger {
+  position: relative;
+}
+
+.drop-indicator::after {
+  content: ' ▾';
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* Hide utility state specifically used by mobile layout interactions */
+.mega-menu-dropdown-panel.toggle-hidden {
+  display: none !important;
+}
+
+/* --- MOBILE & TABLET PORTRAIT RESPONSIVE BREAKPOINTS (max-width: 991px) --- */
+@media (max-width: 991px) {
+  .nav-menu.w-nav-menu {
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+    padding: 24px !important;
+    box-sizing: border-box;
+    text-align: left !important;
+  }
+
+  /* Structural Panel Container Card (When visible/active state is triggered) */
+  .mega-menu-dropdown-panel {
+    display: block !important;
+    width: 100% !important;
+    background-color: #f8fafc !important; 
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    margin: 12px 0 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    position: static !important; /* Forces layout to stack smoothly below parent link items */
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .mega-menu-inner-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .mega-left-sidebar {
+    border-right: none !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding-bottom: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+
+  .track-links-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important; /* Slide tracking selections horizontally */
+    overflow-x: auto !important;
+    gap: 16px !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px !important;
+  }
+
+  .track-links-list::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .track-link {
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.1rem !important;
+    color: #94a3b8 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    font-weight: 500 !important;
+  }
+
+  .track-item.active .track-link {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #10b981 !important;
+    padding-bottom: 4px !important;
+  }
+
+  .discover-btn-accent {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 10px 20px !important;
+    border-radius: 30px !important;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.15) !important;
+  }
+
+  .mega-content-column {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .sub-category-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  .sub-category-links li a {
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1rem !important;
+    color: #334155 !important;
+    text-decoration: none !important;
+    display: block !important;
+    padding: 4px 0 !important;
+  }
+}
+
+/* --- HOVER-BASED DESKTOP VIEWPORT LAYOUT RULES (992px & Up) --- */
+@media (min-width: 992px) {
+  /* Prevent hidden utility override properties from disrupting standard desktop viewports */
+  .mega-menu-dropdown-panel.toggle-hidden {
+    display: block !important; 
+  }
+
+  .mega-menu-dropdown-panel {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid #e2e8f0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+    z-index: 999;
+    padding: 40px 0;
+  }
+
+  /* Desktop hover activation states rule engine */
+  .mega-menu-trigger:hover .mega-menu-dropdown-panel {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+
+  .mega-menu-inner-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr;
+    gap: 48px;
+    box-sizing: border-box;
+  }
+
+  .mega-left-sidebar {
+    border-right: 1px solid #f1f5f9;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .track-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .track-link {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .track-item.active .track-link,
+  .track-link:hover {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  .mega-sidebar-footer {
+    margin-top: 32px;
+  }
+
+  .discover-btn-accent {
+    display: inline-block;
+    background-color: #10b981;
+    color: #ffffff;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .discover-btn-accent:hover {
+    background-color: #059669;
+  }
+
+  .mega-content-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-category-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sub-category-links li a {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.05rem;
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-block;
+  }
+
+  .sub-category-links li a:hover {
+    color: #10b981;
+    padding-left: 4px;
+  }
+}
+
+/* ==========================================================================
+   CLEAN MEGA MENU DISCOVERY & REMOVAL ENGINE
+   ========================================================================== */
+
+/* --- Universal Navbar Baseline --- */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000 !important;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mega-menu-trigger {
+  position: relative;
+}
+
+
+/* --------------------------------------------------------------------------
+   ❌ THE FIX: COMPLETELY DESTROY & HIDE THE DROPDOWN ON MOBILE/TABLETS
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  /* This completely deletes the mega menu card from rendering on phone screens */
+  .mega-menu-dropdown-panel {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Strips the dropdown layout indicator on mobile devices */
+  .drop-indicator::after {
+    display: none !important;
+  }
+  
+  /* Restores the standard clean click behavior back to your Expertise link */
+  #expertise-toggle {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   🖥️ DESKTOP-ONLY VIEWPORT: RETAIN PRESERVED MEGA MENU HOVER EFFECT
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .drop-indicator::after {
+    content: ' ▾';
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .mega-menu-dropdown-panel {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid #e2e8f0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+    z-index: 999;
+    padding: 40px 0;
+    display: block !important;
+  }
+
+  /* Desktop hover activation trigger */
+  .mega-menu-trigger:hover .mega-menu-dropdown-panel {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+
+  .mega-menu-inner-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr;
+    gap: 48px;
+    box-sizing: border-box;
+  }
+
+  .mega-left-sidebar {
+    border-right: 1px solid #f1f5f9;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .track-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .track-link {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .track-item.active .track-link,
+  .track-link:hover {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  .mega-sidebar-footer {
+    margin-top: 32px;
+  }
+
+  .discover-btn-accent {
+    display: inline-block;
+    background-color: #10b981;
+    color: #ffffff;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .discover-btn-accent:hover {
+    background-color: #059669;
+  }
+
+  .mega-content-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-category-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sub-category-links li a {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.05rem;
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-block;
+  }
+
+  .sub-category-links li a:hover {
+    color: #10b981;
+    padding-left: 4px;
+  }
+}
+
+/* ==========================================================================
+   ENHANCED SPACING: PROJECTS MEGA MENU STYLING PATCH
+   ========================================================================== */
+
+/* --- 2-Column Desktop Architecture Layout --- */
+.projects-grid-layout {
+  grid-template-columns: 1.2fr 1fr !important; /* Visual column balance ratio */
+  gap: 56px !important;
+}
+
+.mega-projects-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🟢 FIXES CLOSE PROPORTIONS: Opens vertical gaps between project item lines */
+.project-track-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important; /* Increased from 16px to give each item plenty of breathing room */
+}
+
+/* --- Clean Typography Scales (Matches your exact reference image colors) --- */
+.project-track-link {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 1.75rem !important; /* Premium oversized editorial link text scale */
+  font-weight: 500;
+  color: #94a3b8 !important; /* Elegant faded gray for un-hovered links */
+  text-decoration: none !important;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.project-track-item.active .project-track-link,
+.project-track-link:hover {
+  color: #0f172a !important; /* Sharp high-contrast slate navy for focus states */
+  border-color: #10b981 !important; /* Your signature RISE theme green underline text highlight marker */
+}
+
+/* --- Right Side Preview Display Box Layout Panels --- */
+.mega-project-preview-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Default state hiding mechanism for dynamic project toggles */
+.project-preview-content {
+  display: none !important;
+}
+
+/* Active preview content reveal block rule */
+.project-preview-content.active-preview {
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+  animation: projectFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-preview-image-box {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Cinematic landscape display ratio from your screenshot card layout */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.project-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-preview-description {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  color: #475569 !important; /* Clean readable grey caption text color scale */
+  margin: 0 !important;
+}
+
+@keyframes projectFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   🖥️ DESKTOP-ONLY VIEWPORT OVERRIDES
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  /* 🟢 FIXES CLOSE TO TOP ERRORS: Pushes the panel content down paste the nav bar */
+  #projects-panel.mega-menu-dropdown-panel {
+    position: fixed;
+    top: 70px; /* Aligns comfortably below your nav bar container frame */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid #e2e8f0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+    z-index: 999;
+    padding: 56px 0 48px 0 !important; /* Increased top padding to push content safely away from the header */
+    display: block !important;
+  }
+
+  /* Desktop hover activation trigger */
+  .mega-menu-trigger:hover #projects-panel.mega-menu-dropdown-panel {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* --- Mobile / Tablet Viewport Safety Fail-safe (Hides panel completely on phones) --- */
+@media (max-width: 991px) {
+  #projects-panel {
+    display: none !important;
+  }
+}

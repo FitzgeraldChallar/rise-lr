@@ -25,52 +25,114 @@
 </head>
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-      <div class="container w-container">
-        <div class="navbar-wrapper">
-          <a href="#" class="brand-logo w-nav-brand"><img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image"></a>
-          <nav role="navigation" class="nav-menu w-nav-menu">
-            <div class="nav-link-wrap">
-              <a href="index.html" class="nav-link w-nav-link">Home</a>
-              <a href="about.html" class="nav-link w-nav-link">About</a>
-              <a href="services.html" aria-current="page" class="nav-link w-nav-link w--current">Services</a>
-              <a href="contact.html" class="nav-link w-nav-link">Contact</a>
-              <a href="contact.html" class="primary-button mobile-on w-inline-block">
-                <div class="primary-button-texts nav">
-                  <div class="primary-button-text">Get in Touch</div>
-                  <div class="primary-button-text white">Get in Touch</div>
+    <!-- Premium Navbar Navigation Wrapper with Integrated Mega Menu -->
+<div role="banner" class="navbar w-nav">
+  <div class="container w-container">
+    <div class="navbar-wrapper">
+      
+      
+      <a href="index.html" class="brand-logo w-nav-brand">
+        <img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image">
+      </a>
+      
+      <!-- Interactive Menu Group Links -->
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <div class="nav-link-wrap">
+          <a href="index.html" class="nav-link w-nav-link">Home</a>
+          <a href="about.html" class="nav-link w-nav-link">About</a>
+          <a href="services.html" class="nav-link w-nav-link">Services</a>
+          
+          <!-- MEGA MENU TRIGGER: EXPERTISE -->
+          <div class="mega-menu-trigger">
+            <a href="expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
+            
+            <!-- Complete Hidden Mega Menu Card Dropdown Container -->
+            <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
+              <div class="mega-menu-inner-grid">
+                
+                <!-- Left Side Column Panel: Main Interactive Tracks -->
+                <div class="mega-left-sidebar">
+                  <ul class="track-links-list">
+                    <li class="track-item active"><a href="#" class="track-link">Markets</a></li>
+                    <li class="track-item"><a href="#" class="track-link">Expertise</a></li>
+                    <li class="track-item"><a href="#" class="track-link">Digital</a></li>
+                    <li class="track-item"><a href="#" class="track-link">Sustainability</a></li>
+                  </ul>
+                  <div class="mega-sidebar-footer">
+                    <a href="expertise.html" class="discover-btn-accent">Discover What We Do</a>
+                  </div>
                 </div>
-                <div class="primary-button-bg"></div>
-              </a>
+                
+                <!-- Middle Column Panel: Sub-category Links List (Set A) -->
+                <div class="mega-content-column">
+                  <ul class="sub-category-links">
+                    <li><a href="expertise/aviation.html">Aviation</a></li>
+                    <li><a href="expertise/construction.html">Construction</a></li>
+                    <li><a href="expertise/telecom.html">Data &amp; Telecommunications</a></li>
+                    <li><a href="expertise/defense.html">Defence &amp; National Security</a></li>
+                    <li><a href="expertise/education.html">Education &amp; Research</a></li>
+                    <li><a href="expertise/energy.html">Energy</a></li>
+                    <li><a href="expertise/government.html">Government</a></li>
+                  </ul>
+                </div>
+                
+                <!-- Right Side Column Panel: Sub-category Links List (Set B) -->
+                <div class="mega-content-column">
+                  <ul class="sub-category-links">
+                    <li><a href="expertise/health.html">Health</a></li>
+                    <li><a href="expertise/manufacturing.html">Manufacturing</a></li>
+                    <li><a href="expertise/property.html">Property &amp; Place</a></li>
+                    <li><a href="expertise/resources.html">Resources</a></li>
+                    <li><a href="expertise/entertainment.html">Sports &amp; Entertainment</a></li>
+                    <li><a href="expertise/transport.html">Transport</a></li>
+                    <li><a href="expertise/water.html">Water</a></li>
+                  </ul>
+                </div>
+
+              </div> <!-- Closes .mega-menu-inner-grid -->
+            </div> <!-- Closes .mega-menu-dropdown-panel -->
+          </div> <!-- Closes .mega-menu-trigger -->
+          
+          <!-- Remaining Standard Nav Menu Links -->
+          <a href="projects.html" class="nav-link w-nav-link">Projects</a>
+          <a href="insights.html" class="nav-link w-nav-link">Insights</a>
+          <a href="careers.html" class="nav-link w-nav-link">Career</a>
+          <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
+          
+          <a href="contact.html" class="primary-button mobile-on w-inline-block">
+            <div class="primary-button-texts nav">
+              <div class="primary-button-text">Get in Touch</div>
+              <div class="primary-button-text white">Get in Touch</div>
             </div>
-          </nav>
-          <div class="nav-button-wrap">
-            <div class="search-button-wrap">
-              <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
-            </div>
-            <a href="contact.html" class="primary-button desktop-on w-inline-block">
-              <div class="primary-button-texts nav">
-                <div class="primary-button-text">Get in Touch</div>
-                <div class="primary-button-text white">Get in Touch</div>
-              </div>
-              <div class="primary-button-bg"></div>
-            </a>
-            <div class="hamburger-wrap w-nav-button">
-              <div data-is-ix2-target="1" class="hamburger" data-w-id="92b98c88-ef15-15af-f26b-379b92d3cc6a" data-animation-type="lottie" data-src="documents/black.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0" data-duration="4.083333333333333" data-ix2-initial-state="0"></div>
-            </div>
+            <div class="primary-button-bg"></div>
+          </a>
+        </div> <!-- Closes .nav-link-wrap -->
+      </nav>
+      
+      <!-- Utility Action Section Panels -->
+      <div class="nav-button-wrap">
+        <div class="search-button-wrap">
+          <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
+        </div>
+        <a href="contact.html" class="primary-button desktop-on w-inline-block">
+          <div class="primary-button-texts nav">
+            <div class="primary-button-text">Get in Touch</div>
+            <div class="primary-button-text white">Get in Touch</div>
           </div>
+          <div class="primary-button-bg"></div>
+        </a>
+        <div class="hamburger-wrap w-nav-button">
+          <div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div>
         </div>
       </div>
-    </div>
+
+    </div> <!-- Closes .navbar-wrapper -->
+  </div> <!-- Closes .container -->
+</div> <!-- Closes .navbar -->
+
     <!-- Premium Services Core List Section -->
 <section class="premium-services-list-section">
   <div class="services-list-container">
-    
-    <!-- Main Section Heading Component -->
-    <div class="services-list-header">
-      <span class="services-list-tagline">Our Expertise</span>
-      <h2 class="services-list-main-title">Below are the core services we provide:</h2>
-    </div>
 
     <!-- Core Services Grid Feed -->
     <div class="services-list-grid">
@@ -111,7 +173,7 @@
         <div class="service-info-box">
           <span class="service-index-number">(02)</span>
           <h3 class="service-item-title">Research, Monitoring &amp; Institutional Strengthening</h3>
-          <p class="service-item-description">
+          <p class="service-item-description"> 
             Conducting environmental research, impact assessments, and data-driven monitoring to inform policy, while strengthening the capacity of government institutions and local organizations to effectively enforce environmental regulations.
           </p>
         </div>
