@@ -27,50 +27,247 @@
 </head>
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-      <div class="container w-container">
-        <div class="navbar-wrapper">
-          <a href="#" class="brand-logo w-nav-brand"><img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image"></a>
-          <nav role="navigation" class="nav-menu w-nav-menu">
-            <div class="nav-link-wrap">
-              <a href="index.html" class="nav-link w-nav-link">Home</a>
-              <a href="about.html" class="nav-link w-nav-link">About</a>
-              <a href="services.html" class="nav-link w-nav-link">Services</a>
-              
-              <a href="expertise.html" class="nav-link w-nav-link">Expertise</a>
-              <a href="projects.html" class="nav-link w-nav-link">Projects</a>
-              <a href="insights.html" class="nav-link w-nav-link">Insights</a>
-              <a href="careers.html" class="nav-link w-nav-link">Career</a>
-              <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
-              
-
-              <a href="contact.html" aria-current="page" class="primary-button mobile-on w-inline-block w--current">
-                <div class="primary-button-texts nav">
-                  <div class="primary-button-text">Get in Touch</div>
-                  <div class="primary-button-text white">Get in Touch</div>
+    <!-- Premium Navbar Navigation Wrapper with Integrated Mega Menu -->
+<div role="banner" class="navbar w-nav">
+  <div class="container w-container">
+    <div class="navbar-wrapper">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo w-nav-brand">
+        <img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image">
+      </a>
+      
+      <!-- Interactive Menu Group Links -->
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <div class="nav-link-wrap">
+          <a href="index.html" class="nav-link w-nav-link">Home</a>
+          <a href="about.html" class="nav-link w-nav-link">About</a>
+          
+          <!-- MEGA MENU TRIGGER: EXPERTISE -->
+          <div class="mega-menu-trigger">
+            <a href="expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
+            
+            <!-- Complete Hidden Mega Menu Card Dropdown Container -->
+            <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
+              <div class="mega-menu-inner-grid">
+                
+                <!-- Left Side Column Panel: Main Interactive Tracks (UPDATED WITH TARGET FLAGS) -->
+                <div class="mega-left-sidebar">
+                  <ul class="track-links-list">
+                    <li class="track-item active" data-tab="markets-view"><a href="#" class="track-link">Markets</a></li>
+                    <li class="track-item" data-tab="expertise-view"><a href="#" class="track-link">Expertise</a></li>
+                    <li class="track-item" data-tab="sustainability-view"><a href="#" class="track-link">Sustainability</a></li>
+                  </ul>
+                  <div class="mega-sidebar-footer">
+                    <a href="expertise.html" class="discover-btn-accent">Discover What We Do</a>
+                  </div>
                 </div>
-                <div class="primary-button-bg"></div>
-              </a>
-            </div>
-          </nav>
-          <div class="nav-button-wrap">
-            <div class="search-button-wrap">
-              <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
-            </div>
-            <a href="contact.html" aria-current="page" class="primary-button desktop-on w-inline-block w--current">
-              <div class="primary-button-texts nav">
-                <div class="primary-button-text">Get in Touch</div>
-                <div class="primary-button-text white">Get in Touch</div>
-              </div>
-              <div class="primary-button-bg"></div>
-            </a>
-            <div class="hamburger-wrap w-nav-button">
-              <div data-is-ix2-target="1" class="hamburger" data-w-id="92b98c88-ef15-15af-f26b-379b92d3cc6a" data-animation-type="lottie" data-src="documents/black.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0" data-duration="4.083333333333333" data-ix2-initial-state="0"></div>
-            </div>
+                
+                <!-- CONTAINER SET A: MARKETS (Your original Aviation & Health columns untouched) -->
+                <div id="markets-view" class="mega-tab-content active-panel" style="display: contents;">
+                  <!-- Middle Column Panel: Sub-category Links List (Set A) -->
+                  <div class="mega-content-column">
+                    <ul class="sub-category-links">
+                      <li><a href="expertise/agriculture.html">Agriculture</a></li>
+                      <li><a href="expertise/data_analysis.html">Data Analysis</a></li>
+                      <li><a href="expertise/education_research.html">Education & Research</a></li>
+                      <li><a href="expertise/energy.html">Energy</a></li>
+                      <li><a href="expertise/environmental_science.html">Environmental Science</a></li>
+                      <li><a href="expertise/general_construction.html">General Construction</a></li>
+                      <li><a href="expertise/geology.html">Geology</a></li>
+                    </ul>
+                  </div>
+                  
+                  <!-- Right Side Column Panel: Sub-category Links List (Set B) -->
+                  <div class="mega-content-column">
+                    <ul class="sub-category-links">
+                      <li><a href="expertise/mining.html">Mining</a></li>
+                      <li><a href="expertise/natural_resources.html">Natural Resources</a></li>
+                      <li><a href="expertise/soil.html">Soil</a></li>
+                      <li><a href="expertise/gis.html">Remote Sensing / GIS Service</a></li>
+                      <li><a href="expertise/water.html">Water</a></li>
+                    </ul>
+                  </div>
+                </div> <!-- Closes markets-view -->
+
+                <!-- CONTAINER SET B: EXPERTISE (Your 17 competencies mapped straight to your grid columns) -->
+                <div id="expertise-view" class="mega-tab-content" style="display: none;">
+                  <!-- Left Side Column -->
+                  <div class="mega-content-column">
+                    <ul class="sub-category-links">
+                      <li><a href="expertise.html#agroforestry">Agroforestry and Climate Smart Agriculture</a></li>
+                      <li><a href="expertise.html#renewable">Renewable energy and waste management</a></li>
+                      <li><a href="expertise.html#mineral">Mineral exploration</a></li>
+                      <li><a href="expertise.html#civil">Civil engineering and general construction</a></li>
+                      <li><a href="expertise.html#petroleum">Integrated Petroleum advisory and Geo-services</a></li>
+                      <li><a href="expertise.html#carbon">Carbon market &amp; policy</a></li>
+                      <li><a href="expertise.html#awareness">Environmental Awareness and Research</a></li>
+                      <li><a href="expertise.html#me">Monitoring and Evaluation</a></li>
+                      <li><a href="expertise.html#governance">Natural Resource Management and Mining Governance</a></li>
+                    </ul>
+                  </div>
+                  <!-- Right Side Column -->
+                  <div class="mega-content-column">
+                    <ul class="sub-category-links">
+                      <li><a href="expertise.html#sampling">Soil and water sampling and analysis</a></li>
+                      <li><a href="expertise.html#gis">GIS and remote sensing</a></li>
+                      <li><a href="expertise.html#restoration">Ecosystem restoration and biodiversity conservation</a></li>
+                      <li><a href="expertise.html#solar">Solar installation</a></li>
+                      <li><a href="expertise.html#calibration">Petroleum tank calibration</a></li>
+                      <li><a href="expertise.html#education">Education and research</a></li>
+                      <li><a href="expertise.html#justice">Environmental policy, governance &amp; Justice</a></li>
+                      <li><a href="expertise.html#blue-carbon">Ocean Governance and blue carbon</a></li>
+                    </ul>
+                  </div>
+                </div> <!-- Closes expertise-view -->
+
+                <!-- CONTAINER SET B: EXPERTISE (Your 17 competencies mapped straight to your grid columns) -->
+                <div id="sustainability-view" class="mega-tab-content" style="display: none;">
+                  <!-- Left Side Column -->
+                  <div class="mega-content-column">
+                    <ul class="sub-category-links">
+                      <li><a href="expertise.html#agroforestry">Environmental</a></li>
+                      <li><a href="expertise.html#renewable">Social</a></li>
+                      <li><a href="expertise.html#mineral">Economic</a></li>
+                      <li><a href="expertise.html#civil">Institutional</a></li>
+                    </ul>
+                   </div>
+                </div>
+
+              </div> <!-- Closes .mega-menu-inner-grid -->
+            </div> <!-- Closes .mega-menu-dropdown-panel -->
+          </div> <!-- Closes .mega-menu-trigger -->
+          
+          <!-- Remaining Standard Nav Menu Links -->
+          <!-- MEGA MENU TRIGGER: PROJECTS -->
+<div class="mega-menu-trigger">
+  <a href="projects.html" id="projects-toggle" class="nav-link w-nav-link drop-indicator">Projects</a>
+  
+  <!-- Projects Flyout Dropdown Card -->
+  <div id="projects-panel" class="mega-menu-dropdown-panel toggle-hidden">
+    <div class="mega-menu-inner-grid projects-grid-layout">
+      
+      <!-- Left Column Panel: Project Links List -->
+      <div class="mega-projects-sidebar">
+        <ul class="project-track-list">
+          <!-- Item 1 (Active by Default) -->
+          <li class="project-track-item active" data-project="proj-allianz">
+            <a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
+          </li>
+          <!-- Item 2 -->
+          <li class="project-track-item" data-project="proj-auckland">
+            <a href="projects.html#mainstreamingbiodiversity" class="project-track-link">Mainstreaming Biodiversity in Sand Production</a>
+          </li>
+          <!-- Item 3 -->
+          <li class="project-track-item" data-project="proj-dyson">
+            <a href="projects.html#climateequipment" class="project-track-link">Climate Equipment Needs Assessment for Liberia</a>
+          </li>
+          <!-- Item 4 (🟢 FIXED: Assigned unique identifier data-project) -->
+          <li class="project-track-item" data-project="proj-lfsp">
+            <a href="projects.html#lfsp" class="project-track-link">The Liberia Forest Sector Project (LFSP)</a>
+          </li>
+          <!-- Item 5 (🟢 FIXED: Assigned unique identifier data-project) -->
+          <li class="project-track-item" data-project="proj-kahia">
+            <a href="projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Right Column Panel: Dynamic Preview Cards Display Workspace -->
+      <div class="mega-project-preview-panel">
+        
+        <!-- Preview 01: Allianz (Visible by Default) -->
+        <div id="proj-allianz" class="project-preview-content active-preview">
+          <div class="project-preview-image-box">
+            <img src="images/trust.jpeg" loading="lazy" alt="Climate Change Trust Fund Operational Manual" class="project-preview-img">
           </div>
+          <p class="project-preview-description">
+            The Liberia Climate Change Trust Fund (LCCTF) operational manual is developed under the enhancing Climate Information Systems for Resilient development (Liberia CIS Project), funded by Green Climate Fund (GCF), African Development Bank (AFDB) and the Government of Liberia. 
+          </p>
+        </div>
+
+        <!-- Preview 02: Auckland -->
+        <div id="proj-auckland" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="images/sand.jpeg" loading="lazy" alt="Mainstreaming Biodiversity in Sand Production Responsible Value Chains for coastal resilience in West Africa" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            The 36-month regional project, led by UNEP under the Global Biodiversity Framework Fund (GBFF) was to mainstream biodiversity conservation into productive sectors by addressing unsustainable sand extraction in Liberia and the Gambia. 
+          </p>
+        </div>
+
+        <!-- Preview 03: Dyson -->
+        <div id="proj-dyson" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="images/climate.jpeg" loading="lazy" alt="Climate Equipment Needs Assessment for Liberia" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            Supported the Climate Information System Project (CIS) and the ERVCCS projects to develop the climate equipment needs assessment for Liberia. 
+          </p>
+        </div>
+
+        <!-- Preview 04 (🟢 FIXED: Cleaned card wrapping ID tracking) -->
+        <div id="proj-lfsp" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="images/lfsp.jpeg" loading="lazy" alt="The Liberia Forest Sector Project (LFSP)" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            The (LFSP) was a multi-stakeholder initiative implemented by the Ministry of Mines and Energy (MME), in partnership with EMG Consulting Group Ltd., with support from the Swedish International Development Cooperation Agency (Sida) and the Society for the Conservation of Nature of Liberia (SCNL), to strengthen the capacity of artisanal and small-scale miners to adopt Forest-Smart Mining practices that promote environmentally sustainable mining, forest conservation, and climate resilience in Liberia.
+          </p>
+        </div>
+
+        <!-- Preview 05 (🟢 FIXED: Cleaned card wrapping ID tracking from duplicate to proj-kahia) -->
+        <div id="proj-kahia" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="images/kahia.jpeg" loading="lazy" alt="The Kahia II Mini Hydropower Project" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            Involved conducting geological and geotechnical investigations to support the feasibility assessment, engineering design, and safe development of a proposed mini-hydropower facility in Lofa County, Liberia.
+          </p>
+        </div>
+
+      </div> <!-- Closes .mega-project-preview-panel -->
+    </div> <!-- Closes .mega-menu-inner-grid -->
+  </div> <!-- Closes .mega-menu-dropdown-panel -->
+</div> <!-- Closes .mega-menu-trigger -->
+
+          <!-- Remaining Standard Nav Menu Links -->
+          <a href="insights.html" class="nav-link w-nav-link">Insights</a>
+          <a href="careers.html" class="nav-link w-nav-link">Career</a>
+          <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
+          
+          <a href="contact.html" class="primary-button mobile-on w-inline-block">
+            <div class="primary-button-texts nav">
+              <div class="primary-button-text">Get in Touch</div>
+              <div class="primary-button-text white">Get in Touch</div>
+            </div>
+            <div class="primary-button-bg"></div>
+          </a>
+        </div>   
+      </nav>
+      
+      <!-- Utility Action Section Panels -->
+      <div class="nav-button-wrap">
+        <div class="search-button-wrap">
+          <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
+        </div>
+        <a href="contact.html" class="primary-button desktop-on w-inline-block">
+          <div class="primary-button-texts nav">
+            <div class="primary-button-text">Get in Touch</div>
+            <div class="primary-button-text white">Get in Touch</div>
+          </div>
+          <div class="primary-button-bg"></div>
+        </a>
+        <div class="hamburger-wrap w-nav-button">
+          <div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div>
         </div>
       </div>
+
     </div>
+  </div>
+</div>
+
+  </div>
     <!-- Premium Contact Section -->
 <section class="premium-contact-section">
   <div class="contact-container">
@@ -197,19 +394,6 @@
                   <div class="footer-item-title">Our Office</div>
                   <div class="footer-item-texts">
                     <div class="footer-item-text location">72nd Junction, Behind the Viewpoint Entertainment Center, Paynesville City, Montserrado County, Liberia</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="footer-right-wrap">
-              <div class="footer-manu">
-                <div data-w-id="d414bd12-39bb-683d-39e9-a352048dcbf5" class="footer-menu-wrap">
-                  <div class="footer-menu-title">Pages</div>
-                  <div class="footer-link-wrap">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">About</a>
-                    <a href="services.html" class="footer-link">Project</a>
-                    <a href="contact.html" aria-current="page" class="footer-link w--current">Contact</a>
                   </div>
                 </div>
               </div>

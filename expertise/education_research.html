@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Agriculture - RISE Liberia</title>
+  <meta content="Explore the core scientific, technical, environmental, and engineering competencies driving climate resilience and sustainable development across Liberia at RISE." name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  
+  <!-- 🟢 FIXED: Added ../ to find your stylesheets from the subfolder level -->
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/rise-liberia-388f17.webflow.css" rel="stylesheet" type="text/css">
+  
+  <!-- 🟢 FIXED: Repaired the external WebFont loader paths so your typography renders -->
+  <link href="https://googleapis.com" rel="preconnect">
+  <link href="https://gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://googleapis.com" type="text/javascript"></script>
+  <script type="text/javascript">
+    WebFont.load({ 
+      google: { 
+        families: ["Anton:300,400,500,600,700","Inter Tight:300,400,500,600,700"] 
+      } 
+    });
+  </script>
+<style>
+    /* ==========================================================================
+       PREMIUM MARKET SUB-PAGE CUSTOM STYLING BLOCK
+       ========================================================================== */
+    .market-hero-section {
+      width: 100%;
+      padding: 165px 0 60px 0;
+      background-color: #ffffff !important;
+      box-sizing: border-box;
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .market-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .market-hero-wrapper {
+      max-width: 850px;
+      text-align: left;
+    }
+
+    .market-tagline {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #10b981 !important; /* Signature RISE Green */
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+
+    .market-main-heading {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #0f172a !important; /* Signature Slate Navy */
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+    }
+
+    .market-sub-heading {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.3;
+      font-weight: 600;
+      color: #10b981 !important;
+      margin: 0 0 24px 0;
+    }
+
+    .market-body-section {
+      width: 100% !important;
+      padding: 60px 0 100px 0 !important;
+      background-color: #f8fafc !important; /* Subtle background canvas framing */
+      box-sizing: border-box !important;
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .market-content-grid {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    .market-text-panel {
+      font-family: 'Inter Tight', sans-serif !important;
+      font-size: 1.1rem !important;
+      line-height: 1.7 !important;
+      color: #475569 !important;
+    }
+
+    .market-text-panel p {
+      margin: 0 0 24px 0 !important;
+    }
+
+    .market-text-panel p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    /* Floating callout list card */
+    .market-focus-box {
+      background-color: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 16px !important;
+      padding: 32px !important;
+      box-sizing: border-box !important;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
+    }
+
+    .focus-box-title {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 16px 0;
+    }
+
+    .focus-list {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .focus-list li {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.95rem;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .focus-list li::before {
+      content: '✓';
+      color: #10b981;
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .market-main-heading { font-size: 3.25rem; }
+      .market-sub-heading { font-size: 1.65rem; }
+    }
+
+    @media (min-width: 992px) {
+      .market-content-grid {
+        grid-template-columns: 1.4fr 1fr; /* Two-column premium split layout on desktop */
+        gap: 64px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="pages-wrapper">
+    
+    <!-- Premium Navbar Navigation Wrapper with Integrated Dynamic Mega Menu -->
+<div role="banner" class="navbar w-nav">
+  <div class="container w-container">
+    <div class="navbar-wrapper">
+      
+      <!-- Brand Logo -->
+<a href="../index.html" class="brand-logo w-nav-brand">
+  <!-- 🟢 FIXED: Added ../ to bring back your logo image asset -->
+  <img src="../images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image">
+</a>
+
+<!-- Interactive Menu Group Links -->
+<nav role="navigation" class="nav-menu w-nav-menu">
+  <div class="nav-link-wrap">
+    <!-- 🟢 FIXED: Added ../ to link correctly back up to your core pages -->
+    <a href="../index.html" class="nav-link w-nav-link">Home</a>
+    <a href="../about.html" class="nav-link w-nav-link">About</a>
+    
+    <!-- MEGA MENU TRIGGER: EXPERTISE -->
+    <div class="mega-menu-trigger">
+      <!-- 🟢 FIXED: Added ../ to link correctly back up to your main expertise page -->
+      <a href="../expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
+      
+      <!-- Complete Hidden Mega Menu Card Dropdown Container -->
+      <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
+        <div class="mega-menu-inner-grid">
+          
+          <!-- Left Side Column Panel: Main Interactive Tracks -->
+          <div class="mega-left-sidebar">
+            <ul class="track-links-list">
+              <li class="track-item active" data-tab="markets-view"><a href="#" class="track-link">Markets</a></li>
+              <li class="track-item" data-tab="expertise-view"><a href="#" class="track-link">Expertise</a></li>
+              <li class="track-item" data-tab="sustainability-view"><a href="#" class="track-link">Sustainability</a></li>
+            </ul>
+            <div class="mega-sidebar-footer">
+              <a href="../expertise.html" class="discover-btn-accent">Discover What We Do</a>
+            </div>
+          </div>
+          
+          <!-- CONTAINER SET A: MARKETS (Kept locally grouped within the expertise subfolder) -->
+          <div id="markets-view" class="mega-tab-content active-panel" style="display: contents;">
+            <!-- Middle Column Panel: Sub-category Links List (Set A) -->
+            <div class="mega-content-column">
+              <ul class="sub-category-links">
+                <li><a href="agriculture.html">Agriculture</a></li>
+                <li><a href="data_analysis.html">Data Analysis</a></li>
+                <li><a href="education_research.html">Education &amp; Research</a></li>
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="environmental_science.html">Environmental Science</a></li>
+                <li><a href="general_construction.html">General Construction</a></li>
+                <li><a href="geology.html">Geology</a></li>
+              </ul>
+            </div>
+            
+            <!-- Right Side Column Panel: Sub-category Links List (Set B) -->
+            <div class="mega-content-column">
+              <ul class="sub-category-links">
+                <li><a href="mining.html">Mining</a></li>
+                <li><a href="natural_resources.html">Natural Resources</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="gis.html">Remote Sensing / GIS Service</a></li>
+                <li><a href="water.html">Water</a></li>
+              </ul>
+            </div>
+          </div> <!-- Closes markets-view -->
+
+          <!-- CONTAINER SET B: EXPERTISE -->
+          <div id="expertise-view" class="mega-tab-content" style="display: none;">
+            <!-- Left Side Column -->
+            <div class="mega-content-column">
+              <ul class="sub-category-links">
+                <li><a href="../expertise.html#agroforestry">Agroforestry and Climate Smart Agriculture</a></li>
+                <li><a href="../expertise.html#renewable">Renewable energy and waste management</a></li>
+                <li><a href="../expertise.html#mineral">Mineral exploration</a></li>
+                <li><a href="../expertise.html#civil">Civil engineering and general construction</a></li>
+                <li><a href="../expertise.html#petroleum">Integrated Petroleum advisory and Geo-services</a></li>
+                <li><a href="../expertise.html#carbon">Carbon market &amp; policy</a></li>
+                <li><a href="../expertise.html#awareness">Environmental Awareness and Research</a></li>
+                <li><a href="../expertise.html#me">Monitoring and Evaluation</a></li>
+                <li><a href="../expertise.html#governance">Natural Resource Management and Mining Governance</a></li>
+              </ul>
+            </div>
+            <!-- Right Side Column -->
+            <div class="mega-content-column">
+              <ul class="sub-category-links">
+                <li><a href="../expertise.html#sampling">Soil and water sampling and analysis</a></li>
+                <li><a href="../expertise.html#gis">GIS and remote sensing</a></li>
+                <li><a href="../expertise.html#restoration">Ecosystem restoration and biodiversity conservation</a></li>
+                <li><a href="../expertise.html#solar">Solar installation</a></li>
+                <li><a href="../expertise.html#calibration">Petroleum tank calibration</a></li>
+                <li><a href="../expertise.html#education">Education and research</a></li>
+                <li><a href="../expertise.html#justice">Environmental policy, governance &amp; Justice</a></li>
+                <li><a href="../expertise.html#blue-carbon">Ocean Governance and blue carbon</a></li>
+              </ul>
+            </div>
+          </div> <!-- Closes expertise-view -->
+
+          <!-- CONTAINER SET C: SUSTAINABILITY -->
+          <div id="sustainability-view" class="mega-tab-content" style="display: none;">
+            <!-- Left Side Column -->
+            <div class="mega-content-column">
+              <ul class="sub-category-links">
+                <li><a href="../expertise.html#agroforestry">Environmental</a></li>
+                <li><a href="../expertise.html#renewable">Social</a></li>
+                <li><a href="../expertise.html#mineral">Economic</a></li>
+                <li><a href="../expertise.html#civil">Institutional</a></li>
+              </ul>
+             </div>
+          </div>
+
+        </div> <!-- Closes .mega-menu-inner-grid -->
+      </div> <!-- Closes .mega-menu-dropdown-panel -->
+    </div> <!-- Closes .mega-menu-trigger -->
+
+          <!-- Remaining Standard Nav Menu Links -->
+         <!-- MEGA MENU TRIGGER: PROJECTS -->
+<div class="mega-menu-trigger">
+  <!-- 🟢 FIXED: Added ../ to target your core portfolio page -->
+  <a href="../projects.html" id="projects-toggle" class="nav-link w-nav-link drop-indicator">Projects</a>
+  
+  <!-- Projects Flyout Dropdown Card -->
+  <div id="projects-panel" class="mega-menu-dropdown-panel toggle-hidden">
+    <div class="mega-menu-inner-grid projects-grid-layout">
+      
+      <!-- Left Column Panel: Project Links List -->
+      <div class="mega-projects-sidebar">
+        <ul class="project-track-list">
+          <!-- Item 1 (Active by Default) -->
+          <li class="project-track-item active" data-project="proj-allianz">
+            <!-- 🟢 FIXED: Added ../ to all navigation anchor paths -->
+            <a href="../projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
+          </li>
+          <!-- Item 2 -->
+          <li class="project-track-item" data-project="proj-auckland">
+            <a href="../projects.html#mainstreamingbiodiversity" class="project-track-link">Mainstreaming Biodiversity in Sand Production</a>
+          </li>
+          <!-- Item 3 -->
+          <li class="project-track-item" data-project="proj-dyson">
+            <a href="../projects.html#climateequipment" class="project-track-link">Climate Equipment Needs Assessment for Liberia</a>
+          </li>
+          <!-- Item 4 -->
+          <li class="project-track-item" data-project="proj-lfsp">
+            <a href="../projects.html#lfsp" class="project-track-link">The Liberia Forest Sector Project (LFSP)</a>
+          </li>
+          <!-- Item 5 -->
+          <li class="project-track-item" data-project="proj-kahia">
+            <a href="../projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Right Column Panel: Dynamic Preview Cards Display Workspace -->
+      <div class="mega-project-preview-panel">
+        
+        <!-- Preview 01: Allianz (Visible by Default) -->
+        <div id="proj-allianz" class="project-preview-content active-preview">
+          <div class="project-preview-image-box">
+            <!-- 🟢 FIXED: Added ../ to find your graphics from the subfolder -->
+            <img src="../images/trust.jpeg" loading="lazy" alt="Climate Change Trust Fund Operational Manual" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            The Liberia Climate Change Trust Fund (LCCTF) operational manual is developed under the enhancing Climate Information Systems for Resilient development (Liberia CIS Project), funded by Green Climate Fund (GCF), African Development Bank (AFDB) and the Government of Liberia. 
+          </p>
+        </div>
+
+        <!-- Preview 02: Auckland -->
+        <div id="proj-auckland" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="../images/sand.jpeg" loading="lazy" alt="Mainstreaming Biodiversity in Sand Production Responsible Value Chains for coastal resilience in West Africa" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            The 36-month regional project, led by UNEP under the Global Biodiversity Framework Fund (GBFF) was to mainstream biodiversity conservation into productive sectors by addressing unsustainable sand extraction in Liberia and the Gambia. 
+          </p>
+        </div>
+
+        <!-- Preview 03: Dyson -->
+        <div id="proj-dyson" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="../images/climate.jpeg" loading="lazy" alt="Climate Equipment Needs Assessment for Liberia" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            Supported the Climate Information System Project (CIS) and the ERVCCS projects to develop the climate equipment needs assessment for Liberia. 
+          </p>
+        </div>
+
+        <!-- Preview 04 -->
+        <div id="proj-lfsp" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="../images/lfsp.jpeg" loading="lazy" alt="The Liberia Forest Sector Project (LFSP)" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            The (LFSP) was a multi-stakeholder initiative implemented by the Ministry of Mines and Energy (MME), in partnership with EMG Consulting Group Ltd., with support from the Swedish International Development Cooperation Agency (Sida) and the Society for the Conservation of Nature of Liberia (SCNL), to strengthen the capacity of artisanal and small-scale miners to adopt Forest-Smart Mining practices that promote environmentally sustainable mining, forest conservation, and climate resilience in Liberia.
+          </p>
+        </div>
+
+        <!-- Preview 05 -->
+        <div id="proj-kahia" class="project-preview-content">
+          <div class="project-preview-image-box">
+            <img src="../images/kahia.jpeg" loading="lazy" alt="The Kahia II Mini Hydropower Project" class="project-preview-img">
+          </div>
+          <p class="project-preview-description">
+            Involved conducting geological and geotechnical investigations to support the feasibility assessment, engineering design, and safe development of a proposed mini-hydropower facility in Lofa County, Liberia.
+          </p>
+        </div>
+
+      </div> <!-- Closes .mega-project-preview-panel -->
+    </div> <!-- Closes .mega-menu-inner-grid -->
+  </div> <!-- Closes .mega-menu-dropdown-panel -->
+</div> <!-- Closes .mega-menu-trigger -->
+
+                   <!-- Remaining Standard Nav Menu Links -->
+          <!-- 🟢 FIXED: Added ../ to paths to step back to root folder seamlessly -->
+          <a href="../insights.html" class="nav-link w-nav-link">Insights</a>
+          <a href="../careers.html" class="nav-link w-nav-link">Career</a>
+          <a href="../newsroom.html" class="nav-link w-nav-link">Newsroom</a>
+          
+          <a href="../contact.html" class="primary-button mobile-on w-inline-block">
+            <div class="primary-button-texts nav">
+              <div class="primary-button-text">Get in Touch</div>
+              <div class="primary-button-text white">Get in Touch</div>
+            </div>
+            <div class="primary-button-bg"></div>
+          </a>
+        </div> <!-- Closes .nav-link-wrap -->
+      </nav>
+      
+      <!-- Utility Action Section Panels -->
+      <div class="nav-button-wrap">
+        <div class="search-button-wrap">
+          <!-- 🟢 FIXED: Added ../ to search form action destination paths -->
+          <form action="../search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
+        </div>
+        <a href="../contact.html" class="primary-button desktop-on w-inline-block">
+          <div class="primary-button-texts nav">
+            <div class="primary-button-text">Get in Touch</div>
+            <div class="primary-button-text white">Get in Touch</div>
+          </div>
+          <div class="primary-button-bg"></div>
+        </a>
+        <div class="hamburger-wrap w-nav-button">
+          <!-- 🟢 FIXED: Added ../ to find your lottie animation assets cleanly -->
+          <div data-is-ix2-target="1" class="hamburger" data-src="../documents/black.json" data-renderer="svg" data-default-duration="0"></div>
+        </div>
+      </div>
+
+    </div> <!-- Closes .navbar-wrapper -->
+  </div> <!-- Closes .container -->
+</div> <!-- Closes .navbar -->
+
+<!-- Page Intro Header Panel -->
+    <header class="market-hero-section">
+      <div class="market-container">
+        <div class="market-hero-wrapper">
+          <span class="market-tagline">Markets &amp; Sectors</span>
+          <h1 class="market-main-heading">Education &amp; Research</h1>
+          <h2 class="market-sub-heading">Building knowledge, strengthening skills, and promoting innovation through inclusive learning, applied research, and evidence-based solutions.</h2>
+        </div>
+      </div>
+    </header>
+
+    <!-- Brief & Precise Content Block -->
+    <main class="market-body-section">
+      <div class="market-container">
+        <div class="market-content-grid">
+          
+          <!-- Left Column: Executive Statement -->
+          <div class="market-text-panel">
+            <p>
+              We believe that education and research are essential to building knowledge, strengthening communities, and creating practical solutions for sustainable development. We support applied research, knowledge generation, capacity building, technical training, and the sharing of evidence-based information.
+            </p>
+            <p>
+              Through collaboration with communities, academic institutions, government agencies, development partners, and other stakeholders, RISE connects research and learning with real-world needs. We generate and apply knowledge to inform policies, improve practices, strengthen institutional and community capacity, and promote innovative solutions for a more resilient and sustainable future.
+            </p>
+          </div>
+
+          <!-- Right Column: Brief Capabilities List Box -->
+          <div class="market-focus-box">
+            <h3 class="focus-box-title">Core Initiatives</h3>
+            <ul class="focus-list">
+              <li>Applied Field Research</li>
+              <li>Knowledge Generation &amp; Sharing</li>
+              <li>Institutional Capacity Building</li>
+              <li>Technical Training Programs</li>
+              <li>Multi-Stakeholder Collaboration</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const trackItems = document.querySelectorAll(".track-item");
+    
+    trackItems.forEach(item => {
+      item.addEventListener("mouseenter", function () {
+        const targetTabId = this.getAttribute("data-tab");
+
+        // Toggle active menu indicators
+        trackItems.forEach(i => i.classList.remove("active"));
+        this.classList.add("active");
+
+        // Toggle visibility between columns
+        document.getElementById("markets-view").style.display = (targetTabId === "markets-view") ? "contents" : "none";
+        document.getElementById("expertise-view").style.display = (targetTabId === "expertise-view") ? "contents" : "none";
+        document.getElementById("sustainability-view").style.display = (targetTabId === "sustainability-view") ? "contents" : "none";
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const projectItems = document.querySelectorAll(".project-track-item");
+    const projectPreviews = document.querySelectorAll(".project-preview-content");
+
+    projectItems.forEach(item => {
+      // Listens for instant desktop mouse hover events
+      item.addEventListener("mouseenter", function () {
+        const targetProjId = this.getAttribute("data-project");
+
+        // Clear active classes from track records
+        projectItems.forEach(i => i.classList.remove("active"));
+        this.classList.add("active");
+
+        // Compress and hide all previews
+        projectPreviews.forEach(p => panel = p.classList.remove("active-preview"));
+        
+        // Target specific preview element box and light it up active
+        const targetPreview = document.getElementById(targetProjId);
+        if (targetPreview) {
+          targetPreview.classList.add("active-preview");
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
