@@ -258,18 +258,7 @@
 </div> <!-- Closes .navbar -->
 
           
-          <a href="projects.html" class="nav-link w-nav-link">Projects</a>
-          <a href="insights.html" class="nav-link w-nav-link">Insights</a>
-          <a href="careers.html" class="nav-link w-nav-link">Career</a>
-          <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
           
-          <a href="contact.html" class="primary-button mobile-on w-inline-block">
-            <div class="primary-button-texts nav">
-              <div class="primary-button-text">Get in Touch</div>
-              <div class="primary-button-text white">Get in Touch</div>
-            </div>
-            <div class="primary-button-bg"></div>
-          </a>
         </div>
       </nav>
       
@@ -284,9 +273,7 @@
           </div>
           <div class="primary-button-bg"></div>
         </a>
-        <div class="hamburger-wrap w-nav-button">
-          <div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div>
-        </div>
+        
       </div>
 
     </div>
@@ -338,5 +325,24 @@
     });
   });
 </script>
+<!-- Lightweight Non-Webflow Menu Animation Handler -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Hooks clean selectors targetting your exact navbar buttons and menus
+    const mobileTrigger = document.querySelector('.w-nav-button') || document.querySelector('.menu-button');
+    const layoutMenu = document.querySelector('.w-nav-menu') || document.querySelector('.nav-menu');
+    
+    if (mobileTrigger && layoutMenu) {
+      mobileTrigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Safely toggles active layout view states
+        layoutMenu.classList.toggle('is-mobile-active');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

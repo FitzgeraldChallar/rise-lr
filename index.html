@@ -807,6 +807,68 @@
     });
   });
 </script>
+<!-- Complete Mobile Navigation & Accordion Engine -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.menu-button') || document.querySelector('.w-nav-button');
+    const navMenu = document.querySelector('.nav-menu') || document.querySelector('.w-nav-menu');
+    const expertiseToggle = document.getElementById('expertise-toggle');
+    const expertisePanel = document.getElementById('expertise-panel');
+
+    // 1. Core Navigation Bar Toggle
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navMenu.classList.toggle('is-mobile-active');
+        
+        // Swaps between hamburger and closing cross seamlessly 
+        navToggle.classList.toggle('w--open');
+      });
+    }
+
+    // 2. Mobile Mega Menu Expansion System
+    if (expertiseToggle && expertisePanel) {
+      expertiseToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          e.stopPropagation();
+          expertisePanel.classList.toggle('toggle-hidden');
+          expertisePanel.classList.toggle('is-panel-open');
+        }
+      });
+    }
+
+    // 3. Tab Swapping Action Engine (Works on Desktop and Mobile)
+    const trackItems = document.querySelectorAll('.track-item');
+    trackItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Disables current active instances
+        trackItems.forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.mega-tab-content').forEach(panel => {
+          panel.style.display = 'none';
+          panel.classList.remove('active-panel');
+        });
+
+        // Toggles active selection rules
+        item.classList.add('active');
+        const targetTab = item.getAttribute('data-tab');
+        const targetPanel = document.getElementById(targetTab);
+        if (targetPanel) {
+          if (window.innerWidth <= 991) {
+            targetPanel.style.display = 'block'; // Block display pattern for clean linear stack
+          } else {
+            targetPanel.style.display = 'contents'; // Default desktop matrix grid layout
+          }
+          targetPanel.classList.add('active-panel');
+        }
+      });
+    });
+  });
+</script>
+
 
 </body>
 </html>

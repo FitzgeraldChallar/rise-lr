@@ -10456,3 +10456,1391 @@ figure {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   MASTER MOBILE NAV RESPONSIVENESS OVERRIDE (FIXED VIEW SYSTEM)
+   ========================================================================== */
+@media (max-width: 991px) {
+  
+  /* --- 1. Prevent Header Layout From Overlapping Core Page Content --- */
+  .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 70px !important; /* Forces a fixed, immutable boundary frame height */
+    z-index: 1000 !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+  }
+
+  /* Structural Global Safe Padding Offset Rule: Bypasses hidden content overlapping */
+  body, 
+  .pages-wrapper {
+    padding-top: 70px !important; /* Pushes the active page main section down past the navbar */
+  }
+
+  /* Alternate Webflow page hero utility section fallback push targets */
+  .premium-contact-section,
+  .premium-services-intro,
+  .premium-trust-section,
+  .premium-feedback-section,
+  .premium-about-hero,
+  .premium-mission-stats-section,
+  .premium-team-section,
+  .premium-services-list-section,
+  .expertise-hero-section,
+  .portfolio-hero-section,
+  .market-hero-section {
+    padding-top: 40px !important; /* Adds comfortable proportional space below the fixed 70px row */
+  }
+
+  /* --- 2. Force Left-Aligned Row Layout on Header --- */
+  .navbar-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .brand-logo-image {
+    width: 100px !important;
+    height: auto !important;
+  }
+
+  /* --- 3. Lock Navigation Menu Open/Close Default Visibility States --- */
+  .nav-menu.w-nav-menu {
+    display: none !important; /* 🟢 THE FIX: Hides the list link track by default so it never bleeds onto the fold */
+    position: fixed !important;
+    top: 70px !important; /* Snaps cleanly right below the 70px navbar bar line track */
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 70px) !important;
+    background-color: #ffffff !important;
+    padding: 32px 24px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    z-index: 999 !important;
+    border-top: 1px solid #f1f5f9 !important;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.05) !important;
+    
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Webflow state tracker utility class: Displays the menu only when clicked active */
+  .nav-menu.w-nav-menu.w--open {
+    display: flex !important; /* Snaps drawer open instantly when hamburger is selected */
+  }
+
+  /* --- 4. Link Alignment & Button Proportions --- */
+  .nav-link-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .nav-link.w-nav-link {
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    text-align: left !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+  .nav-link.w-nav-link:hover,
+  .nav-link.w-nav-link.w--current {
+    color: #10b981 !important;
+  }
+
+  .mega-menu-trigger {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  /* Strict block destruction on complex desktop layouts across viewport frames */
+  .mega-menu-dropdown-panel,
+  #projects-panel,
+  #insights-panel,
+  .drop-indicator::after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .primary-button.mobile-on {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin-top: 20px !important;
+    padding: 12px 24px !important;
+    background-color: #10b981 !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+  }
+
+  .primary-button.mobile-on .primary-button-text {
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+  }
+  
+  .primary-button.desktop-on {
+    display: none !important;
+  }
+
+  /* --- 5. Hamburger Menu Toggle Alignment Container --- */
+  .nav-button-wrap {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .hamburger-wrap.w-nav-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    cursor: pointer !important;
+  }
+}
+
+  /* ==========================================================================
+     CONTACT PAGE SOCIAL ENGAGEMENT STYLING PATTERNS
+     ========================================================================== */
+  .contact-social-section {
+    width: 100%;
+    margin-top: 50px;       /* Adds clear breathing space below the contact elements */
+    padding: 24px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    /* 🛠️ CRUCIAL FIX: Breaks out of grid columns and forces it below the form */
+    grid-column: 1 / -1 !important; 
+    clear: both !important;
+    float: none !important;
+  }
+
+  .social-row-label {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #475569; /* Slate Gray tint */
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .contact-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px; /* Margins out the spacing between Facebook and LinkedIn links */
+    align-items: center;
+  }
+
+  .social-handle-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    color: #0f172a !important; /* Signature Slate Navy Base */
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .social-icon-svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.25s ease;
+  }
+
+  .social-handle-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* ✨ Premium Interaction Micro-animations */
+  .social-handle-item:hover {
+    color: #10b981 !important; /* Smooth color-pop transition to Signature RISE Green */
+  }
+
+  .social-handle-item:hover .social-icon-svg {
+    transform: translateY(-2px); /* Delivers a tiny organic float effect */
+  }
+
+  /* ==========================================================================
+   METRIC CARD LOCAL SPACING OVERRIDE (SAFE FOR GLOBAL FONTS)
+   ========================================================================== */
+
+.metric-card-box {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;            /* Creates a clean gap between the numbers and labels */
+  align-items: flex-start !important;
+}
+
+.metric-value-row {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+
+.metric-number-display {
+  /* Locks the spacing properties for the local numbers */
+  letter-spacing: -0.01em !important;
+  line-height: 1 !important;
+}
+
+.metric-label-title {
+  /* 🛠️ SCOPED FIX: STOPS THE WORDS AND LETTERS FROM SQUISHING */
+  letter-spacing: normal !important; /* Pushes letters apart so they don't overlap */
+  word-spacing: normal !important;   /* Pushes individual words apart naturally */
+  
+  /* 🚨 ANTI-JAM PLACEMENT RENDER PROPERTIES */
+  line-height: 1.4 !important;       /* Adds breathing space if text wraps to two lines */
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   CUSTOM MOBILE RESPONSIVE NAVIGATION ENGINE
+   ========================================================================== */
+
+/* 📱 Targeted Breakpoint: Triggers on mobile screens and smaller tablets */
+@media (max-width: 991px) {
+  
+  /* 🛠️ Forces the parent navigation bar context to handle absolute layers */
+  header, .w-nav, nav {
+    position: relative !important;
+    z-index: 100000 !important;
+  }
+
+  /* 🛠️ BASE MOBILE MENU SETUP (Hidden by default, positioned under logo) */
+  .w-nav-menu, [class*="nav-menu"] {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important; /* Positions it cleanly directly underneath your logo header bar */
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    background-color: #ffffff !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08) !important;
+    
+    /* Layout link stacking direction rule */
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+
+  /* 🛠️ ACTIVE OPEN STATE: Instantly reveals menu when clicked */
+  .w-nav-menu.is-active, [class*="nav-menu"].is-active {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
+  }
+
+  /* 🛠️ CLEAN LINKS CONFIGURATION FOR MOBILE */
+  .w-nav-menu a, [class*="nav-menu"] a {
+    width: 100% !important;
+    padding: 10px 0 !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #0f172a !important; /* Signature Slate Navy */
+    text-align: left !important;
+    border-bottom: 1px solid #f1f5f9 !important; /* Adds premium divider lines between links */
+  }
+
+  .w-nav-menu a:last-child {
+    border-bottom: none !important;
+  }
+
+  /* 🛠️ INTERACTING STATE CLUSTERS (Dropdown grids fallback) */
+  .market-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* 🛠️ METRICS TEXT BOX CORRECTION */
+  .metric-card-box {
+    width: 100% !important;
+    padding: 16px !important;
+  }
+
+  .metric-number-display {
+    font-size: 2.75rem !important;
+  }
+
+  .metric-label-title {
+    font-size: 1rem !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+  }
+}
+
+/* ==========================================================================
+   PURE HYBRID MOBILE RESPONSIVENESS FIX FOR WEBFLOW STRUCTURES
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  /* 🛠️ FORCE HEADER HEADER ROW TO REMAIN PERFECTLY ALIGNED HORIZONTALLY */
+  .navbar-wrapper, [class*="navbar-wrapper"] {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 12px 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Prevent Logo frame from stretching out of line */
+  .brand-logo, .w-nav-brand {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 🛠️ THE HAMBURGER BUTTON FALLBACK: Auto-generates a clean toggle button if missing */
+  .menu-button, .w-nav-button, [class*="nav-toggle"] {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    z-index: 100002 !important;
+  }
+
+  /* Creates three crisp navigation bar indicators inside the hamburger element */
+  .menu-button::before,
+  .w-nav-button::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #0f172a; /* Signature Slate Navy */
+    border-radius: 2px;
+    box-shadow: 0 7px 0 #0f172a, 0 14px 0 #0f172a; /* Automatically builds the remaining bars */
+  }
+  .w-nav-button .w-icon-nav-menu { display: none !important; } /* Strips broken Webflow system font icons */
+
+  /* 🛠️ TRANSFORM NAVIGATION LAYER INTO A SMOOTH DROPDOWN BOX */
+  .nav-menu, .w-nav-menu {
+    display: none !important; /* Kept completely out of sight until activated */
+    position: absolute !important;
+    top: 100% !important; /* Snaps drop down cleanly right under your logo bar */
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+    background-color: #ffffff !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08) !important;
+    z-index: 100001 !important;
+    
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  /* 🛠️ OPEN TRIGGER MANIPULATION */
+  .w-nav-menu.is-mobile-active {
+    display: flex !important;
+  }
+
+  /* Re-format standard text links to expand edge-to-edge for mobile thumbs */
+  .nav-link, .w-nav-link {
+    width: 100% !important;
+    padding: 12px 0 !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    text-align: left !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    margin: 0 !important;
+  }
+
+  /* 🛠️ DISABLE MULTI-COLUMN SIDE PANEL GRIDS ON MOBILE VIEWPORTS */
+  .mega-menu-trigger {
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  .mega-menu-dropdown-panel, .mega-menu-inner-grid {
+    display: none !important; /* Hides horizontal panels so they don't leak out off-screen */
+    position: relative !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+}
+
+/* ==========================================================================
+   RISE RESPONSIVE MOBILE CORE ENGINE PATCH (MAX-WIDTH: 991PX)
+   ========================================================================== */
+@media (max-width: 991px) {
+  
+  /* 🛠️ NAVIGATION WRAPPER ALIGNMENT CORRECTION */
+  .navbar, .w-nav {
+    position: relative !important;
+    background-color: #ffffff !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+  }
+
+  .navbar-wrapper {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 🛠️ REMOVE MULTIPLE COPIES OF BROKEN HAMBURGER LOGIC */
+  .menu-button, .w-nav-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+  .w-nav-button .w-icon-nav-menu { display: none !important; }
+
+  /* 🛠️ MOBILE DROPDOWN CONTAINER BASE OVERRIDE */
+  .nav-menu, .w-nav-menu {
+    display: none !important; /* Hidden by default */
+    position: absolute !important;
+    top: 100% !important; /* Drops cleanly below your navbar */
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 75vh !important;
+    overflow-y: auto !important;
+    background-color: #ffffff !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1) !important;
+    
+    /* Forces elements into a neat vertical row stack */
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  /* Reveals container panel seamlessly when clicked */
+  .w-nav-menu.is-mobile-active {
+    display: flex !important;
+  }
+
+  /* 🛠️ CLEAN ACCORDION TEXT LINKS FORMATTING */
+  .nav-link, .w-nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 0 !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important; /* Signature Slate Navy */
+    text-align: left !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    margin: 0 !important;
+  }
+
+  /* 🛠️ COMPLETE MEGA MENU LAYOUT CONVERSION FOR MOBILE PORTALS */
+  .mega-menu-trigger {
+    width: 100% !important;
+  }
+
+  .drop-indicator::after {
+    content: ' ▾';
+    font-size: 0.9rem;
+    color: #10b981; /* Signature RISE Green Accent */
+  }
+
+  .mega-menu-dropdown-panel {
+    background-color: #f8fafc !important; /* Premium light grey inset backdrop contrast */
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    margin-top: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Toggle configuration bindings controlled by script layers */
+  .mega-menu-dropdown-panel.toggle-hidden {
+    display: none !important;
+  }
+  .mega-menu-dropdown-panel.is-panel-open {
+    display: block !important;
+  }
+
+  .mega-menu-inner-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  /* Sub-categories link adjustments */
+  .mega-left-sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    padding: 0 0 12px 0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+
+  .track-links-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    margin: 0 0 12px 0 !important;
+    list-style: none !important;
+  }
+
+  .track-item a {
+    display: inline-block !important;
+    padding: 6px 14px !important;
+    background-color: #e2e8f0 !important;
+    border-radius: 20px !important;
+    font-size: 0.9rem !important;
+    color: #475569 !important;
+    border: none !important;
+  }
+
+  .track-item.active a {
+    background-color: #10b981 !important; /* Highlights chosen sub-tracks */
+    color: #ffffff !important;
+  }
+
+  .mega-tab-content {
+    width: 100% !important;
+  }
+
+  .mega-content-column {
+    width: 100% !important;
+  }
+
+  .sub-category-links {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .sub-category-links li a {
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    text-decoration: none !important;
+    display: block !important;
+    border-bottom: none !important;
+    padding: 4px 0 !important;
+  }
+
+  .mega-sidebar-footer {
+    display: none !important; /* Strips desktop clutter button arrays */
+  }
+}
+
+/* ==========================================================================
+   STRICT MOBILE-ONLY VIEW NAVIGATION RESCUE (ZERO DESKTOP SIDE-EFFECTS)
+   ========================================================================== */
+
+/* 🚨 THIS FORCE MEDIA QUERY ENSURES DESKTOP CORES REMAIN 100% UNTOUCHED */
+@media screen and (max-width: 991px) {
+  
+  /* 🛠️ 1. ELIMINATE EMPTY UPPER DISPLAY GAP BY STANDARDIZING ROW BLOCK STACKING */
+  body, 
+  html, 
+  .pages-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+
+  /* 🛠️ 2. LOCK THE NAVBAR BLOCK FLUSH AGAINST THE SCREEN TOP BOUNDS */
+  .navbar, 
+  .w-nav {
+    position: relative !important; /* Overrides broken floating absolute placement bugs */
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 90px !important;    /* Guarantees full clearance height for the tagline text */
+    background-color: #ffffff !important; /* Forces solid, rich white backdrop canvas layer */
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 999999 !important;     /* Ensures logo stays safely layered above hero photos */
+    top: 0 !important;
+  }
+
+  /* 🛠️ 3. CLEAN COHESIVE AXIS ALIGNMENT FOR LOGO AND HAMBURGER SIGN */
+  .navbar-wrapper,
+  .container,
+  .w-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 24px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Locks your branding frame into natural dimensions */
+  .brand-logo, 
+  .w-nav-brand {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 🛠️ 4. STRIP WEBFLOW'S GHOST OVERLAY BOX WITHOUT STALLING CLICK TRIGGERS */
+  .w-nav-overlay {
+    height: 0 !important;
+    max-height: 0 !important;
+    min-height: 0 !important;
+    background: transparent !important;
+    overflow: visible !important; /* Crucial: Allows the real container card to spill down */
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 🛠️ 5. RE-STYLE ACCIDENTAL SQUISHED MOVEMENT ARRAYS INTO A ROUNDED DRAWER CARD */
+  /* Default closed configuration limits tracking boundaries */
+  .nav-menu, 
+  .w-nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+
+  /* Active Open State: Re-creates the uniform white container card you had working on Home */
+  .nav-menu.w--open,
+  .w-nav-menu.w--open {
+    display: flex !important; /* Activates layout block matrix parameters */
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important; /* Enables crisp finger-scrolling engine rows */
+    
+    background-color: #ffffff !important; 
+    border-radius: 16px !important;       /* Premium rounded card border radius look */
+    border: 1px solid #e2e8f0 !important; /* Clean outer card borderline edge */
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    
+    position: absolute !important;
+    top: 100% !important;                 /* Places dropdown exactly beneath the logo line */
+    left: 24px !important;                /* Balanced margin padding inset space away from phone edges */
+    right: 24px !important;
+    width: calc(100% - 48px) !important;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12) !important;
+    z-index: 1000005 !important;
+    
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  /* 🛠️ 6. FORCIBLY RESTORE MOBILITY TEXT FIELDS FLOW RULES */
+  .nav-link-wrap,
+  .mega-menu-trigger {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+  }
+
+  .nav-link, 
+  .w-nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 16px !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;            /* Signature Slate Navy */
+    text-align: left !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #f1f5f9 !important; /* Clean divider line between items */
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Mask desktop multi-column panels so horizontal sub-links don't push outside screen fields */
+  .mega-menu-dropdown-panel,
+  .mega-menu-inner-grid {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+
+  /* 🛠️ 7. EXPLICITLY STYLES ONLY THE 'GET IN TOUCH' CALL-TO-ACTION BUTTON ACCENT */
+  .nav-link.target-action-button,
+  .w-nav-link[href*="contact"],
+  a.nav-link:last-of-type {
+    background-color: #10b981 !important; /* Signature RISE Green Action Accent */
+    color: #ffffff !important;
+    text-align: center !important;
+    border-radius: 8px !important;        /* Clean interactive pill capsule button */
+    margin-top: 16px !important;          /* Generates space separation above button block */
+    padding: 14px !important;
+    border-bottom: none !important;       /* Removes divider line from action block */
+    font-weight: 700 !important;
+  }
+
+  /* 🛠️ 8. COMPONENT BANNER STABILIZATION UNDER HEADER BASELINES */
+  header, 
+  .market-hero-section, 
+  .premium-about-hero, 
+  [class*="-hero"] {
+    position: relative !important;
+    margin-top: 0 !important;
+    padding-top: 40px !important; /* Leaves clear breathing space for the logo tagline sub-text */
+    z-index: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE-ONLY RESPONSIVE VISIBILITY OVERRIDE WRAPPER
+   ========================================================================== */
+@media screen and (max-width: 991px) {
+
+  /* 🚨 THE FORCE ACTIVE SWITCH: Triggered instantly by the click handler above */
+  .w-nav-menu.is-mobile-active,
+  .nav-menu.is-mobile-active {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important; /* Smooth scrolling if the link items run long */
+    
+    /* Styles the container into a clean, uniform solid white dropdown block */
+    background-color: #ffffff !important; 
+    border-radius: 16px !important;       /* Premium rounded card edges layout */
+    border: 1px solid #e2e8f0 !important; /* Outer card borderline */
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    
+    position: absolute !important;
+    top: 100% !important;                 /* Drops down cleanly right beneath your logo header row */
+    left: 24px !important;                /* Even inset margin margins away from phone frames */
+    right: 24px !important;
+    width: calc(100% - 48px) !important;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12) !important;
+    z-index: 999999 !important;
+    
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  /* 🛠️ NORMALIZES HORIZONTAL SPACE FLOW FOR LINKS WRAPPERS */
+  .nav-link-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .nav-link, 
+  .w-nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 16px !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;            /* Signature Slate Navy */
+    text-align: left !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #f1f5f9 !important; /* Clean horizontal separator divider line */
+    background-color: transparent !important;
+  }
+
+  /* 🛠️ CLEANS OUT HORIZONTAL DESKTOP CLUTTER CHANNELS FROM RETARDING THE LIST */
+  .mega-menu-dropdown-panel,
+  .w-nav-overlay {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+
+  /* 🛠️ KEEPS ONLY YOUR 'GET IN TOUCH' SELECTION CODED AS A GREEN BUTTON ACCENT */
+  .nav-link.target-action-button,
+  a.nav-link[href*="contact"] {
+    background-color: #10b981 !important; /* Signature RISE Green Action Accent */
+    color: #ffffff !important;
+    text-align: center !important;
+    border-radius: 8px !important;        
+    margin-top: 16px !important;          /* Generates space separation above button block */
+    padding: 14px !important;
+    border-bottom: none !important;       
+    font-weight: 700 !important;
+  }
+}
+
+/* Mobile/Tablet Breakpoint Configuration */
+@media screen and (max-width: 991px) {
+  .w-nav-menu {
+    display: none; /* Webflow scripts switch this to block/flex dynamically on click */
+  }
+  .w-nav-button {
+    display: block !important; /* Forces the hamburger lines icon to appear on mobile screens */
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .w-nav-button {
+    display: none !important; /* Hides the hamburger layout on desktop screens */
+  }
+  .w-nav-menu {
+    display: block !important;
+  }
+}
+
+/* ==========================================================================
+   RISE MOBILITY NAVIGATION POWER-FIX OVERRIDE (MAX-WIDTH: 991PX)
+   ========================================================================== */
+@media screen and (max-width: 991px) {
+
+  /* 🛠️ 1. GHOST NAVIGATION PROTECTION: Strips away Webflow's broken empty white overlay block */
+  .w-nav-overlay, 
+  [class*="nav-overlay"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* 🛠️ 2. STRUCTURE SEGREGATION STACK PACKAGING */
+  body, 
+  .pages-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+
+  /* 🛠️ 3. NAVBAR ROW STABILIZATION CONSTRAINTS */
+  .navbar, 
+  .w-nav {
+    position: relative !important; /* Strips absolute overlap layout float bugs */
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #ffffff !important; /* Forces solid white header backing */
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 999999 !important; /* Layers branding safely over waterfall photos */
+  }
+
+  /* 🛠️ 4. COHESIVE AXIS ROW ALIGNMENT FOR LOGO AND THE HAMBURGER ICON SIGN */
+  .navbar-wrapper,
+  .container,
+  .w-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 16px 24px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 🛠️ 5. THE TOUCH TRIGGER FIX: Forces button container area to capture finger input */
+  .menu-button, 
+  .w-nav-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+    z-index: 1000005 !important;
+    outline: none !important;
+  }
+
+  .w-nav-button .w-icon-nav-menu,
+  .menu-button .w-icon-nav-menu {
+    font-size: 30px !important;
+    color: #0f172a !important; /* Signature Slate Navy Tint */
+    display: block !important;
+  }
+
+  /* 🛠️ 6. DEFAULT CLOSED CONFIGURATION: Dropdown card stays completely compressed and hidden */
+  .nav-menu, 
+  .w-nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* 🚨 7. THE POWER-FIX ENGINE TRIGGER: Opens menu instantly when hamburger is pressed 🚨 */
+  /* This uses browser-level ':active' and ':focus-within' keys to override Webflow system blocks */
+  .w-nav-button:active ~ .w-nav-menu,
+  .w-nav-button:focus ~ .w-nav-menu,
+  .menu-button:active ~ .nav-menu,
+  .menu-button:focus ~ .nav-menu,
+  .navbar-wrapper:focus-within .w-nav-menu,
+  .navbar-wrapper:focus-within .nav-menu {
+    display: flex !important; /* Activates layout block parameters instantly */
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important; /* Smooth touch-scrolling functionality row strings */
+    
+    /* 🎨 Re-builds your premium rounded solid white dropdown card container */
+    background-color: #ffffff !important; 
+    border-radius: 16px !important;       
+    border: 1px solid #e2e8f0 !important; /* Clean outer card borderline edge */
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    
+    position: absolute !important;
+    top: 100% !important;                 /* Drops menu box down cleanly directly beneath the header bar line */
+    left: 24px !important;                /* Balanced margin padding inset space away from phone frames */
+    right: 24px !important;
+    width: calc(100% - 48px) !important;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12) !important;
+    z-index: 1000010 !important;
+    
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+
+  /* 🛠️ 8. FULL VISIBILITY ENFORCEMENT FOR INTERNAL LINKS SECTIONS */
+  .nav-link-wrap,
+  .mega-menu-trigger {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+  }
+
+  .nav-link, 
+  .w-nav-link {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 16px !important;
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;            /* Signature Slate Navy */
+    text-align: left !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #f1f5f9 !important; /* Light grey horizontal divider line separators */
+    background-color: transparent !important;
+    border-radius: 0 !important;
+  }
+
+  /* Mask desktop multi-column panels so horizontal sub-links don't push outside screen fields */
+  .mega-menu-dropdown-panel,
+  .mega-menu-inner-grid {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+
+  /* 🛠️ 9. EXPLICITLY STYLES ONLY THE 'GET IN TOUCH' ACTION BUTTON ACCENT ACCORDINGLY */
+  .nav-link.target-action-button,
+  .w-nav-link[href*="contact"],
+  a.nav-link:last-of-type {
+    background-color: #10b981 !important; /* Signature RISE Green Action Accent */
+    color: #ffffff !important;
+    text-align: center !important;
+    border-radius: 8px !important;        /* Clean interactive link layout capsule */
+    margin-top: 16px !important;          /* Displaces it below the prior text parameters */
+    padding: 14px !important;
+    border-bottom: none !important;       /* Removes divider line from action block */
+    font-weight: 700 !important;
+  }
+
+  /* 🛠️ 10. RE-POSITION WATERFALL HERO GRAPHICS DOWN TO PREVENT TEXT EXTINCTION */
+  header, 
+  .market-hero-section, 
+  .premium-about-hero, 
+  [class*="-hero"] {
+    position: relative !important;
+    margin-top: 0 !important;
+    padding-top: 40px !important; /* Leaves clear breathing space for the logo tagline sub-text */
+    z-index: 1 !important;
+  }
+}
+
+/* ==========================================================================
+   PREMIUM PROJECTS PORTFOLIO CORE ARCHITECTURE
+   ========================================================================== */
+
+.project-hero-section {
+  width: 100%;
+  padding: 165px 0 60px 0;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff !important;
+}
+
+/* 🖼️ Embedded Watermark Background Hook Layer */
+.project-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/trust.jpeg'); /* 👇 Change this to your default banner graphic path if desired */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  opacity: 0.12; /* Kept clean and elegant behind text titles */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.project-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.project-hero-wrapper {
+  max-width: 850px;
+  text-align: left;
+}
+
+.project-tagline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981 !important; /* Signature RISE Green */
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.project-main-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #0f172a !important; /* Signature Slate Navy */
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.project-sub-heading {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #10b981 !important;
+  margin: 0 0 24px 0;
+}
+
+.project-body-section {
+  width: 100% !important;
+  padding: 60px 0 100px 0 !important;
+  background-color: #f8fafc !important; /* Canvas color framing style */
+  box-sizing: border-box !important;
+}
+
+/* 💎 Sidebar Left / Preview Right Master Grid Matrix */
+.project-explorer-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .project-explorer-layout {
+    grid-template-columns: 0.9fr 1.1fr; /* Premium split workspace canvas ratios */
+    gap: 64px;
+  }
+}
+
+/* 📋 Left Side Track Navigation List Items Styling */
+.project-sidebar-panel {
+  width: 100%;
+}
+
+.project-track-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-track-item {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-track-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #475569; /* Balanced slate text */
+  text-decoration: none !important;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+.track-indicator {
+  min-width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cbd5e1; /* Off dot indicator */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ✨ Active link selections properties */
+.project-track-item.active {
+  border-color: #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.06);
+}
+
+.project-track-item.active .project-track-link {
+  color: #0f172a; /* Locks bold Slate Navy focus colors */
+}
+
+.project-track-item.active .track-indicator {
+  background-color: #10b981; /* High-glow green indicator dot */
+  transform: scale(1.2);
+}
+
+.project-track-item:hover:not(.active) {
+  border-color: #cbd5e1;
+  transform: translateX(4px); /* Gently offsets container cards rightwards */
+}
+
+/* 🖼️ Right Side Viewer Screen Workspaces */
+.project-preview-display-window {
+  width: 100%;
+  position: sticky;
+  top: 40px; /* Locks card display pinned during scroll actions */
+}
+
+.project-preview-content {
+  display: none; /* Keeps background content maps out of view natively */
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 10px 15px -3px rgba(15, 23, 42, 0.04);
+}
+
+/* Forces activation reveal states handled by script automation loop blocks */
+.project-preview-content.active-preview {
+  display: block;
+  animation: fadeInFrame 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInFrame {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.project-preview-image-box {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background-color: #f1f5f9;
+}
+
+.project-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Forces crisp photo scale fills without warping shapes */
+}
+
+.project-preview-text-box {
+  width: 100%;
+}
+
+.project-card-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 14px 0;
+  line-height: 1.3;
+}
+
+.project-preview-description {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+}
+
+/* 📱 Responsive Structural Adjustments Matrix */
+@media (max-width: 991px) {
+  .project-hero-section { padding-top: 120px; padding-bottom: 40px; }
+  .project-main-heading { font-size: 3.25rem; }
+  .project-preview-image-box { height: 200px; }
+  
+  /* On small screens, cards collapse to stack chronologically for touch thumbs */
+  .project-preview-content { padding: 20px; }
+}
+
+/* ==========================================================================
+   MEGA MENU SUB-LINK TYPOGRAPHY & CLASH CORRECTION
+   ========================================================================== */
+
+/* 💻 Desktop Window View Constraint Layouts */
+@media screen and (min-width: 992px) {
+  
+  /* 🛠️ FIXES THE TEXT BUG: Shrinks huge navigation layout links down to fit cleanly */
+  .projects-grid-layout .project-track-link,
+  .mega-projects-sidebar .project-track-link,
+  .mega-menu-dropdown-panel .sub-category-links li a,
+  .mega-menu-dropdown-panel .project-track-list li a {
+    font-size: 0.92rem !important;          /* Elegant, professional layout scale sizing */
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    padding: 8px 12px !important;           /* Compact breathing padding spacing rows */
+    display: block !important;
+    color: #475569 !important;              /* Crisp Slate Gray */
+    white-space: normal !important;         /* Allows natural text breaks without horizontal distortion */
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  /* Smooth hover color shift pop to RISE Signature Green */
+  .projects-grid-layout .project-track-item a:hover,
+  .mega-menu-dropdown-panel .sub-category-links li a:hover {
+    color: #10b981 !important;
+    background-color: #f8fafc !important;   /* Premium subtle grey hover background */
+    padding-left: 16px !important;          /* Micro-interaction sliding hover response */
+  }
+
+  /* Compresses the massive gap heights inside the sub-link block columns list */
+  .mega-projects-sidebar .project-track-list,
+  .mega-menu-dropdown-panel .sub-category-links {
+    gap: 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@keyframes projectFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   PRODUCTION CARD STATE RESET SWITCHES
+   ========================================================================== */
+.project-preview-content {
+  display: none;
+  box-sizing: border-box !important;
+}

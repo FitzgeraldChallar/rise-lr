@@ -29,10 +29,43 @@
     .market-hero-section {
       width: 100%;
       padding: 165px 0 60px 0;
-      background-color: #ffffff !important;
       box-sizing: border-box;
       display: block !important;
       visibility: visible !important;
+      
+      /* Crucial layout setup for the background layer */
+      position: relative;
+      overflow: hidden;
+      background-color: #ffffff !important; /* Base color behind the image tint */
+    }
+
+    /* 🖼️ Independent Background Watermark & Overlay Layer */
+    .market-hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      /* 👇 PASTE THE UNIQUE IMAGE PATH FOR THIS PAGE INSIDE THE QUOTES 👇 */
+      background-image: url('../images/construction.png');
+      
+      background-repeat: no-repeat;
+      background-position: center center;
+      
+      /* 🛠️ Stretches the image to fill the screen edge-to-edge with zero cropping */
+      background-size: 100% 100%; 
+      
+      /* 👇 CONTROL IMAGE OPACITY HERE (0.0 to 1.0) 👇 */
+      opacity: 0.3; 
+      
+      /* 👇 OPTIONAL OVERLAY TINT 👇 
+         Uncomment the line below if you need an extra colored overlay mask over the image */
+      /* background-color: rgba(255, 255, 255, 0.4); */
+      
+      z-index: 1;
+      pointer-events: none;
     }
 
     .market-container {
@@ -41,6 +74,10 @@
       margin: 0 auto;
       padding: 0 24px;
       box-sizing: border-box;
+      
+      /* Pushes content cleanly forward over the background graphic */
+      position: relative;
+      z-index: 2;
     }
 
     .market-hero-wrapper {
@@ -162,7 +199,8 @@
         gap: 64px;
       }
     }
-  </style>
+</style>
+
 <body>
 <div class="pages-wrapper">
     
@@ -502,5 +540,23 @@
     });
   });
 </script>
+<!-- Lightweight Custom Mobile Navigation Controller -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 🛠️ Adjust these classes if your hamburger button or menu use different names!
+    const menuButton = document.querySelector('.w-nav-button') || document.querySelector('[class*="nav-button"]');
+    const navMenu = document.querySelector('.w-nav-menu') || document.querySelector('[class*="nav-menu"]');
+    
+    if (menuButton && navMenu) {
+      menuButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Toggles active state classes on both elements
+        menuButton.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

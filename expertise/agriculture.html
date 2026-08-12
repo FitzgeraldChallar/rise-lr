@@ -23,146 +23,182 @@
     });
   </script>
   <style>
-    /* ==========================================================================
-       PREMIUM MARKET SUB-PAGE CUSTOM STYLING PATCH
-       ========================================================================== */
-    .market-hero-section {
-      width: 100%;
-      padding: 165px 0 60px 0;
-      background-color: #ffffff !important;
-      box-sizing: border-box;
-      display: block !important;
-      visibility: visible !important;
-    }
+  /* ==========================================================================
+     PREMIUM MARKET SUB-PAGE CUSTOM STYLING PATCH
+     ========================================================================== */
 
-    .market-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      box-sizing: border-box;
-    }
+  .market-hero-section {
+    width: 100%;
+    padding: 165px 0 60px 0;
+    box-sizing: border-box;
+    display: block !important;
+    visibility: visible !important;
+    
+    /* Crucial layout setup for the background layer */
+    position: relative; 
+    overflow: hidden;
+    background-color: #ffffff !important; /* Base color behind the image tint */
+  }
 
-    .market-hero-wrapper {
-      max-width: 850px;
-      text-align: left;
-    }
+  /* 🖼️ Independent Background Watermark & Overlay Layer */
+  .market-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Loads your image path */
+    background-image: url('../images/agriculture.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    /* 👇 CONTROL IMAGES OPACITY HERE (0.0 to 1.0) 👇 */
+    opacity: 0.3; /* Low opacity keeps the image subtle behind text */
+    
+    /* 👇 OPTIONAL OVERLAY TINT 👇 
+       Uncomment the line below if you need an extra colored overlay mask over the image */
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    
+    z-index: 1;
+    pointer-events: none;
+  }
 
-    .market-tagline {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #10b981 !important; /* Signature RISE Green */
-      font-weight: 700;
-      margin-bottom: 14px;
-      display: inline-block;
-    }
+  .market-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+    
+    /* Pushes content cleanly forward over the background graphic */
+    position: relative; 
+    z-index: 2; 
+  }
 
-    .market-main-heading {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 2.5rem;
-      line-height: 1.2;
-      font-weight: 700;
-      color: #0f172a !important; /* Signature Slate Navy */
-      letter-spacing: -0.02em;
-      margin: 0 0 16px 0;
-    }
+  .market-hero-wrapper {
+    max-width: 850px;
+    text-align: left;
+  }
 
-    .market-sub-heading {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 1.4rem;
-      line-height: 1.3;
-      font-weight: 600;
-      color: #10b981 !important;
-      margin: 0 0 24px 0;
-    }
+  .market-tagline {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #10b981 !important; /* Signature RISE Green */
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
 
-    .market-body-section {
-      width: 100% !important;
-      padding: 60px 0 100px 0 !important;
-      background-color: #f8fafc !important; /* Subtle background canvas framing */
-      box-sizing: border-box !important;
-      display: block !important;
-      visibility: visible !important;
-    }
+  .market-main-heading {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #0f172a !important; /* Signature Slate Navy */
+    letter-spacing: -0.02em;
+    margin: 0 0 16px 0;
+  }
 
+  .market-sub-heading {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #10b981 !important;
+    margin: 0 0 24px 0;
+  }
+
+  .market-body-section {
+    width: 100% !important;
+    padding: 60px 0 100px 0 !important;
+    background-color: #f8fafc !important; /* Subtle background canvas framing */
+    box-sizing: border-box !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .market-content-grid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .market-text-panel {
+    font-family: 'Inter Tight', sans-serif !important;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    color: #475569 !important;
+  }
+
+  .market-text-panel p {
+    margin: 0 0 24px 0 !important;
+  }
+
+  .market-text-panel p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Floating callout list card */
+  .market-focus-box {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 32px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
+  }
+
+  .focus-box-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 16px 0;
+  }
+
+  .focus-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .focus-list li {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.95rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .focus-list li::before {
+    content: '✓';
+    color: #10b981;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .market-main-heading { font-size: 3.25rem; }
+    .market-sub-heading { font-size: 1.65rem; }
+  }
+
+  @media (min-width: 992px) {
     .market-content-grid {
-      display: grid !important;
-      grid-template-columns: 1fr;
-      gap: 48px;
-      align-items: flex-start;
+      grid-template-columns: 1.4fr 1fr; /* Two-column premium split layout on desktop */
+      gap: 64px;
     }
+  }
+</style>
 
-    .market-text-panel {
-      font-family: 'Inter Tight', sans-serif !important;
-      font-size: 1.1rem !important;
-      line-height: 1.7 !important;
-      color: #475569 !important;
-    }
-
-    .market-text-panel p {
-      margin: 0 0 24px 0 !important;
-    }
-
-    .market-text-panel p:last-child {
-      margin-bottom: 0 !important;
-    }
-
-    /* Floating callout list card */
-    .market-focus-box {
-      background-color: #ffffff !important;
-      border: 1px solid #e2e8f0 !important;
-      border-radius: 16px !important;
-      padding: 32px !important;
-      box-sizing: border-box !important;
-      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
-    }
-
-    .focus-box-title {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin: 0 0 16px 0;
-    }
-
-    .focus-list {
-      list-style: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .focus-list li {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 0.95rem;
-      color: #475569;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .focus-list li::before {
-      content: '✓';
-      color: #10b981;
-      font-weight: 700;
-    }
-
-    @media (min-width: 768px) {
-      .market-main-heading { font-size: 3.25rem; }
-      .market-sub-heading { font-size: 1.65rem; }
-    }
-
-    @media (min-width: 992px) {
-      .market-content-grid {
-        grid-template-columns: 1.4fr 1fr; /* Two-column premium split layout on desktop */
-        gap: 64px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -418,46 +454,51 @@
 </div> <!-- Closes .navbar -->
 
  <!-- Page Intro Header Panel -->
-    <header class="market-hero-section">
-      <div class="market-container">
-        <div class="market-hero-wrapper">
-          <span class="market-tagline">Markets &amp; Sectors</span>
-          <h1 class="market-main-heading">Agriculture</h1>
-          <h2 class="market-sub-heading">Promoting sustainable, climate-resilient, and inclusive agricultural systems.</h2>
-        </div>
+    <!-- Background Pictorial Watermark -->
+<div class="site-watermark"></div>
+
+<!-- Page Intro Header Panel -->
+<header class="market-hero-section">
+  <div class="market-container">
+    <div class="market-hero-wrapper">
+      <span class="market-tagline">Markets &amp; Sectors</span>
+      <h1 class="market-main-heading">Agriculture</h1>
+      <h2 class="market-sub-heading">Promoting sustainable, climate-resilient, and inclusive agricultural systems.</h2>
+    </div>
+  </div>
+</header>
+
+<!-- Brief & Precise Content Block -->
+<main class="market-body-section">
+  <div class="market-container">
+    <div class="market-content-grid">
+      
+      <!-- Left Column: Executive Statement -->
+      <div class="market-text-panel">
+        <p>
+          RISE promotes sustainable, climate-resilient, and inclusive agricultural systems that strengthen food security, improve livelihoods, and support responsible natural resource management. Our work focuses on climate-smart agriculture, sustainable land and soil management, agro-ecology, agroforestry, food systems, agricultural value chains, agribusiness development, and the empowerment of smallholder farmers, women, and youth.
+        </p>
+        <p>
+          Through research, technical assistance, capacity building, stakeholder engagement, and strategic partnerships, RISE supports innovative agricultural solutions that enhance productivity, build resilience to climate change, protect ecosystems, and contribute to sustainable rural development.
+        </p>
       </div>
-    </header>
 
-    <!-- Brief & Precise Content Block -->
-    <main class="market-body-section">
-      <div class="market-container">
-        <div class="market-content-grid">
-          
-          <!-- Left Column: Executive Statement -->
-          <div class="market-text-panel">
-            <p>
-              RISE promotes sustainable, climate-resilient, and inclusive agricultural systems that strengthen food security, improve livelihoods, and support responsible natural resource management. Our work focuses on climate-smart agriculture, sustainable land and soil management, agro-ecology, agroforestry, food systems, agricultural value chains, agribusiness development, and the empowerment of smallholder farmers, women, and youth.
-            </p>
-            <p>
-              Through research, technical assistance, capacity building, stakeholder engagement, and strategic partnerships, RISE supports innovative agricultural solutions that enhance productivity, build resilience to climate change, protect ecosystems, and contribute to sustainable rural development.
-            </p>
-          </div>
-
-          <!-- Right Column: Brief Capabilities List Box -->
-          <div class="market-focus-box">
-            <h3 class="focus-box-title">Sector Focus Areas</h3>
-            <ul class="focus-list">
-              <li>Climate-Smart Agriculture</li>
-              <li>Agroforestry &amp; Agro-ecology</li>
-              <li>Sustainable Land &amp; Soil Management</li>
-              <li>Value Chain &amp; Agribusiness Development</li>
-              <li>Smallholder &amp; Youth Empowerment</li>
-            </ul>
-          </div>
-
-        </div>
+      <!-- Right Column: Brief Capabilities List Box -->
+      <div class="market-focus-box">
+        <h3 class="focus-box-title">Sector Focus Areas</h3>
+        <ul class="focus-list">
+          <li>Climate-Smart Agriculture</li>
+          <li>Agroforestry &amp; Agro-ecology</li>
+          <li>Sustainable Land &amp; Soil Management</li>
+          <li>Value Chain &amp; Agribusiness Development</li>
+          <li>Smallholder &amp; Youth Empowerment</li>
+        </ul>
       </div>
-    </main>
+
+    </div>
+  </div>
+</main>
+
 
 
 <script>
@@ -506,5 +547,23 @@
     });
   });
 </script>
+<!-- Lightweight Custom Mobile Navigation Controller -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 🛠️ Adjust these classes if your hamburger button or menu use different names!
+    const menuButton = document.querySelector('.w-nav-button') || document.querySelector('[class*="nav-button"]');
+    const navMenu = document.querySelector('.w-nav-menu') || document.querySelector('[class*="nav-menu"]');
+    
+    if (menuButton && navMenu) {
+      menuButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Toggles active state classes on both elements
+        menuButton.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>

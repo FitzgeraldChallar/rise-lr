@@ -161,6 +161,62 @@ spurious results.`)}}return!1};class j{constructor(e,t="GraphQL request",n={line
       ok
     }
   }
+
+  /* ==========================================================================
+   RISE MOBILITY NAV TOGGLE ENGINE - ANTI-OVERWRITE ENGINE
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", function() {
+  const mobileTrigger = document.querySelector(".w-nav-button") || document.querySelector(".menu-button");
+  const layoutMenu = document.querySelector(".w-nav-menu") || document.querySelector(".nav-menu");
+  
+  if (mobileTrigger && layoutMenu) {
+    
+    // 🛠️ 1. CORE CLICK INTERCEPTOR
+    mobileTrigger.addEventListener("click", function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      layoutMenu.classList.toggle("is-mobile-active");
+      
+      if (layoutMenu.classList.contains("is-mobile-active")) {
+        layoutMenu.style.setProperty("display", "flex", "important");
+      } else {
+        layoutMenu.style.setProperty("display", "none", "important");
+      }
+    });
+
+    // 🛠️ 2. THE ANTI-OVERWRITE ENGINE (Watches for Webflow's automated system overrides)
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === "style") {
+          const hasActiveClass = layoutMenu.classList.contains("is-mobile-active");
+          const currentDisplay = layoutMenu.style.display;
+          
+          // If our active mobile class is active, NEVER allow Webflow to turn it to "none"
+          if (hasActiveClass && currentDisplay !== "flex") {
+            layoutMenu.style.setProperty("display", "flex", "important");
+          } 
+          // If our active mobile class is removed, NEVER allow Webflow to pop it open
+          else if (!hasActiveClass && currentDisplay !== "none") {
+            layoutMenu.style.setProperty("display", "none", "important");
+          }
+        }
+      });
+    });
+
+    // Tells the browser engine to start actively tracking the style changes on the menu drawer
+    observer.observe(layoutMenu, { attributes: true, attributeFilter: ["style"] });
+
+    // 🛠️ 3. CLEAN BACKGROUND OUTSIDE-CLICK DISMISSAL
+    document.addEventListener("click", function(e) {
+      if (!layoutMenu.contains(e.target) && !mobileTrigger.contains(e.target)) {
+        layoutMenu.classList.remove("is-mobile-active");
+        layoutMenu.style.setProperty("display", "none", "important");
+      }
+    });
+  }
+});
+
 `,c=(0,r.default)`
   mutation CheckoutUpdateShippingMethod($id: String) {
     ecommerceUpdateShippingMethod(methodId: $id) {
