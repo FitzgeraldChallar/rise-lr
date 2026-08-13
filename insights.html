@@ -12,6 +12,226 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://googleapis.com" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({ google: { families: ["Anton:300,400,500,600,700","Inter Tight:300,400,500,600,700"] } });</script>
+<style>
+  /* ==========================================================================
+     RISE INSIGHTS — FIXED HERO IMAGE POSITIONAL CONTRAST ENGINE
+     ========================================================================== */
+
+  /* Import Editorial & Premium Typography Systems */
+  @import url('https://googleapis.com');
+
+  .premium-insights-wrapper * {
+    box-sizing: border-box;
+  }
+
+  /* --- Premium Typography Hierarchy --- */
+  .insights-display-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.35rem, 5.5vw, 4.25rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: #0f172a; 
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin: 0 0 24px 0;
+  }
+
+  .insights-hero-intro {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.65;
+    color: #334155;
+    max-width: 580px;
+    margin: 0 0 40px 0;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .insights-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    text-transform: uppercase;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .insights-section-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22b38a;
+    margin: 0 0 64px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  /* --- Advanced Multi-Layer Insights Hero Layout Component --- */
+  .premium-insights-hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0fdf4 !important;
+    padding: clamp(120px, 12vw, 180px) 0 clamp(100px, 10vw, 140px) 0;
+    display: flex;
+    align-items: center;
+    min-height: 70vh; /* Premium fluid cinematic height box */
+  }
+
+  /* 🖼️ Sharp Foreground Image Layer (Forces Subject Frame Optimization) */
+  .insights-hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 👇 FIX: Locks horizontal anchor over the right subject and 0% from the vertical ceiling edge */
+    object-position: 85% 0%; 
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* 🟢 Precision Left-Heavy Gradient Protection Shield */
+  .insights-hero-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 👇 Dense coverage on the left that clears completely by 65% to leave the man unblurred and colorful */
+    background: linear-gradient(
+      90deg, 
+      rgba(240, 253, 244, 1) 0%, 
+      rgba(240, 253, 244, 0.98) 30%, 
+      rgba(240, 253, 244, 0.8) 55%, 
+      rgba(255, 255, 255, 0) 75%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .insights-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+  }
+
+  /* --- Editorial Image-Free Section System --- */
+  .insights-section {
+    padding: clamp(80px, 12vw, 150px) 0;
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .asymmetric-insights-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* --- Modern Editorial Row Matrix --- */
+  .topic-row-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .topic-editorial-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px 40px;
+    padding: 44px 0;
+    border-top: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .topic-editorial-row:last-child {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .topic-meta-block {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .topic-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #22b38a;
+    opacity: 0.8;
+  }
+
+  .topic-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .topic-description-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .topic-body-copy {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+  }
+
+  @media (min-width: 992px) {
+    .topic-editorial-row:hover {
+      padding-left: 20px;
+      background-color: #fcfdfd;
+      border-top-color: #0f172a;
+    }
+    .topic-editorial-row:hover .topic-title {
+      color: #22b38a;
+    }
+  }
+
+  /* --- Ultimate Responsive Breakpoint Matrix --- */
+  @media (min-width: 992px) {
+    .asymmetric-insights-layout {
+      grid-template-columns: 3.5fr 6.5fr;
+      gap: 80px;
+    }
+    .topic-editorial-row {
+      grid-template-columns: 4.5fr 5.5fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .insights-section {
+      padding: 80px 0;
+    }
+    .topic-editorial-row {
+      padding: 36px 0;
+    }
+    /* Changes linear mask logic to stack content top-to-bottom elegantly over portrait devices */
+    .premium-insights-hero::after {
+      background: linear-gradient(
+        180deg,
+        rgba(240, 253, 244, 0.98) 0%,
+        rgba(240, 253, 244, 0.85) 60%,
+        rgba(240, 253, 244, 0.3) 100%
+      );
+    }
+  }
+</style>
+
 </head>
 <body>
   <div class="pages-wrapper">
@@ -257,24 +477,109 @@
   </div> <!-- Closes .container -->
 </div> <!-- Closes .navbar -->
 
-          
-          
-        </div>
-      </nav>
-      
-      <div class="nav-button-wrap">
-        <div class="search-button-wrap">
-          <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
-        </div>
-        <a href="contact.html" class="primary-button desktop-on w-inline-block">
-          <div class="primary-button-texts nav">
-            <div class="primary-button-text">Get in Touch</div>
-            <div class="primary-button-text white">Get in Touch</div>
-          </div>
-          <div class="primary-button-bg"></div>
+          <div class="premium-insights-wrapper">
+
+  <!-- HERO COMPONENT: THE ONLY CONTAINER WITH A BACKGROUND PHOTO -->
+  <header class="premium-insights-hero">
+    <!-- 📷 Hero Image Anchor -->
+    <img src="images/insight.jpeg" alt="RISE Insights Hero Image" class="insights-hero-bg-img">
+    
+    <!-- 🟢 Asymmetric Safety Vignette Shield -->
+    <div class="insights-hero-mask"></div>
+    
+    <!-- 📑 Front-facing Editorial Text Column -->
+    <div class="container w-container">
+      <div class="insights-hero-content">
+        <h1 class="insights-display-title">
+          Ideas that move<br>projects forward.
+        </h1>
+        <p class="insights-hero-intro">
+          RISE turns field evidence, technical practice and Liberia’s development realities into clear perspectives for better decisions.
+        </p>
+        <a href="#topics" class="discover-btn-accent w-button" style="border-radius: 4px; padding: 16px 32px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; box-shadow: 0 4px 14px rgba(34,179,138,0.2);">
+          EXPLORE INSIGHTS
         </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION: EXPLORE BY TOPIC (PURE EDITORIAL TYPOGRAPHIC LAYOUT) -->
+  <section id="topics" class="insights-section">
+    <div class="container w-container">
+      <div class="asymmetric-insights-layout">
+        
+        <!-- Sticky Left Structural Header Pillar -->
+        <div>
+          <h2 class="insights-section-title">Explore by topic</h2>
+          <div class="insights-section-subtitle">Perspectives & Domains</div>
+        </div>
+        
+        <!-- Right Image-Free Dynamic Matrix List -->
+        <div class="topic-row-container">
+          
+          <!-- Row 1: Climate & Environment -->
+          <div class="topic-editorial-row">
+            <div class="topic-meta-block">
+              <span class="topic-num">01 //</span>
+              <h3 class="topic-title">Climate & Environment</h3>
+            </div>
+            <div class="topic-description-panel">
+              <p class="topic-body-copy">Adaptation, safeguards, restoration and environmental performance.</p>
+            </div>
+          </div>
+          
+          <!-- Row 2: Natural Resources -->
+          <div class="topic-editorial-row">
+            <div class="topic-meta-block">
+              <span class="topic-num">02 //</span>
+              <h3 class="topic-title">Natural Resources</h3>
+            </div>
+            <div class="topic-description-panel">
+              <p class="topic-body-copy">Responsible mining, governance and resource stewardship.</p>
+            </div>
+          </div>
+          
+          <!-- Row 3: Engineering & Energy -->
+          <div class="topic-editorial-row">
+            <div class="topic-meta-block">
+              <span class="topic-num">03 //</span>
+              <h3 class="topic-title">Engineering & Energy</h3>
+            </div>
+            <div class="topic-description-panel">
+              <p class="topic-body-copy">Resilient infrastructure, renewable energy and practical innovation.</p>
+            </div>
+          </div>
+          
+          <!-- Row 4: Agriculture & Livelihoods -->
+          <div class="topic-editorial-row">
+            <div class="topic-meta-block">
+              <span class="topic-num">04 //</span>
+              <h3 class="topic-title">Agriculture & Livelihoods</h3>
+            </div>
+            <div class="topic-description-panel">
+              <p class="topic-body-copy">Climate-smart production, value chains and local resilience.</p>
+            </div>
+          </div>
+          
+          <!-- Row 5: Data & Learning -->
+          <div class="topic-editorial-row">
+            <div class="topic-meta-block">
+              <span class="topic-num">05 //</span>
+              <h3 class="topic-title">Data & Learning</h3>
+            </div>
+            <div class="topic-description-panel">
+              <p class="topic-body-copy">Research, GIS, monitoring, evaluation and evidence use.</p>
+            </div>
+          </div>
+          
+        </div> <!-- End of Topic Rows Stack -->
         
       </div>
+    </div>
+  </section>
+
+</div>
+
 
     </div>
   </div>

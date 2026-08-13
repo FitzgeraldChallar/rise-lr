@@ -12,6 +12,357 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://googleapis.com" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({ google: { families: ["Anton:300,400,500,600,700","Inter Tight:300,400,500,600,700"] } });</script>
+  <style>
+  /* ==========================================================================
+     RISE CAREERS — ELITE ASYMMETRIC VISUAL ENGINE
+     ========================================================================== */
+
+  /* Import Editorial & Premium Typography Systems */
+  @import url('https://googleapis.com');
+
+  .premium-careers-hero * {
+    box-sizing: border-box;
+  }
+
+  /* --- Premium Typography Hierarchy Overhaul --- */
+  .careers-display-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: #0f172a; 
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin: 0 0 24px 0;
+  }
+
+  .careers-hero-intro {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.65;
+    color: #334155;
+    max-width: 580px;
+    margin: 0 0 40px 0;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .careers-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    text-transform: uppercase;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .careers-section-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22b38a;
+    margin: 0 0 48px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  /* --- Advanced Multi-Layer Hero Layout Component --- */
+  .premium-careers-hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0fdf4 !important;
+    padding: clamp(140px, 15vw, 220px) 0 clamp(100px, 12vw, 140px) 0;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  /* 🖼️ Sharp Foreground Image Layer (Forces Man's Head into Frame) */
+  .careers-hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 👇 Anchors the crop line directly to the absolute top edge of the photo */
+    object-position: center top; 
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* 🟢 Targeted Left-Heavy Text Protection Shield */
+  .careers-hero-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 👇 Completely transparent on the right to preserve raw image color & sharpness */
+    background: linear-gradient(
+      90deg, 
+      rgba(240, 253, 244, 1) 0%, 
+      rgba(240, 253, 244, 0.96) 35%, 
+      rgba(240, 253, 244, 0.75) 55%, 
+      rgba(240, 253, 244, 0) 80%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .careers-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+  }
+
+  /* --- Global Structural Sections --- */
+  .careers-section {
+    padding: clamp(80px, 10vw, 130px) 0;
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .asymmetric-split-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* --- Why RISE Premium Layout --- */
+  .why-rise-visual-grid {
+    display: grid;
+    grid-template-columns: 4.5fr 5.5fr;
+    gap: 40px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .why-rise-photo-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    background-color: #f0fdf4;
+  }
+
+  .why-rise-photo-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .why-rise-text-panel {
+    padding: 48px 48px 48px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+
+  .editorial-card-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .editorial-card-item h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+  }
+
+  .editorial-card-item p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* --- Premium Floating Tag System --- */
+  .pillars-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .pillar-premium-tag {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 16px 28px;
+    border-radius: 100px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+  }
+
+  .pillar-premium-tag:hover {
+    border-color: #22b38a;
+    color: #ffffff;
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(15,23,42,0.08);
+  }
+
+  /* --- Glassmorphic Notice Layout --- */
+  .immersive-notice-banner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f0fdf4;
+    padding: clamp(48px, 6vw, 80px);
+    border: 1px solid #dcfce7;
+  }
+
+  .immersive-notice-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6;
+  }
+
+  .notice-blend-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(220, 252, 231, 0.95) 30%, rgba(240, 253, 244, 0.75) 100%);
+    z-index: 2;
+  }
+
+  .notice-inner-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .notice-tag-glass {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(34, 179, 138, 0.3);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #115e59;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+
+  .notice-headline {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.85rem, 3.5vw, 2.85rem);
+    text-transform: uppercase;
+    color: #0f172a;
+    line-height: 1.05;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .notice-body-copy {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #334155;
+    margin: 0;
+  }
+
+  /* Footnote Row */
+  .promise-footer-row {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .promise-footer-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0f172a;
+    letter-spacing: 0.08em;
+  }
+
+  .promise-footer-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* --- Responsive Matrix --- */
+  @media (min-width: 992px) {
+    .asymmetric-split-layout {
+      grid-template-columns: 3fr 7fr;
+      gap: 64px;
+    }
+    .notice-inner-grid {
+      grid-template-columns: 4.5fr 5.5fr;
+      gap: 64px;
+    }
+    .promise-footer-row {
+      grid-template-columns: 2.5fr 7.5fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .why-rise-visual-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .why-rise-text-panel {
+      padding: 40px;
+    }
+    /* Switches to a clean top-to-bottom protective overlay context for small viewports */
+    .careers-hero-mask {
+      background: linear-gradient(
+        180deg,
+        rgba(240, 253, 244, 0.98) 0%,
+        rgba(240, 253, 244, 0.85) 60%,
+        rgba(240, 253, 244, 0.3) 100%
+      );
+    }
+  }
+
+  @media (max-width: 767px) {
+    .why-rise-text-panel {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .pillar-premium-tag {
+      width: 100%;
+      text-align: center;
+      padding: 14px 20px;
+    }
+  }
+</style>
+
 </head>
 <body>
   <div class="pages-wrapper">
@@ -257,27 +608,131 @@
   </div> <!-- Closes .container -->
 </div> <!-- Closes .navbar -->
 
-          
-          
-        </div>
-      </nav>
-      
-      <div class="nav-button-wrap">
-        <div class="search-button-wrap">
-          <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
-        </div>
-        <a href="contact.html" class="primary-button desktop-on w-inline-block">
-          <div class="primary-button-texts nav">
-            <div class="primary-button-text">Get in Touch</div>
-            <div class="primary-button-text white">Get in Touch</div>
-          </div>
-          <div class="primary-button-bg"></div>
-        </a>
-        
-      </div>
-
+<!-- HERO COMPONENT WITH NATIVE OBJECT-FIT MULTI-LAYER ENGINE -->
+<header class="premium-careers-hero">
+  <!-- 📷 Fixed Image Layer: Dynamically locked to the absolute top edge to prevent head cut-off -->
+  <img src="images/careers-hero.jpg" alt="Careers Image" class="careers-hero-bg-img">
+  
+  <!-- 🟢 Asymmetric Gradient Shield Layer: Fades completely on the right for raw color clarity -->
+  <div class="careers-hero-mask"></div>
+  
+  <!-- 📑 Foreground Text Content Link Wrapper -->
+  <div class="container w-container">
+    <div class="careers-hero-content">
+      <h1 class="careers-display-title">
+        Build your career<br>where science meets impact.
+      </h1>
+      <p class="careers-hero-intro">
+        Join a multidisciplinary Liberian team solving environmental, engineering and development challenges that matter.
+      </p>
+      <a href="#vacancies" class="discover-btn-accent w-button" style="border-radius: 4px; padding: 16px 32px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; box-shadow: 0 4px 14px rgba(34,179,138,0.2);">
+        VIEW OPEN ROLES
+      </a>
     </div>
   </div>
+</header>
+
+<!-- SECTION: WHY RISE -->
+<section class="careers-section">
+  <div class="container w-container">
+    
+    <div class="why-rise-visual-grid">
+      
+      <!-- Left Dynamic Image Side Panel with light green blend overlay -->
+      <div class="why-rise-photo-panel">
+        <img src="images/why-rise.jpg" alt="Why RISE Team Graphic">
+      </div>
+      
+      <!-- Right Content Side Panel Grid -->
+      <div class="why-rise-text-panel">
+        
+        <div class="editorial-card-item">
+          <h3>Meaningful work</h3>
+          <p>Contribute to solutions with visible value for clients, communities and the environment.</p>
+        </div>
+        
+        <div class="editorial-card-item">
+          <h3>Serious learning</h3>
+          <p>Grow through field exposure, collaboration and technical responsibility.</p>
+        </div>
+        
+        <div class="editorial-card-item">
+          <h3>Local insight, wider standards</h3>
+          <p>Apply Liberian knowledge alongside respected professional practice.</p>
+        </div>
+        
+        <div class="editorial-card-item">
+          <h3>Room to contribute</h3>
+          <p>Bring ideas, take ownership and help shape better ways of working.</p>
+        </div>
+        
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: AREAS OF CONTRIBUTION -->
+<section class="careers-section" style="background-color: #fafafa; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+  <div class="container w-container">
+    <div class="asymmetric-split-layout">
+      
+      <!-- Left Heading Anchor -->
+      <div>
+        <h2 class="careers-section-title">Where you could contribute</h2>
+        <div class="careers-section-subtitle">Functional Tracks</div>
+      </div>
+      
+      <!-- Right Floating Tag Pack -->
+      <div class="pillars-flex-wrap">
+        <div class="pillar-premium-tag">Technical consulting</div>
+        <div class="pillar-premium-tag">Project delivery</div>
+        <div class="pillar-premium-tag">Research and GIS</div>
+        <div class="pillar-premium-tag">Monitoring and evaluation</div>
+        <div class="pillar-premium-tag">Finance and operations</div>
+        <div class="pillar-premium-tag">Graduate and early-career assignments</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: VACANCIES -->
+<section id="vacancies" class="careers-section">
+  <div class="container w-container">
+    
+    <!-- Immersive Light Green Gradient Graphic Notice Container -->
+    <div class="immersive-notice-banner">
+      <img src="images/vacancies-bg.jpg" alt="Vacancies Background Texture">
+      <div class="notice-blend-layer"></div>
+      
+      <div class="notice-inner-grid">
+        <div>
+          <span class="notice-tag-glass">Talent Acquisition</span>
+          <h3 class="notice-headline">When no vacancy is listed</h3>
+        </div>
+        <div>
+          <p class="notice-body-copy">
+            There may be no open role today, but new opportunities arise as our portfolio grows. Follow this page for verified vacancies and application instructions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sincere Recruitment Footnote Row -->
+    <div class="promise-footer-row">
+      <div class="promise-footer-tag">Our hiring promise</div>
+      <p class="promise-footer-text">
+        RISE supports fair, merit-based recruitment and equal opportunity. We do not charge application or recruitment fees. Apply only through instructions published on our official channels.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
