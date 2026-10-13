@@ -15,162 +15,224 @@
 
   <style>
     /* ==========================================================================
-       PREMIUM EXPERTISE INTERFACE CUSTOM STYLING BLOCK
-       ========================================================================== */
-    
-    /* --- Inner Page Hero Title Layout Space --- */
-    .expertise-hero-section {
-      width: 100%;
-      padding: 165px 0 60px 0; /* Clears fixed navbar header boundaries comfortably */
-      background-color: #ffffff !important;
-      box-sizing: border-box;
-      display: block !important;
-      visibility: visible !important;
-    }
+   PREMIUM EXPERTISE INTERFACE CUSTOM STYLING BLOCK (UPDATED)
+   ========================================================================== */
 
-    .expertise-hero-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      box-sizing: border-box;
-    }
+/* --- Inner Page Hero Title Layout Space --- */
+.expertise-hero-section {
+  width: 100%;
+  padding: 165px 0 60px 0; /* Clears fixed navbar header boundaries comfortably */
+  background-color: #ffffff !important;
+  box-sizing: border-box;
+  display: block !important;
+  visibility: visible !important;
+}
 
-    .expertise-hero-wrapper {
-      max-width: 850px;
-      text-align: left;
-    }
+.expertise-hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
 
-    .expertise-tagline-indicator {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #10b981 !important; /* Core RISE brand green accent */
-      font-weight: 700;
-      margin-bottom: 14px;
-      display: inline-block;
-    }
+.expertise-hero-wrapper {
+  max-width: 850px;
+  text-align: left;
+}
 
-    .expertise-main-title {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 2.5rem;
-      line-height: 1.25;
-      font-weight: 700;
-      color: #0f172a !important;
-      letter-spacing: -0.02em;
-      margin: 0 0 16px 0;
-    }
+.expertise-tagline-indicator {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #10b981 !important; /* Core RISE brand green accent */
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: inline-block;
+}
 
-    .expertise-subtext-intro {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.6;
-      color: #475569 !important;
-      margin: 0;
-    }
+.expertise-main-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a !important;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
 
-    /* --- Core Capabilities Grid Layout Canvas (FORCES REVEAL OVER WEBFLOW CONFLICTS) --- */
-    .expertise-main-content-canvas {
-      width: 100% !important;
-      padding: 40px 0 100px 0 !important;
-      background-color: #f8fafc !important; /* Professional secondary tinted frame layout canvas */
-      box-sizing: border-box !important;
-      display: block !important;           /* Overrides Webflow's hidden container rules */
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
+.expertise-subtext-intro {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #475569 !important;
+  margin: 0;
+}
 
-    .capabilities-grid-feed {
-      display: grid !important;
-      grid-template-columns: 1fr; /* Singular column layout standard by default for mobile viewports */
-      gap: 24px;
-    }
+/* --- Core Capabilities Grid Layout Canvas --- */
+.expertise-main-content-canvas {
+  width: 100% !important;
+  padding: 40px 0 100px 0 !important;
+  background-color: #f8fafc !important; /* Professional secondary tinted frame layout canvas */
+  box-sizing: border-box !important;
+  display: block !important;           
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 
-    /* --- Capability Interactive Layout Cards --- */
-    .capability-card-item {
-      background-color: #ffffff !important;
-      border: 1px solid #e2e8f0 !important;
-      border-radius: 16px !important;
-      padding: 32px !important;
-      box-sizing: border-box !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
-    }
+.capabilities-grid-feed {
+  display: grid !important;
+  grid-template-columns: 1fr; /* Singular column layout standard by default for mobile viewports */
+  gap: 24px;
+}
 
-    .capability-card-item:hover {
-      transform: translateY(-4px) !important;
-      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.06) !important;
-      border-color: #cbd5e1 !important;
-    }
+/* --- Capability Interactive Layout Cards --- */
+.capability-card-item {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
 
-    /* Card Top Vector Structural Rows */
-    .capability-card-top {
-      display: flex !important;
-      align-items: flex-start !important;
-      justify-content: space-between !important;
-      margin-bottom: 20px !important;
-    }
+.capability-card-item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.06) !important;
+  border-color: #cbd5e1 !important;
+}
 
-    .capability-icon-shape-wrapper {
-      width: 48px !important;
-      height: 48px !important;
-      border-radius: 10px !important;
-      background-color: #f0fdf4 !important; /* Very light transparent green backdrop */
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      color: #10b981 !important;
-      font-size: 1.35rem !important;
-      font-weight: 700 !important;
-    }
+/* Card Top Vector Structural Rows */
+.capability-card-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  margin-bottom: 20px !important;
+}
 
-    .capability-card-index {
-      font-family: 'Inter Tight', sans-serif !important;
-      font-size: 0.9rem !important;
-      font-weight: 600 !important;
-      color: #94a3b8 !important;
-    }
+.capability-icon-shape-wrapper {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 10px !important;
+  background-color: #f0fdf4 !important; /* Very light transparent green backdrop */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #10b981 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+}
 
-    /* Card Info Body Typography */
-    .capability-card-title {
-      font-family: 'Inter Tight', sans-serif !important;
-      font-size: 1.3rem !important;
-      font-weight: 700 !important;
-      color: #0f172a !important;
-      line-height: 1.35 !important;
-      margin: 0 0 12px 0 !important;
-    }
+.capability-card-index {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: #94a3b8 !important;
+}
 
-    .capability-card-description {
-      font-family: 'Inter Tight', sans-serif !important;
-      font-size: 0.95rem !important;
-      line-height: 1.55 !important;
-      color: #475569 !important;
-      margin: 0 !important;
-    }
+/* Card Info Body Typography */
+.capability-card-title {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  line-height: 1.35 !important;
+  margin: 0 0 20px 0 !important;
+  min-height: 54px; /* Keeps cards aligned evenly on matching screen sizes */
+}
 
-    /* --- Multi-Device Responsive Breakpoints --- */
-    @media (min-width: 640px) {
-      .capabilities-grid-feed {
-        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns split alignment standard on tablet scales */
-      }
-    }
+/* ==========================================================================
+   EXTENSIONS: INNER CONTENT & LIST STYLING (WHAT RISE SELLS & TARGET CLIENTS)
+   ========================================================================== */
+.capability-card-body-wrapper {
+  width: 100%;
+}
 
-    @media (min-width: 768px) {
-      .expertise-main-title {
-        font-size: 3.25rem !important;
-      }
-    }
+.capability-section-label {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #64748b !important;
+  font-weight: 700 !important;
+  margin: 0 0 12px 0 !important;
+}
 
-    @media (min-width: 992px) {
-      .capabilities-grid-feed {
-        grid-template-columns: repeat(3, 1fr) !important; /* Premium 3 columns grid architecture layout on laptop viewports */
-        gap: 32px !important;
-      }
-    }
+/* Bullet list format for "What RISE Sells" */
+.capability-offerings-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 32px 0 !important;
+}
+
+.capability-offerings-list li {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  color: #475569 !important;
+  padding-left: 18px !important;
+  position: relative !important;
+  margin-bottom: 8px !important;
+}
+
+.capability-offerings-list li::before {
+  content: "•" !important;
+  color: #10b981 !important; /* Green bullets matching brand logo */
+  font-weight: bold !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+/* Footer layout for Target Clients */
+.capability-card-footer {
+  border-top: 1px solid #f1f5f9 !important;
+  padding-top: 20px !important;
+  margin-top: auto !important;
+}
+
+/* Badge/Pill structure for target entities */
+.capability-client-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+
+.client-tag {
+  font-family: 'Inter Tight', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  display: inline-block !important;
+}
+
+/* --- Multi-Device Responsive Breakpoints --- */
+@media (min-width: 640px) {
+  .capabilities-grid-feed {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns split alignment standard on tablet scales */
+  }
+}
+
+@media (min-width: 768px) {
+  .expertise-main-title {
+    font-size: 3.25rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .capabilities-grid-feed {
+    grid-template-columns: repeat(3, 1fr) !important; /* Premium 3 columns grid architecture layout on laptop viewports */
+    gap: 32px !important;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -299,6 +361,12 @@
       <!-- Left Column Panel: Project Links List -->
       <div class="mega-projects-sidebar">
         <ul class="project-track-list">
+
+          <!-- Item 6: Mantrac CAT Liberia -->
+          <li class="project-track-item" data-project="proj-mantrac">
+            <a href="projects.html#propertyappraisalvaluationmantrac"
+               class="project-track-link">Property Appraisal/Valuation for Mantrac CAT Liberia</a>
+          </li>
           <!-- Item 1 (Active by Default) -->
           <li class="project-track-item active" data-project="proj-allianz">
             <a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
@@ -375,6 +443,27 @@
           </p>
         </div>
 
+        <!-- Preview 06: Property Appraisal/Valuation for Mantrac CAT Liberia -->
+        <div id="proj-mantrac" class="project-preview-content">
+         <div class="project-preview-image-box">
+           <img
+             src="images/mantrac.jpeg"
+             loading="lazy"
+             alt="Property Appraisal and Valuation for Mantrac CAT Liberia"
+             class="project-preview-img"
+           >
+         </div>
+         <p class="project-preview-description">
+         As a major industrial player operating heavy equipment, power systems,
+         and specialized facilities in Liberia, Mantrac required an expert,
+         certified third-party appraisal of its real estate holdings and
+         physical infrastructure. RISE Liberia evaluated the fair market value,
+         structural integrity, and asset baseline of Mantrac's properties,
+         leveraging its technical expertise and consulting competencies.
+         </p>
+       </div>
+
+
       </div> <!-- Closes .mega-project-preview-panel -->
     </div> <!-- Closes .mega-menu-inner-grid -->
   </div> <!-- Closes .mega-menu-dropdown-panel -->
@@ -440,197 +529,130 @@
 </div>
 
 
-    <!-- Page Intro Header Panel Wrapper -->
-    <header class="expertise-hero-section">
-      <div class="expertise-hero-container">
-        <div class="expertise-hero-wrapper">
-          <span class="expertise-tagline-indicator">Our Competencies</span>
-          <h1 class="expertise-main-title">Bridging Science with Sustainable Action</h1>
-          <p class="expertise-subtext-intro">
-            RISE Consulting Group provides localized, data-driven, and community-owned engineering and ecological solutions to address Liberia's urgent development and infrastructure needs.
-          </p>
-        </div>
-      </div>
-    </header>
+    <!-- ==========================================
+     RISE PREMIUM EXPERTISE INTERFACE SECTION
+     ========================================== -->
+<section class="expertise-hero-section">
+  <div class="expertise-hero-container">
+    <div class="expertise-hero-wrapper">
+      <span class="expertise-tagline-indicator">Our Competencies</span>
+      <h1 class="expertise-main-title">Core Expertise & Strategic Capabilities</h1>
+      <p class="expertise-subtext-intro">We deliver integrated engineering, environmental, and geological compliance frameworks to drive sustainable asset development across global markets.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Capabilities Grid System Showcase -->
-    <main class="expertise-main-content-canvas">
-      <div class="expertise-hero-container">
-        <div class="capabilities-grid-feed">
+<main class="expertise-main-content-canvas">
+  <div class="expertise-hero-container">
+    <div class="capabilities-grid-feed">
+
+      <!-- Competency 01: Environmental, Social & Investment Compliance -->
+      <article class="capability-card-item">
+        <div class="capability-card-body-wrapper">
+          <div class="capability-card-top">
+            <div class="capability-icon-shape-wrapper">01</div>
+            <span class="capability-card-index">Strategic Pillar</span>
+          </div>
           
-          <!-- Card 01 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🌱</div>
-              <span class="capability-card-index">01</span>
-            </div>
-            <h3 class="capability-card-title">Agroforestry &amp; Climate Smart Agriculture</h3>
-            <p class="capability-card-description">Designing resilient land-use systems that restore soil biodiversity, increase agricultural yields, and mitigate regional climate disruption factors.</p>
+          <h2 class="capability-card-title">Environmental, Social & Investment Compliance</h2>
+          
+          <div class="capability-content-block">
+            <h3 class="capability-section-label">Core Offerings</h3>
+            <ul class="capability-offerings-list">
+              <li>ESIA/ESMP support</li>
+              <li>Compliance audits</li>
+              <li>Stakeholder mapping</li>
+              <li>Community engagement</li>
+              <li>Local-content planning</li>
+              <li>Environmental monitoring</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Card 02 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">⚡</div>
-              <span class="capability-card-index">02</span>
-            </div>
-            <h3 class="capability-card-title">Renewable Energy &amp; Waste Management</h3>
-            <p class="capability-card-description">Developing circular economy pipelines and environmental waste-to-energy frameworks to clean municipal and community footprints.</p>
+        <div class="capability-card-footer">
+          <h3 class="capability-section-label">Target Clients</h3>
+          <div class="capability-client-tags">
+            <span class="client-tag">Mining Companies</span>
+            <span class="client-tag">Infrastructure Contractors</span>
+            <span class="client-tag">Energy Developers</span>
+            <span class="client-tag">Foreign Investors</span>
           </div>
+        </div>
+      </article>
 
-          <!-- Card 03 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">💎</div>
-              <span class="capability-card-index">03</span>
-            </div>
-            <h3 class="capability-card-title">Mineral Exploration</h3>
-            <p class="capability-card-description">Conducting precise geological structural tracking and asset maps mapping utilizing low-impact, sustainable ground survey methods.</p>
+      <!-- Competency 02: Climate & Donor-Project Delivery -->
+      <article class="capability-card-item">
+        <div class="capability-card-body-wrapper">
+          <div class="capability-card-top">
+            <div class="capability-icon-shape-wrapper">02</div>
+            <span class="capability-card-index">Strategic Pillar</span>
           </div>
-
-          <!-- Card 04 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🏗️</div>
-              <span class="capability-card-index">04</span>
-            </div>
-            <h3 class="capability-card-title">Civil Engineering &amp; General Construction</h3>
-            <p class="capability-card-description">Providing engineering oversight, structural integrity diagnostics, and smart load assessments to build stable climate-resilient infrastructure.</p>
+          
+          <h2 class="capability-card-title">Climate & Donor-Project Delivery</h2>
+          
+          <div class="capability-content-block">
+            <h3 class="capability-section-label">Core Offerings</h3>
+            <ul class="capability-offerings-list">
+              <li>Field research</li>
+              <li>GIS, M&amp;E</li>
+              <li>Land-use planning</li>
+              <li>Climate adaptation</li>
+              <li>Restoration &amp; facilitation</li>
+              <li>Institutional capacity building</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Card 05 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🛢️</div>
-              <span class="capability-card-index">05</span>
-            </div>
-            <h3 class="capability-card-title">Integrated Petroleum Advisory &amp; Geo-Services</h3>
-            <p class="capability-card-description">Offering engineering analysis, strategic industry technical advice, and environmental baseline metrics for regional operators.</p>
+        <div class="capability-card-footer">
+          <h3 class="capability-section-label">Target Clients</h3>
+          <div class="capability-client-tags">
+            <span class="client-tag">UN Agencies</span>
+            <span class="client-tag">World Bank/AfDB Projects</span>
+            <span class="client-tag">NGOs</span>
+            <span class="client-tag">International Consulting Firms</span>
           </div>
+        </div>
+      </article>
 
-          <!-- Card 06 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">📊</div>
-              <span class="capability-card-index">06</span>
-            </div>
-            <h3 class="capability-card-title">Carbon Market &amp; Policy</h3>
-            <p class="capability-card-description">Navigating international compliance pathways to develop high-integrity carbon credits and align with global frameworks.</p>
+      <!-- Competency 03: Geotechnical, Geological & Spatial Services -->
+      <article class="capability-card-item">
+        <div class="capability-card-body-wrapper">
+          <div class="capability-card-top">
+            <div class="capability-icon-shape-wrapper">03</div>
+            <span class="capability-card-index">Strategic Pillar</span>
           </div>
-
-          <!-- Card 07 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🔬</div>
-              <span class="capability-card-index">07</span>
-            </div>
-            <h3 class="capability-card-title">Environmental Awareness &amp; Research</h3>
-            <p class="capability-card-description">Conducting environmental tracking studies to publish actionable community impact data across fragile eco-regions.</p>
+          
+          <h2 class="capability-card-title">Geotechnical, Geological &amp; Spatial Services</h2>
+          
+          <div class="capability-content-block">
+            <h3 class="capability-section-label">Core Offerings</h3>
+            <ul class="capability-offerings-list">
+              <li>Site investigations</li>
+              <li>Geological mapping</li>
+              <li>GIS/Remote sensing</li>
+              <li>Soil &amp; water studies</li>
+              <li>Baseline surveys</li>
+              <li>Construction supervision support</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Card 08 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">📈</div>
-              <span class="capability-card-index">08</span>
-            </div>
-            <h3 class="capability-card-title">Monitoring &amp; Evaluation (M&amp;E)</h3>
-            <p class="capability-card-description">Tracking environmental metrics and sustainability goals timelines using rigorous validation data systems.</p>
+        <div class="capability-card-footer">
+          <h3 class="capability-section-label">Target Projects &amp; Sectors</h3>
+          <div class="capability-client-tags">
+            <span class="client-tag">Mines</span>
+            <span class="client-tag">Roads &amp; Bridges</span>
+            <span class="client-tag">Hydropower</span>
+            <span class="client-tag">Construction</span>
+            <span class="client-tag">Renewable Energy</span>
           </div>
+        </div>
+      </article>
 
-          <!-- Card 09 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">⚖️</div>
-              <span class="capability-card-index">09</span>
-            </div>
-            <h3 class="capability-card-title">Natural Resource Mgt &amp; Mining Governance</h3>
-            <p class="capability-card-description">Advocating for sustainable lease tracking and building transparent governance structures that protect local stakeholders.</p>
-          </div>
+    </div>
+  </div>
+</main>
 
-                    <!-- Card 10 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🧪</div>
-              <span class="capability-card-index">10</span>
-            </div>
-            <h3 class="capability-card-title">Soil &amp; Water Sampling &amp; Analysis</h3>
-            <p class="capability-card-description">Executing analytical chemical laboratory assessments to maintain regional water safety and environmental baseline criteria.</p>
-          </div>
-
-          <!-- Card 11 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🗺️</div>
-              <span class="capability-card-index">11</span>
-            </div>
-            <h3 class="capability-card-title">GIS &amp; Remote Sensing</h3>
-            <p class="capability-card-description">Processing satellite spatial data streams to model topography, structural changes, and forest management metrics.</p>
-          </div>
-
-          <!-- Card 12 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🦋</div>
-              <span class="capability-card-index">12</span>
-            </div>
-            <h3 class="capability-card-title">Ecosystem Restoration &amp; Biodiversity Conservation</h3>
-            <p class="capability-card-description">Managing active reforestation programs and mapping wildlife corridors to protect native species habitats.</p>
-          </div>
-
-          <!-- Card 13 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">☀️</div>
-              <span class="capability-card-index">13</span>
-            </div>
-            <h3 class="capability-card-title">Solar Installation</h3>
-            <p class="capability-card-description">Engineering and deploying durable hybrid and off-grid solar infrastructure configurations for rural electrification.</p>
-          </div>
-
-          <!-- Card 14 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">📐</div>
-              <span class="capability-card-index">14</span>
-            </div>
-            <h3 class="capability-card-title">Petroleum Tank Calibration</h3>
-            <p class="capability-card-description">Executing accurate volumetric calibrations to ensure structural operations are efficient and fully standards-compliant.</p>
-          </div>
-
-          <!-- Card 15 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🎓</div>
-              <span class="capability-card-index">15</span>
-            </div>
-            <h3 class="capability-card-title">Education &amp; Research</h3>
-            <p class="capability-card-description">Facilitating high-level training workshops to enhance scientific literacy and capacity across institutions.</p>
-          </div>
-
-          <!-- Card 16 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🌍</div>
-              <span class="capability-card-index">16</span>
-            </div>
-            <h3 class="capability-card-title">Environmental Policy, Governance &amp; Justice</h3>
-            <p class="capability-card-description">Advancing policy representation for vulnerable communities to enforce environmental standards and defend local rights.</p>
-          </div>
-
-          <!-- Card 17 -->
-          <div class="capability-card-item">
-            <div class="capability-card-top">
-              <div class="capability-icon-shape-wrapper">🌊</div>
-              <span class="capability-card-index">17</span>
-            </div>
-            <h3 class="capability-card-title">Ocean Governance &amp; Blue Carbon</h3>
-            <p class="capability-card-description">Safeguarding critical marine eco-zones and coastal mangrove frameworks to harness blue carbon asset potential.</p>
-          </div>
-
-        </div> <!-- Closes .capabilities-grid-feed -->
-      </div> <!-- Closes .expertise-hero-container -->
-    </main>
 
   </div> <!-- Closes .pages-wrapper -->
 <script>

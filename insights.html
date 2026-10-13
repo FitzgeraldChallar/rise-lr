@@ -230,6 +230,65 @@
       );
     }
   }
+
+/* Consistent typography — aligned with Newsroom and Projects */
+
+.insights-display-title {
+  font-size: clamp(42px, 5.2vw, 62px);
+  line-height: 1.06;
+}
+
+.insights-hero-intro {
+  font-size: clamp(15px, 1.35vw, 17px);
+  line-height: 1.65;
+}
+
+.insights-section-title {
+  font-size: clamp(29px, 3.4vw, 40px);
+  line-height: 1.15;
+}
+
+.insights-section-subtitle {
+  font-size: 11px;
+  margin-bottom: 40px;
+}
+
+.topic-num {
+  font-size: 13px;
+}
+
+.topic-title {
+  font-size: clamp(18px, 1.8vw, 23px);
+  line-height: 1.2;
+}
+
+.topic-body-copy {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Keep the hero heading proportionate on mobile */
+@media (max-width: 767px) {
+  .insights-display-title {
+    font-size: clamp(36px, 9vw, 46px);
+  }
+
+  .insights-hero-intro {
+    font-size: 15px;
+  }
+
+  .insights-section-title {
+    font-size: clamp(28px, 7vw, 34px);
+  }
+
+  .topic-title {
+    font-size: 19px;
+  }
+
+  .topic-body-copy {
+    font-size: 14px;
+  }
+}
 </style>
 
 </head>
@@ -359,6 +418,11 @@
       <!-- Left Column Panel: Project Links List -->
       <div class="mega-projects-sidebar">
         <ul class="project-track-list">
+          <!-- Item 6: Mantrac CAT Liberia -->
+          <li class="project-track-item" data-project="proj-mantrac">
+            <a href="projects.html#propertyappraisalvaluationmantrac"
+               class="project-track-link">Property Appraisal/Valuation for Mantrac CAT Liberia</a>
+          </li>
           <!-- Item 1 (Active by Default) -->
           <li class="project-track-item active" data-project="proj-allianz">
             <a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
@@ -434,6 +498,26 @@
             Involved conducting geological and geotechnical investigations to support the feasibility assessment, engineering design, and safe development of a proposed mini-hydropower facility in Lofa County, Liberia.
           </p>
         </div>
+
+        <!-- Preview 06: Property Appraisal/Valuation for Mantrac CAT Liberia -->
+        <div id="proj-mantrac" class="project-preview-content">
+         <div class="project-preview-image-box">
+           <img
+             src="images/mantrac.jpeg"
+             loading="lazy"
+             alt="Property Appraisal and Valuation for Mantrac CAT Liberia"
+             class="project-preview-img"
+           >
+         </div>
+         <p class="project-preview-description">
+         As a major industrial player operating heavy equipment, power systems,
+         and specialized facilities in Liberia, Mantrac required an expert,
+         certified third-party appraisal of its real estate holdings and
+         physical infrastructure. RISE Liberia evaluated the fair market value,
+         structural integrity, and asset baseline of Mantrac's properties,
+         leveraging its technical expertise and consulting competencies.
+         </p>
+       </div>
 
       </div> <!-- Closes .mega-project-preview-panel -->
     </div> <!-- Closes .mega-menu-inner-grid -->

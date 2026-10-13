@@ -2,802 +2,451 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Careers - RISE Liberia</title>
-  <meta content="Explore the core scientific, technical, environmental, and engineering competencies driving climate resilience and sustainable development across Liberia at RISE." name="description">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/rise-liberia-388f17.webflow.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-  <script src="https://googleapis.com" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({ google: { families: ["Anton:300,400,500,600,700","Inter Tight:300,400,500,600,700"] } });</script>
+  <title>Careers | RISE Liberia</title>
+  <meta name="description" content="Explore career opportunities with RISE Liberia and contribute to climate resilience, environmental stewardship, engineering, and sustainable development.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/webflow.css" rel="stylesheet">
+  <link href="css/rise-liberia-388f17.webflow.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-  /* ==========================================================================
-     RISE CAREERS — ELITE ASYMMETRIC VISUAL ENGINE
-     ========================================================================== */
-
-  /* Import Editorial & Premium Typography Systems */
-  @import url('https://googleapis.com');
-
-  .premium-careers-hero * {
-    box-sizing: border-box;
-  }
-
-  /* --- Premium Typography Hierarchy Overhaul --- */
-  .careers-display-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
-    line-height: 1.05;
-    text-transform: uppercase;
-    color: #0f172a; 
-    letter-spacing: -0.03em;
-    font-weight: 800;
-    margin: 0 0 24px 0;
-  }
-
-  .careers-hero-intro {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-    line-height: 1.65;
-    color: #334155;
-    max-width: 580px;
-    margin: 0 0 40px 0;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-  }
-
-  .careers-section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.85rem, 4vw, 2.75rem);
-    text-transform: uppercase;
-    color: #0f172a;
-    margin: 0 0 8px 0;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-
-  .careers-section-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #22b38a;
-    margin: 0 0 48px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-  }
-
-  /* --- Advanced Multi-Layer Hero Layout Component --- */
-  .premium-careers-hero {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background-color: #f0fdf4 !important;
-    padding: clamp(140px, 15vw, 220px) 0 clamp(100px, 12vw, 140px) 0;
-    display: flex;
-    align-items: center;
-    min-height: 80vh;
-  }
-
-  /* 🖼️ Sharp Foreground Image Layer (Forces Man's Head into Frame) */
-  .careers-hero-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* 👇 Anchors the crop line directly to the absolute top edge of the photo */
-    object-position: center top; 
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  /* 🟢 Targeted Left-Heavy Text Protection Shield */
-  .careers-hero-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* 👇 Completely transparent on the right to preserve raw image color & sharpness */
-    background: linear-gradient(
-      90deg, 
-      rgba(240, 253, 244, 1) 0%, 
-      rgba(240, 253, 244, 0.96) 35%, 
-      rgba(240, 253, 244, 0.75) 55%, 
-      rgba(240, 253, 244, 0) 80%
-    );
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .careers-hero-content {
-    position: relative;
-    z-index: 3;
-    max-width: 900px;
-  }
-
-  /* --- Global Structural Sections --- */
-  .careers-section {
-    padding: clamp(80px, 10vw, 130px) 0;
-    position: relative;
-    background-color: #ffffff;
-  }
-
-  .asymmetric-split-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-
-  /* --- Why RISE Premium Layout --- */
-  .why-rise-visual-grid {
-    display: grid;
-    grid-template-columns: 4.5fr 5.5fr;
-    gap: 40px;
-    background-color: #f8fafc;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #e2e8f0;
-  }
-
-  .why-rise-photo-panel {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 380px;
-    background-color: #f0fdf4;
-  }
-
-  .why-rise-photo-panel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .why-rise-text-panel {
-    padding: 48px 48px 48px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 32px;
-  }
-
-  .editorial-card-item {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .editorial-card-item h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 12px 0;
-    letter-spacing: -0.02em;
-  }
-
-  .editorial-card-item p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #475569;
-    margin: 0;
-  }
-
-  /* --- Premium Floating Tag System --- */
-  .pillars-flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .pillar-premium-tag {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 16px 28px;
-    border-radius: 100px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #1e293b;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
-  }
-
-  .pillar-premium-tag:hover {
-    border-color: #22b38a;
-    color: #ffffff;
-    background-color: #0f172a;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(15,23,42,0.08);
-  }
-
-  /* --- Glassmorphic Notice Layout --- */
-  .immersive-notice-banner {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background-color: #f0fdf4;
-    padding: clamp(48px, 6vw, 80px);
-    border: 1px solid #dcfce7;
-  }
-
-  .immersive-notice-banner img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    opacity: 0.6;
-  }
-
-  .notice-blend-layer {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(220, 252, 231, 0.95) 30%, rgba(240, 253, 244, 0.75) 100%);
-    z-index: 2;
-  }
-
-  .notice-inner-grid {
-    position: relative;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    align-items: center;
-  }
-
-  .notice-tag-glass {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(34, 179, 138, 0.3);
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #115e59;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 16px;
-  }
-
-  .notice-headline {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.85rem, 3.5vw, 2.85rem);
-    text-transform: uppercase;
-    color: #0f172a;
-    line-height: 1.05;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-
-  .notice-body-copy {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.65;
-    color: #334155;
-    margin: 0;
-  }
-
-  /* Footnote Row */
-  .promise-footer-row {
-    margin-top: 80px;
-    padding-top: 40px;
-    border-top: 1px solid #e2e8f0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .promise-footer-tag {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #0f172a;
-    letter-spacing: 0.08em;
-  }
-
-  .promise-footer-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: #64748b;
-    margin: 0;
-  }
-
-  /* --- Responsive Matrix --- */
-  @media (min-width: 992px) {
-    .asymmetric-split-layout {
-      grid-template-columns: 3fr 7fr;
-      gap: 64px;
+    :root {
+      --rise-green: #147653;
+      --rise-green-dark: #0c4938;
+      --rise-mint: #eaf4ed;
+      --rise-ink: #13221d;
+      --rise-muted: #5f7068;
+      --rise-line: #dce7df;
+      --rise-paper: #f7f9f6;
+      --rise-white: #fff;
+      --rise-radius: 22px;
+      --rise-shadow: 0 24px 70px rgba(19, 44, 32, .10);
     }
-    .notice-inner-grid {
-      grid-template-columns: 4.5fr 5.5fr;
-      gap: 64px;
-    }
-    .promise-footer-row {
-      grid-template-columns: 2.5fr 7.5fr;
-      gap: 40px;
-    }
-  }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+    body { margin: 0; color: var(--rise-ink); background: var(--rise-white); font-family: "DM Sans", Arial, sans-serif; }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    .pages-wrapper { overflow: clip; }
+    .container.w-container { width: min(1180px, calc(100% - 48px)); max-width: 1180px; margin-inline: auto; }
 
-  @media (max-width: 991px) {
-    .why-rise-visual-grid {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .why-rise-text-panel {
-      padding: 40px;
-    }
-    /* Switches to a clean top-to-bottom protective overlay context for small viewports */
-    .careers-hero-mask {
-      background: linear-gradient(
-        180deg,
-        rgba(240, 253, 244, 0.98) 0%,
-        rgba(240, 253, 244, 0.85) 60%,
-        rgba(240, 253, 244, 0.3) 100%
-      );
-    }
-  }
+    /* Keep the site's existing navigation and mega-menu classes working. */
+    .navbar.w-nav { z-index: 1000; }
+    .navbar .nav-link-wrap { align-items: center; }
+    .mega-menu-dropdown-panel { z-index: 1100; }
+    .mega-menu-dropdown-panel.toggle-hidden { display: none; }
+    .mega-menu-trigger:hover > .mega-menu-dropdown-panel:not(.toggle-hidden),
+    .mega-menu-trigger:focus-within > .mega-menu-dropdown-panel:not(.toggle-hidden) { display: block; }
+    .mega-menu-inner-grid { display: grid; }
+    .project-preview-content { display: none; }
+    .project-preview-content.active-preview { display: block; }
 
-  @media (max-width: 767px) {
-    .why-rise-text-panel {
-      grid-template-columns: 1fr;
-      gap: 32px;
+    /* Career page hero — intentionally clears the fixed/overlapping site header. */
+    .careers-hero {
+      position: relative;
+      isolation: isolate;
+      min-height: min(790px, 90vh);
+      display: flex;
+      align-items: center;
+      padding: clamp(170px, 17vw, 230px) 0 clamp(90px, 10vw, 130px);
+      background: #eef5ef;
+      overflow: hidden;
     }
-    .pillar-premium-tag {
-      width: 100%;
-      text-align: center;
-      padding: 14px 20px;
+    .careers-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(90deg, rgba(240,247,240,.99) 0%, rgba(240,247,240,.96) 34%, rgba(240,247,240,.76) 53%, rgba(240,247,240,.12) 100%);
     }
-  }
-</style>
+    .careers-hero-bg {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 74%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 28%;
+      z-index: -3;
+    }
+    .careers-hero-inner { width: 100%; }
+    .careers-hero-copy { max-width: 700px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 24px;
+      color: var(--rise-green);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    .careers-title {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(42px, 5.2vw, 62px);
+      line-height: .98;
+      letter-spacing: -.065em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #101b16;
+    }
+    .careers-title span { color: var(--rise-green); }
+    .careers-intro {
+      max-width: 590px;
+      margin: 28px 0 32px;
+      color: #52645b;
+      font-size: clamp(15px, 1.35vw, 17px);
+      line-height: 1.8;
+    }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .rise-button {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 15px 24px;
+      border: 1px solid var(--rise-green);
+      border-radius: 999px;
+      background: var(--rise-green);
+      color: white;
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+      transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+      box-shadow: 0 10px 26px rgba(20,118,83,.16);
+    }
+    .rise-button:hover { transform: translateY(-3px); background: var(--rise-green-dark); box-shadow: 0 15px 32px rgba(20,118,83,.22); }
+    .rise-text-link { color: var(--rise-green-dark); font-size: .94rem; font-weight: 700; text-decoration: none; padding: 12px 4px; }
+    .rise-text-link span { display: inline-block; margin-left: 5px; transition: transform .2s ease; }
+    .rise-text-link:hover span { transform: translateX(4px); }
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 44px;
+      color: #52645b;
+      font-size: .88rem;
+      font-weight: 600;
+    }
+    .hero-note-dot { width: 9px; height: 9px; border-radius: 50%; background: #63a57a; box-shadow: 0 0 0 5px rgba(99,165,122,.14); }
 
+    .careers-section { padding: clamp(72px, 9vw, 118px) 0; }
+    .section-heading { max-width: 760px; margin-bottom: 42px; }
+    .section-title {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(29px, 3.4vw, 40px);
+      line-height: 1.08;
+      letter-spacing: -.05em;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .section-description { max-width: 650px; margin: 18px 0 0; color: var(--rise-muted); font-size: 15px; line-height: 1.75; }
+    .why-rise { display: grid; grid-template-columns: minmax(280px, .86fr) 1.14fr; overflow: hidden; border: 1px solid var(--rise-line); border-radius: var(--rise-radius); background: #f7faf7; box-shadow: var(--rise-shadow); }
+    .why-rise-photo { position: relative; min-height: 500px; background: #dfe9df; }
+    .why-rise-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .why-rise-photo::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(9,38,26,.3)); pointer-events: none; }
+    .why-rise-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(28px, 4.3vw, 58px); }
+    .why-rise-copy .section-title { font-size: clamp(27px, 3.4vw, 39px); }
+    .benefit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 26px; margin-top: 38px; }
+    .benefit { border-top: 1px solid #d9e5db; padding-top: 18px; }
+    .benefit-number { color: #6e9b79; font-size: .78rem; font-weight: 800; letter-spacing: .1em; }
+    .benefit h3 { margin: 10px 0 8px; font-size: 16px; letter-spacing: -.025em; }
+    .benefit p { margin: 0; color: var(--rise-muted); font-size: 13px; line-height: 1.75; }
+
+    .tracks-section { background: var(--rise-paper); border-block: 1px solid #e9eee9; }
+    .tracks-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 70px; align-items: start; }
+    .tracks-layout .section-heading { margin-bottom: 0; }
+    .track-intro { color: var(--rise-muted); line-height: 1.8; margin: 18px 0 0; }
+    .track-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+    .track-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 19px;
+      border: 1px solid #dce7df;
+      border-radius: 999px;
+      background: #fff;
+      color: #20392d;
+      font-size: 13px;
+      font-weight: 600;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .track-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #69a37b; flex: 0 0 auto; }
+    .track-tag:hover { transform: translateY(-3px); border-color: #8ebca0; box-shadow: 0 10px 24px rgba(24,67,43,.07); }
+
+    .vacancy-panel {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(32px, 6vw, 76px);
+      border-radius: 26px;
+      background: #eaf4ed;
+      border: 1px solid #d8e9dc;
+    }
+    .vacancy-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .22; z-index: -2; }
+    .vacancy-panel::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, rgba(239,248,240,.97), rgba(230,243,232,.83)); }
+    .vacancy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; }
+    .notice-label { display: inline-flex; margin-bottom: 20px; padding: 8px 12px; border: 1px solid #c5dfcc; border-radius: 999px; background: rgba(255,255,255,.65); color: var(--rise-green-dark); font-size: .73rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .vacancy-title { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(27px, 3.4vw, 39px); line-height: 1.05; letter-spacing: -.05em; text-transform: uppercase; }
+    .vacancy-copy { margin: 0; color: #43594c; font-size: 15px; line-height: 1.8; }
+    .hiring-promise { display: grid; grid-template-columns: .45fr 1.55fr; gap: 40px; padding-top: 30px; margin-top: 54px; border-top: 1px solid var(--rise-line); }
+    .promise-label { margin: 0; color: var(--rise-ink); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .promise-copy { margin: 0; color: var(--rise-muted); font-size: 14px; line-height: 1.75; }
+
+    @media (min-width: 992px) {
+      .careers-hero { padding-top: clamp(190px, 17vw, 245px); }
+    }
+    @media (max-width: 991px) {
+      .careers-hero { min-height: 720px; padding-top: 175px; }
+      .careers-hero-bg { width: 100%; object-position: 62% center; }
+      .careers-hero::before { background: linear-gradient(90deg, rgba(240,247,240,.98) 0%, rgba(240,247,240,.91) 50%, rgba(240,247,240,.55) 100%); }
+      .why-rise { grid-template-columns: 1fr; }
+      .why-rise-photo { min-height: 360px; }
+      .tracks-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 767px) {
+      .container.w-container { width: min(100% - 36px, 1180px); }
+      .careers-hero { min-height: auto; padding: 150px 0 76px; }
+      .careers-hero-bg { width: 100%; object-position: 62% center; }
+      .careers-hero::before { background: linear-gradient(180deg, rgba(240,247,240,.94) 0%, rgba(240,247,240,.92) 48%, rgba(240,247,240,.72) 100%); }
+      .careers-title { font-size: clamp(38px, 10vw, 48px); }
+      .careers-intro { margin: 22px 0 26px; font-size: 15px; line-height: 1.7; }
+      .hero-note { margin-top: 30px; align-items: flex-start; line-height: 1.5; }
+      .careers-section { padding: 68px 0; }
+      .why-rise-photo { min-height: 280px; }
+      .why-rise-copy { padding: 28px 24px 32px; }
+      .benefit-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 28px; }
+      .track-tags { gap: 10px; }
+      .track-tag { width: 100%; padding: 14px 17px; }
+      .vacancy-grid { grid-template-columns: 1fr; gap: 24px; }
+      .hiring-promise { grid-template-columns: 1fr; gap: 12px; margin-top: 36px; }
+      .rise-button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-  <div class="pages-wrapper">
-    
-    <!-- Premium Navbar Navigation Wrapper with Integrated Dynamic Mega Menu -->
-<div role="banner" class="navbar w-nav">
-  <div class="container w-container">
-    <div class="navbar-wrapper">
-      
-      <!-- Brand Logo -->
-      <a href="index.html" class="brand-logo w-nav-brand">
-        <img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image">
-      </a>
-      
-      <!-- Interactive Menu Group Links -->
-      <nav role="navigation" class="nav-menu w-nav-menu">
-        <div class="nav-link-wrap">
-          <a href="index.html" class="nav-link w-nav-link">Home</a>
-          <a href="about.html" class="nav-link w-nav-link">About</a>
-          
-          <!-- MEGA MENU TRIGGER: EXPERTISE -->
-          <div class="mega-menu-trigger">
-            <a href="expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
-            
-            <!-- Complete Hidden Mega Menu Card Dropdown Container -->
-            <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
-              <div class="mega-menu-inner-grid">
-                
-                <!-- Left Side Column Panel: Main Interactive Tracks (UPDATED WITH TARGET FLAGS) -->
-                <div class="mega-left-sidebar">
-                  <ul class="track-links-list">
-                    <li class="track-item active" data-tab="markets-view"><a href="#" class="track-link">Markets</a></li>
-                    <li class="track-item" data-tab="expertise-view"><a href="#" class="track-link">Expertise</a></li>
-                    <li class="track-item" data-tab="sustainability-view"><a href="#" class="track-link">Sustainability</a></li>
-                  </ul>
-                  <div class="mega-sidebar-footer">
-                    <a href="expertise.html" class="discover-btn-accent">Discover What We Do</a>
-                  </div>
-                </div>
-                
-                <!-- CONTAINER SET A: MARKETS (Your original Aviation & Health columns untouched) -->
-                <div id="markets-view" class="mega-tab-content active-panel" style="display: contents;">
-                  <!-- Middle Column Panel: Sub-category Links List (Set A) -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise/agriculture.html">Agriculture</a></li>
-                      <li><a href="expertise/data_analysis.html">Data Analysis</a></li>
-                      <li><a href="expertise/education_research.html">Education & Research</a></li>
-                      <li><a href="expertise/energy.html">Energy</a></li>
-                      <li><a href="expertise/environmental_science.html">Environmental Science</a></li>
-                      <li><a href="expertise/general_construction.html">General Construction</a></li>
-                      <li><a href="expertise/geology.html">Geology</a></li>
-                    </ul>
-                  </div>
-                  
-                  <!-- Right Side Column Panel: Sub-category Links List (Set B) -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise/mining.html">Mining</a></li>
-                      <li><a href="expertise/natural_resources.html">Natural Resources</a></li>
-                      <li><a href="expertise/soil.html">Soil</a></li>
-                      <li><a href="expertise/gis.html">Remote Sensing / GIS Service</a></li>
-                      <li><a href="expertise/water.html">Water</a></li>
-                    </ul>
-                  </div>
-                </div> <!-- Closes markets-view -->
-
-                <!-- CONTAINER SET B: EXPERTISE (Your 17 competencies mapped straight to your grid columns) -->
-                <div id="expertise-view" class="mega-tab-content" style="display: none;">
-                  <!-- Left Side Column -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise.html#agroforestry">Agroforestry and Climate Smart Agriculture</a></li>
-                      <li><a href="expertise.html#renewable">Renewable energy and waste management</a></li>
-                      <li><a href="expertise.html#mineral">Mineral exploration</a></li>
-                      <li><a href="expertise.html#civil">Civil engineering and general construction</a></li>
-                      <li><a href="expertise.html#petroleum">Integrated Petroleum advisory and Geo-services</a></li>
-                      <li><a href="expertise.html#carbon">Carbon market &amp; policy</a></li>
-                      <li><a href="expertise.html#awareness">Environmental Awareness and Research</a></li>
-                      <li><a href="expertise.html#me">Monitoring and Evaluation</a></li>
-                      <li><a href="expertise.html#governance">Natural Resource Management and Mining Governance</a></li>
-                    </ul>
-                  </div>
-                  <!-- Right Side Column -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise.html#sampling">Soil and water sampling and analysis</a></li>
-                      <li><a href="expertise.html#gis">GIS and remote sensing</a></li>
-                      <li><a href="expertise.html#restoration">Ecosystem restoration and biodiversity conservation</a></li>
-                      <li><a href="expertise.html#solar">Solar installation</a></li>
-                      <li><a href="expertise.html#calibration">Petroleum tank calibration</a></li>
-                      <li><a href="expertise.html#education">Education and research</a></li>
-                      <li><a href="expertise.html#justice">Environmental policy, governance &amp; Justice</a></li>
-                      <li><a href="expertise.html#blue-carbon">Ocean Governance and blue carbon</a></li>
-                    </ul>
-                  </div>
-                </div> <!-- Closes expertise-view -->
-
-                <!-- CONTAINER SET B: EXPERTISE (Your 17 competencies mapped straight to your grid columns) -->
-                <div id="sustainability-view" class="mega-tab-content" style="display: none;">
-                  <!-- Left Side Column -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise.html#agroforestry">Environmental</a></li>
-                      <li><a href="expertise.html#renewable">Social</a></li>
-                      <li><a href="expertise.html#mineral">Economic</a></li>
-                      <li><a href="expertise.html#civil">Institutional</a></li>
-                    </ul>
-                   </div>
-                </div>
-
-              </div> <!-- Closes .mega-menu-inner-grid -->
-            </div> <!-- Closes .mega-menu-dropdown-panel -->
-          </div> <!-- Closes .mega-menu-trigger -->
-          
-          <!-- Remaining Standard Nav Menu Links -->
-          <!-- MEGA MENU TRIGGER: PROJECTS -->
-<div class="mega-menu-trigger">
-  <a href="projects.html" id="projects-toggle" class="nav-link w-nav-link drop-indicator">Projects</a>
-  
-  <!-- Projects Flyout Dropdown Card -->
-  <div id="projects-panel" class="mega-menu-dropdown-panel toggle-hidden">
-    <div class="mega-menu-inner-grid projects-grid-layout">
-      
-      <!-- Left Column Panel: Project Links List -->
-      <div class="mega-projects-sidebar">
-        <ul class="project-track-list">
-          <!-- Item 1 (Active by Default) -->
-          <li class="project-track-item active" data-project="proj-allianz">
-            <a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
-          </li>
-          <!-- Item 2 -->
-          <li class="project-track-item" data-project="proj-auckland">
-            <a href="projects.html#mainstreamingbiodiversity" class="project-track-link">Mainstreaming Biodiversity in Sand Production</a>
-          </li>
-          <!-- Item 3 -->
-          <li class="project-track-item" data-project="proj-dyson">
-            <a href="projects.html#climateequipment" class="project-track-link">Climate Equipment Needs Assessment for Liberia</a>
-          </li>
-          <!-- Item 4 (🟢 FIXED: Assigned unique identifier data-project) -->
-          <li class="project-track-item" data-project="proj-lfsp">
-            <a href="projects.html#lfsp" class="project-track-link">The Liberia Forest Sector Project (LFSP)</a>
-          </li>
-          <!-- Item 5 (🟢 FIXED: Assigned unique identifier data-project) -->
-          <li class="project-track-item" data-project="proj-kahia">
-            <a href="projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a>
-          </li>
-        </ul>
-      </div>
-      
-      <!-- Right Column Panel: Dynamic Preview Cards Display Workspace -->
-      <div class="mega-project-preview-panel">
-        
-        <!-- Preview 01: Allianz (Visible by Default) -->
-        <div id="proj-allianz" class="project-preview-content active-preview">
-          <div class="project-preview-image-box">
-            <img src="images/trust.jpeg" loading="lazy" alt="Climate Change Trust Fund Operational Manual" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            The Liberia Climate Change Trust Fund (LCCTF) operational manual is developed under the enhancing Climate Information Systems for Resilient development (Liberia CIS Project), funded by Green Climate Fund (GCF), African Development Bank (AFDB) and the Government of Liberia. 
-          </p>
-        </div>
-
-        <!-- Preview 02: Auckland -->
-        <div id="proj-auckland" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/sand.jpeg" loading="lazy" alt="Mainstreaming Biodiversity in Sand Production Responsible Value Chains for coastal resilience in West Africa" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            The 36-month regional project, led by UNEP under the Global Biodiversity Framework Fund (GBFF) was to mainstream biodiversity conservation into productive sectors by addressing unsustainable sand extraction in Liberia and the Gambia. 
-          </p>
-        </div>
-
-        <!-- Preview 03: Dyson -->
-        <div id="proj-dyson" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/climate.jpeg" loading="lazy" alt="Climate Equipment Needs Assessment for Liberia" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            Supported the Climate Information System Project (CIS) and the ERVCCS projects to develop the climate equipment needs assessment for Liberia. 
-          </p>
-        </div>
-
-        <!-- Preview 04 (🟢 FIXED: Cleaned card wrapping ID tracking) -->
-        <div id="proj-lfsp" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/lfsp.jpeg" loading="lazy" alt="The Liberia Forest Sector Project (LFSP)" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            The (LFSP) was a multi-stakeholder initiative implemented by the Ministry of Mines and Energy (MME), in partnership with EMG Consulting Group Ltd., with support from the Swedish International Development Cooperation Agency (Sida) and the Society for the Conservation of Nature of Liberia (SCNL), to strengthen the capacity of artisanal and small-scale miners to adopt Forest-Smart Mining practices that promote environmentally sustainable mining, forest conservation, and climate resilience in Liberia.
-          </p>
-        </div>
-
-        <!-- Preview 05 (🟢 FIXED: Cleaned card wrapping ID tracking from duplicate to proj-kahia) -->
-        <div id="proj-kahia" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/kahia.jpeg" loading="lazy" alt="The Kahia II Mini Hydropower Project" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            Involved conducting geological and geotechnical investigations to support the feasibility assessment, engineering design, and safe development of a proposed mini-hydropower facility in Lofa County, Liberia.
-          </p>
-        </div>
-
-      </div> <!-- Closes .mega-project-preview-panel -->
-    </div> <!-- Closes .mega-menu-inner-grid -->
-  </div> <!-- Closes .mega-menu-dropdown-panel -->
-</div> <!-- Closes .mega-menu-trigger -->
-
-
-          <!-- Remaining Standard Nav Menu Links -->
-          <a href="insights.html" class="nav-link w-nav-link">Insights</a>
-          <a href="careers.html" class="nav-link w-nav-link">Career</a>
-          <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
-          
-          <a href="contact.html" class="primary-button mobile-on w-inline-block">
-            <div class="primary-button-texts nav">
-              <div class="primary-button-text">Get in Touch</div>
-              <div class="primary-button-text white">Get in Touch</div>
-            </div>
-            <div class="primary-button-bg"></div>
-          </a>
-        </div> <!-- Closes .nav-link-wrap -->
-      </nav>
-      
-      <!-- Utility Action Section Panels -->
-      <div class="nav-button-wrap">
-        <div class="search-button-wrap">
-          <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
-        </div>
-        <a href="contact.html" class="primary-button desktop-on w-inline-block">
-          <div class="primary-button-texts nav">
-            <div class="primary-button-text">Get in Touch</div>
-            <div class="primary-button-text white">Get in Touch</div>
-          </div>
-          <div class="primary-button-bg"></div>
+<div class="pages-wrapper">
+  <!-- Site navigation and mega-menu structure retained -->
+  <div role="banner" class="navbar w-nav">
+    <div class="container w-container">
+      <div class="navbar-wrapper">
+        <a href="index.html" class="brand-logo w-nav-brand">
+          <img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" alt="RISE Liberia" class="brand-logo-image">
         </a>
-        <div class="hamburger-wrap w-nav-button">
-          <div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <div class="nav-link-wrap">
+            <a href="index.html" class="nav-link w-nav-link">Home</a>
+            <a href="about.html" class="nav-link w-nav-link">About</a>
+            <div class="mega-menu-trigger">
+              <a href="expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
+              <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
+                <div class="mega-menu-inner-grid">
+                  <div class="mega-left-sidebar">
+                    <ul class="track-links-list">
+                      <li class="track-item active" data-tab="markets-view"><a href="#" class="track-link">Markets</a></li>
+                      <li class="track-item" data-tab="expertise-view"><a href="#" class="track-link">Expertise</a></li>
+                      <li class="track-item" data-tab="sustainability-view"><a href="#" class="track-link">Sustainability</a></li>
+                    </ul>
+                    <div class="mega-sidebar-footer"><a href="expertise.html" class="discover-btn-accent">Discover What We Do</a></div>
+                  </div>
+                  <div id="markets-view" class="mega-tab-content active-panel" style="display:contents">
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise/agriculture.html">Agriculture</a></li><li><a href="expertise/data_analysis.html">Data Analysis</a></li><li><a href="expertise/education_research.html">Education &amp; Research</a></li><li><a href="expertise/energy.html">Energy</a></li><li><a href="expertise/environmental_science.html">Environmental Science</a></li><li><a href="expertise/general_construction.html">General Construction</a></li><li><a href="expertise/geology.html">Geology</a></li>
+                    </ul></div>
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise/mining.html">Mining</a></li><li><a href="expertise/natural_resources.html">Natural Resources</a></li><li><a href="expertise/soil.html">Soil</a></li><li><a href="expertise/gis.html">Remote Sensing / GIS Service</a></li><li><a href="expertise/water.html">Water</a></li>
+                    </ul></div>
+                  </div>
+                  <div id="expertise-view" class="mega-tab-content" style="display:none">
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise.html#agroforestry">Agroforestry and Climate Smart Agriculture</a></li><li><a href="expertise.html#renewable">Renewable energy and waste management</a></li><li><a href="expertise.html#mineral">Mineral exploration</a></li><li><a href="expertise.html#civil">Civil engineering and general construction</a></li><li><a href="expertise.html#petroleum">Integrated Petroleum advisory and Geo-services</a></li><li><a href="expertise.html#carbon">Carbon market &amp; policy</a></li><li><a href="expertise.html#awareness">Environmental Awareness and Research</a></li><li><a href="expertise.html#me">Monitoring and Evaluation</a></li><li><a href="expertise.html#governance">Natural Resource Management and Mining Governance</a></li>
+                    </ul></div>
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise.html#sampling">Soil and water sampling and analysis</a></li><li><a href="expertise.html#gis">GIS and remote sensing</a></li><li><a href="expertise.html#restoration">Ecosystem restoration and biodiversity conservation</a></li><li><a href="expertise.html#solar">Solar installation</a></li><li><a href="expertise.html#calibration">Petroleum tank calibration</a></li><li><a href="expertise.html#education">Education and research</a></li><li><a href="expertise.html#justice">Environmental policy, governance &amp; Justice</a></li><li><a href="expertise.html#blue-carbon">Ocean Governance and blue carbon</a></li>
+                    </ul></div>
+                  </div>
+                  <div id="sustainability-view" class="mega-tab-content" style="display:none"><div class="mega-content-column"><ul class="sub-category-links">
+                    <li><a href="expertise.html#agroforestry">Environmental</a></li><li><a href="expertise.html#renewable">Social</a></li><li><a href="expertise.html#mineral">Economic</a></li><li><a href="expertise.html#civil">Institutional</a></li>
+                  </ul></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="mega-menu-trigger">
+              <a href="projects.html" id="projects-toggle" class="nav-link w-nav-link drop-indicator">Projects</a>
+              <div id="projects-panel" class="mega-menu-dropdown-panel toggle-hidden">
+                <div class="mega-menu-inner-grid projects-grid-layout">
+                  <div class="mega-projects-sidebar"><ul class="project-track-list">
+                    <li class="project-track-item" data-project="proj-mantrac"><a href="projects.html#propertyappraisalvaluationmantrac" class="project-track-link">Property Appraisal/Valuation for Mantrac CAT Liberia</a></li>
+                    <li class="project-track-item active" data-project="proj-allianz"><a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a></li>
+                    <li class="project-track-item" data-project="proj-auckland"><a href="projects.html#mainstreamingbiodiversity" class="project-track-link">Mainstreaming Biodiversity in Sand Production</a></li>
+                    <li class="project-track-item" data-project="proj-dyson"><a href="projects.html#climateequipment" class="project-track-link">Climate Equipment Needs Assessment for Liberia</a></li>
+                    <li class="project-track-item" data-project="proj-lfsp"><a href="projects.html#lfsp" class="project-track-link">The Liberia Forest Sector Project (LFSP)</a></li>
+                    <li class="project-track-item" data-project="proj-kahia"><a href="projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a></li>
+                  </ul></div>
+                  <div class="mega-project-preview-panel">
+                    <div id="proj-allianz" class="project-preview-content active-preview"><div class="project-preview-image-box"><img src="images/trust.jpeg" loading="lazy" alt="Climate Change Trust Fund Operational Manual" class="project-preview-img"></div><p class="project-preview-description">The Liberia Climate Change Trust Fund operational manual was developed under the Liberia Climate Information Systems for Resilient Development project.</p></div>
+                    <div id="proj-auckland" class="project-preview-content"><div class="project-preview-image-box"><img src="images/sand.jpeg" loading="lazy" alt="Biodiversity in sand production" class="project-preview-img"></div><p class="project-preview-description">A regional initiative to mainstream biodiversity conservation and address unsustainable sand extraction in Liberia and The Gambia.</p></div>
+                    <div id="proj-dyson" class="project-preview-content"><div class="project-preview-image-box"><img src="images/climate.jpeg" loading="lazy" alt="Climate equipment needs assessment" class="project-preview-img"></div><p class="project-preview-description">Supported climate information systems and resilience initiatives through a climate equipment needs assessment for Liberia.</p></div>
+                    <div id="proj-lfsp" class="project-preview-content"><div class="project-preview-image-box"><img src="images/lfsp.jpeg" loading="lazy" alt="Liberia Forest Sector Project" class="project-preview-img"></div><p class="project-preview-description">A multi-stakeholder initiative strengthening forest-smart mining, forest conservation, and climate resilience in Liberia.</p></div>
+                    <div id="proj-kahia" class="project-preview-content"><div class="project-preview-image-box"><img src="images/kahia.jpeg" loading="lazy" alt="Kahia II Mini Hydropower Project" class="project-preview-img"></div><p class="project-preview-description">Geological and geotechnical investigations supporting feasibility assessment and engineering design for a proposed mini-hydropower facility in Lofa County.</p></div>
+                    <div id="proj-mantrac" class="project-preview-content"><div class="project-preview-image-box"><img src="images/mantrac.jpeg" loading="lazy" alt="Mantrac CAT Liberia property appraisal" class="project-preview-img"></div><p class="project-preview-description">As a major industrial player operating heavy equipment, power systems,
+         and specialized facilities in Liberia, Mantrac required an expert,
+         certified third-party appraisal of its real estate holdings and
+         physical infrastructure. RISE Liberia evaluated the fair market value,
+         structural integrity, and asset baseline of Mantrac's properties,
+         leveraging its technical expertise and consulting competencies.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="insights.html" class="nav-link w-nav-link">Insights</a>
+            <a href="careers.html" class="nav-link w-nav-link">Career</a>
+            <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
+            <a href="contact.html" class="primary-button mobile-on w-inline-block"><div class="primary-button-texts nav"><div class="primary-button-text">Get in Touch</div><div class="primary-button-text white">Get in Touch</div></div><div class="primary-button-bg"></div></a>
+          </div>
+        </nav>
+        <div class="nav-button-wrap">
+          <div class="search-button-wrap"><form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form></div>
+          <a href="contact.html" class="primary-button desktop-on w-inline-block"><div class="primary-button-texts nav"><div class="primary-button-text">Get in Touch</div><div class="primary-button-text white">Get in Touch</div></div><div class="primary-button-bg"></div></a>
+          <div class="hamburger-wrap w-nav-button"><div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div></div>
         </div>
       </div>
-
-    </div> <!-- Closes .navbar-wrapper -->
-  </div> <!-- Closes .container -->
-</div> <!-- Closes .navbar -->
-
-<!-- HERO COMPONENT WITH NATIVE OBJECT-FIT MULTI-LAYER ENGINE -->
-<header class="premium-careers-hero">
-  <!-- 📷 Fixed Image Layer: Dynamically locked to the absolute top edge to prevent head cut-off -->
-  <img src="images/careers-hero.jpg" alt="Careers Image" class="careers-hero-bg-img">
-  
-  <!-- 🟢 Asymmetric Gradient Shield Layer: Fades completely on the right for raw color clarity -->
-  <div class="careers-hero-mask"></div>
-  
-  <!-- 📑 Foreground Text Content Link Wrapper -->
-  <div class="container w-container">
-    <div class="careers-hero-content">
-      <h1 class="careers-display-title">
-        Build your career<br>where science meets impact.
-      </h1>
-      <p class="careers-hero-intro">
-        Join a multidisciplinary Liberian team solving environmental, engineering and development challenges that matter.
-      </p>
-      <a href="#vacancies" class="discover-btn-accent w-button" style="border-radius: 4px; padding: 16px 32px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; box-shadow: 0 4px 14px rgba(34,179,138,0.2);">
-        VIEW OPEN ROLES
-      </a>
     </div>
   </div>
-</header>
 
-<!-- SECTION: WHY RISE -->
-<section class="careers-section">
-  <div class="container w-container">
-    
-    <div class="why-rise-visual-grid">
-      
-      <!-- Left Dynamic Image Side Panel with light green blend overlay -->
-      <div class="why-rise-photo-panel">
-        <img src="images/why-rise.jpg" alt="Why RISE Team Graphic">
-      </div>
-      
-      <!-- Right Content Side Panel Grid -->
-      <div class="why-rise-text-panel">
-        
-        <div class="editorial-card-item">
-          <h3>Meaningful work</h3>
-          <p>Contribute to solutions with visible value for clients, communities and the environment.</p>
-        </div>
-        
-        <div class="editorial-card-item">
-          <h3>Serious learning</h3>
-          <p>Grow through field exposure, collaboration and technical responsibility.</p>
-        </div>
-        
-        <div class="editorial-card-item">
-          <h3>Local insight, wider standards</h3>
-          <p>Apply Liberian knowledge alongside respected professional practice.</p>
-        </div>
-        
-        <div class="editorial-card-item">
-          <h3>Room to contribute</h3>
-          <p>Bring ideas, take ownership and help shape better ways of working.</p>
-        </div>
-        
-      </div>
-      
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION: AREAS OF CONTRIBUTION -->
-<section class="careers-section" style="background-color: #fafafa; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
-  <div class="container w-container">
-    <div class="asymmetric-split-layout">
-      
-      <!-- Left Heading Anchor -->
-      <div>
-        <h2 class="careers-section-title">Where you could contribute</h2>
-        <div class="careers-section-subtitle">Functional Tracks</div>
-      </div>
-      
-      <!-- Right Floating Tag Pack -->
-      <div class="pillars-flex-wrap">
-        <div class="pillar-premium-tag">Technical consulting</div>
-        <div class="pillar-premium-tag">Project delivery</div>
-        <div class="pillar-premium-tag">Research and GIS</div>
-        <div class="pillar-premium-tag">Monitoring and evaluation</div>
-        <div class="pillar-premium-tag">Finance and operations</div>
-        <div class="pillar-premium-tag">Graduate and early-career assignments</div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<!-- SECTION: VACANCIES -->
-<section id="vacancies" class="careers-section">
-  <div class="container w-container">
-    
-    <!-- Immersive Light Green Gradient Graphic Notice Container -->
-    <div class="immersive-notice-banner">
-      <img src="images/vacancies-bg.jpg" alt="Vacancies Background Texture">
-      <div class="notice-blend-layer"></div>
-      
-      <div class="notice-inner-grid">
-        <div>
-          <span class="notice-tag-glass">Talent Acquisition</span>
-          <h3 class="notice-headline">When no vacancy is listed</h3>
-        </div>
-        <div>
-          <p class="notice-body-copy">
-            There may be no open role today, but new opportunities arise as our portfolio grows. Follow this page for verified vacancies and application instructions.
-          </p>
+  <main>
+    <header class="careers-hero">
+      <img src="images/careers-hero.jpg" alt="RISE Liberia field and professional work" class="careers-hero-bg" fetchpriority="high">
+      <div class="container w-container careers-hero-inner">
+        <div class="careers-hero-copy">
+          <p class="eyebrow">Careers at RISE Liberia</p>
+          <h1 class="careers-title">Build your career<br>where science<br><span>meets impact.</span></h1>
+          <p class="careers-intro">Join a multidisciplinary Liberian team solving environmental, engineering and development challenges that matter.</p>
+          <div class="hero-actions">
+            <a href="#vacancies" class="rise-button">Explore opportunities <span aria-hidden="true">↗</span></a>
+            <a href="#why-rise" class="rise-text-link">Why build with RISE? <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note"><span class="hero-note-dot" aria-hidden="true"></span><span>Purpose-led work. Local insight. Professional standards.</span></div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- Sincere Recruitment Footnote Row -->
-    <div class="promise-footer-row">
-      <div class="promise-footer-tag">Our hiring promise</div>
-      <p class="promise-footer-text">
-        RISE supports fair, merit-based recruitment and equal opportunity. We do not charge application or recruitment fees. Apply only through instructions published on our official channels.
-      </p>
-    </div>
+    <section id="why-rise" class="careers-section">
+      <div class="container w-container">
+        <div class="why-rise">
+          <div class="why-rise-photo"><img src="images/why-rise.jpg" loading="lazy" alt="RISE Liberia team and field work"></div>
+          <div class="why-rise-copy">
+            <p class="eyebrow">Work with purpose</p>
+            <h2 class="section-title">Bring your skills to work that matters.</h2>
+            <p class="section-description">At RISE, technical knowledge is part of a bigger mission: helping clients and communities address complex challenges and build a more resilient future.</p>
+            <div class="benefit-grid">
+              <article class="benefit"><span class="benefit-number">01 / IMPACT</span><h3>Meaningful work</h3><p>Contribute to solutions with visible value for clients, communities and the environment.</p></article>
+              <article class="benefit"><span class="benefit-number">02 / GROWTH</span><h3>Serious learning</h3><p>Grow through field exposure, collaboration and technical responsibility.</p></article>
+              <article class="benefit"><span class="benefit-number">03 / PRACTICE</span><h3>Local insight, wider standards</h3><p>Apply Liberian knowledge alongside respected professional practice.</p></article>
+              <article class="benefit"><span class="benefit-number">04 / OWNERSHIP</span><h3>Room to contribute</h3><p>Bring ideas, take ownership and help shape better ways of working.</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <section class="careers-section tracks-section">
+      <div class="container w-container">
+        <div class="tracks-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Ways to contribute</p>
+            <h2 class="section-title">Where you could make a difference.</h2>
+            <p class="track-intro">Our work spans multiple disciplines. The right opportunity depends on our active projects, client needs and the skills you bring.</p>
+          </div>
+          <div class="track-tags" aria-label="Functional career tracks">
+            <span class="track-tag">Technical consulting</span>
+            <span class="track-tag">Project delivery</span>
+            <span class="track-tag">Research and GIS</span>
+            <span class="track-tag">Monitoring and evaluation</span>
+            <span class="track-tag">Finance and operations</span>
+            <span class="track-tag">Graduate and early-career assignments</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-
+    <section id="vacancies" class="careers-section">
+      <div class="container w-container">
+        <div class="vacancy-panel">
+          <img class="vacancy-bg" src="images/vacancies-bg.jpg" loading="lazy" alt="">
+          <div class="vacancy-grid">
+            <div>
+              <span class="notice-label">Talent acquisition</span>
+              <h2 class="vacancy-title">When no vacancy is listed.</h2>
+            </div>
+            <p class="vacancy-copy">There may be no open role today, but new opportunities arise as our portfolio grows. Follow this page for verified vacancies and application instructions.</p>
+          </div>
+        </div>
+        <div class="hiring-promise">
+          <h3 class="promise-label">Our hiring promise</h3>
+          <p class="promise-copy">RISE supports fair, merit-based recruitment and equal opportunity. We do not charge application or recruitment fees. Apply only through instructions published on our official channels.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const trackItems = document.querySelectorAll(".track-item");
-    
-    trackItems.forEach(item => {
-      item.addEventListener("mouseenter", function () {
-        const targetTabId = this.getAttribute("data-tab");
-
-        // Toggle active menu indicators
-        trackItems.forEach(i => i.classList.remove("active"));
-        this.classList.add("active");
-
-        // Toggle visibility between columns
-        document.getElementById("markets-view").style.display = (targetTabId === "markets-view") ? "contents" : "none";
-        document.getElementById("expertise-view").style.display = (targetTabId === "expertise-view") ? "contents" : "none";
-        document.getElementById("sustainability-view").style.display = (targetTabId === "sustainability-view") ? "contents" : "none";
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  const trackItems = document.querySelectorAll(".track-item");
+  trackItems.forEach(item => item.addEventListener("mouseenter", function () {
+    const target = this.getAttribute("data-tab");
+    trackItems.forEach(node => node.classList.remove("active"));
+    this.classList.add("active");
+    ["markets-view", "expertise-view", "sustainability-view"].forEach(id => {
+      const panel = document.getElementById(id);
+      if (panel) panel.style.display = id === target ? (id === "markets-view" ? "contents" : "contents") : "none";
     });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const projectItems = document.querySelectorAll(".project-track-item");
-    const projectPreviews = document.querySelectorAll(".project-preview-content");
+  }));
 
-    projectItems.forEach(item => {
-      // Listens for instant desktop mouse hover events
-      item.addEventListener("mouseenter", function () {
-        const targetProjId = this.getAttribute("data-project");
+  const projectItems = document.querySelectorAll(".project-track-item");
+  const projectPreviews = document.querySelectorAll(".project-preview-content");
+  projectItems.forEach(item => item.addEventListener("mouseenter", function () {
+    const target = this.getAttribute("data-project");
+    projectItems.forEach(node => node.classList.remove("active"));
+    this.classList.add("active");
+    projectPreviews.forEach(panel => panel.classList.remove("active-preview"));
+    const preview = document.getElementById(target);
+    if (preview) preview.classList.add("active-preview");
+  }));
 
-        // Clear active classes from track records
-        projectItems.forEach(i => i.classList.remove("active"));
-        this.classList.add("active");
-
-        // Compress and hide all previews
-        projectPreviews.forEach(p => panel = p.classList.remove("active-preview"));
-        
-        // Target specific preview element box and light it up active
-        const targetPreview = document.getElementById(targetProjId);
-        if (targetPreview) {
-          targetPreview.classList.add("active-preview");
-        }
-      });
+  const mobileTrigger = document.querySelector(".w-nav-button");
+  const navMenu = document.querySelector(".w-nav-menu");
+  if (mobileTrigger && navMenu) {
+    mobileTrigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      navMenu.classList.toggle("is-mobile-active");
     });
-  });
-</script>
-<!-- Lightweight Non-Webflow Menu Animation Handler -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Hooks clean selectors targetting your exact navbar buttons and menus
-    const mobileTrigger = document.querySelector('.w-nav-button') || document.querySelector('.menu-button');
-    const layoutMenu = document.querySelector('.w-nav-menu') || document.querySelector('.nav-menu');
-    
-    if (mobileTrigger && layoutMenu) {
-      mobileTrigger.addEventListener('click', (event) => {
+  }
+
+  /* Ensure the dropdown panels can open from the original navigation triggers. */
+  document.querySelectorAll("#expertise-toggle, #projects-toggle").forEach(trigger => {
+    trigger.addEventListener("click", function (event) {
+      const panel = document.getElementById(this.id === "expertise-toggle" ? "expertise-panel" : "projects-panel");
+      if (window.matchMedia("(max-width: 991px)").matches && panel) {
         event.preventDefault();
-        event.stopPropagation();
-        
-        // Safely toggles active layout view states
-        layoutMenu.classList.toggle('is-mobile-active');
-      });
-    }
+        panel.classList.toggle("toggle-hidden");
+      }
+    });
   });
+});
 </script>
-
 </body>
 </html>

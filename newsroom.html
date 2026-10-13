@@ -3,717 +3,258 @@
 <head>
   <meta charset="utf-8">
   <title>Newsroom - RISE Liberia</title>
-  <meta content="Explore the core scientific, technical, environmental, and engineering competencies driving climate resilience and sustainable development across Liberia at RISE." name="description">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content="Official announcements, project milestones, field activities, and media updates from RISE Liberia.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/rise-liberia-388f17.webflow.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-  <script src="https://googleapis.com" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({ google: { families: ["Anton:300,400,500,600,700","Inter Tight:300,400,500,600,700"] } });</script>
-<style>
-  /* ==========================================================================
-     RISE NEWSROOM — OPTIMIZED MINIMALIST ENGINE (ULTRA-RESPONSIVE)
-     ========================================================================== */
-
-  @import url('https://googleapis.com');
-
-  .premium-newsroom-wrapper * { box-sizing: border-box; }
-
-  /* --- Professional Typography Matrix --- */
-  .newsroom-display-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.2rem, 5.5vw, 4rem);
-    line-height: 1.05;
-    text-transform: uppercase;
-    color: #0f172a; 
-    letter-spacing: -0.03em;
-    font-weight: 800;
-    margin: 0 0 24px 0;
-  }
-
-  .newsroom-hero-intro {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.65;
-    color: #334155;
-    max-width: 600px;
-    margin: 0 0 40px 0;
-  }
-
-  .newsroom-section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    text-transform: uppercase;
-    color: #0f172a;
-    margin: 0 0 8px 0;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-
-  .newsroom-section-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #22b38a;
-    margin: 0 0 48px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-  }
-
-  /* --- Multi-Layer Hero Component --- */
-  .premium-newsroom-hero {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background-color: #f0fdf4 !important;
-    padding: clamp(120px, 12vw, 180px) 0 clamp(80px, 10vw, 130px) 0;
-    display: flex;
-    align-items: center;
-    min-height: 70vh;
-  }
-
-  /* 🖼️ Fixed Position Top-Ceiling Framing Anchor */
-  .newsroom-hero-bg-img {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: 85% 0%; 
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  /* 🟢 Left-Aligned Dynamic Protection Gradient Mask */
-  .newsroom-hero-mask {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(90deg, rgba(240, 253, 244, 1) 0%, rgba(240, 253, 244, 0.96) 35%, rgba(240, 253, 244, 0.75) 55%, rgba(255, 255, 255, 0) 85%);
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .newsroom-hero-content { position: relative; z-index: 3; max-width: 900px; }
-  .newsroom-section { padding: clamp(60px, 8vw, 120px) 0; position: relative; background-color: #ffffff; }
-
-  /* --- Asymmetric Layout & Category Feeds --- */
-  .asymmetric-newsroom-layout { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
-  .news-categories-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 32px; }
-  
-  .category-feed-node { border-top: 1px solid #e2e8f0; padding-top: 24px; }
-  .category-feed-node h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 0 0 10px 0; }
-  .category-feed-node p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #475569; margin: 0; }
-
-  /* --- Empty State Dynamic Info Box --- */
-  .launch-state-board {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #22b38a;
-    padding: 40px;
-    border-radius: 4px;
-    margin-bottom: 64px;
-  }
-  .launch-state-board p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; color: #334155; margin: 0; line-height: 1.6; }
-
-  /* --- Media Panel Structures --- */
-  .enquiries-split-matrix { display: grid; grid-template-columns: 1fr; gap: 48px; }
-  .enquiry-panel h4 { font-family: 'Syne', sans-serif; font-size: 1.35rem; color: #0f172a; margin: 0 0 16px 0; }
-  .enquiry-panel p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; line-height: 1.6; color: #475569; margin: 0; }
-
-  .press-kit-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-  .kit-tag { background: #ffffff; border: 1px solid #cbd5e1; color: #475569; padding: 8px 16px; border-radius: 4px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 500; }
-
-  /* High-Impact CTA Block Component */
-  .newsroom-footer-cta {
-    background-color: #f0fdf4;
-    border: 1px solid #dcfce7;
-    border-radius: 12px;
-    padding: clamp(40px, 6vw, 80px);
-    text-align: center;
-    margin-top: 80px;
-  }
-  .newsroom-footer-cta h3 { font-family: 'Syne', sans-serif; font-size: clamp(1.75rem, 3.5vw, 2.5rem); text-transform: uppercase; color: #0f172a; margin: 0 0 24px 0; }
-
-  /* ==========================================================================
-     MOBILE BREAKPOINT MATRIX (100% RESPONSIVE ADAPTATION)
-     ========================================================================== */
-  @media (min-width: 992px) {
-    .asymmetric-newsroom-layout { grid-template-columns: 3.5fr 6.5fr; gap: 64px; }
-    .enquiries-split-matrix { grid-template-columns: 1fr 1fr; gap: 48px; }
-  }
-
-  @media (max-width: 991px) {
-    .news-categories-grid { grid-template-columns: 1fr; gap: 32px; }
-    .newsroom-hero-mask { background: linear-gradient(180deg, rgba(240, 253, 244, 0.98) 0%, rgba(240, 253, 244, 0.90) 50%, rgba(240, 253, 244, 0.4) 100%); }
-    .premium-newsroom-hero::before { background-position: center 10%; }
-  }
-
-  @media (max-width: 767px) {
-    .why-rise-text-panel { grid-template-columns: 1fr; gap: 32px; padding: 32px 20px; }
-    .kit-tag { width: 100%; text-align: center; padding: 14px 20px; }
-    .newsroom-footer-cta { padding: 32px 20px; margin-top: 48px; }
-  }
-  /* ==========================================================================
-   🚨 CRITICAL OVERLAP CORRECTION & ISOLATION PATCH
-   ========================================================================== */
-@media (max-width: 991px) {
-  /* Forces the split content grid to completely break apart into safe stacked rows */
-  .enquiries-split-matrix {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 40px !important;
-    width: 100% !important;
-  }
-
-  /* Isolates the Notice banner box from running into adjacent components */
-  .launch-state-board {
-    display: block !important;
-    position: relative !important;
-    width: 100% !important;
-    margin: 0 0 48px 0 !important; /* Forces solid breathing room beneath it */
-    float: none !important;
-    clear: both !important;
-  }
-
-  /* Cleans up and structures individual text panel elements */
-  .enquiry-panel {
-    display: block !important;
-    width: 100% !important;
-    margin-bottom: 24px !important;
-  }
-
-  /* Stabilizes the Press Kit item boxes so they don't break lines awkwardly */
-  .press-kit-tags {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    width: 100% !important;
-  }
-
-  .kit-tag {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Fixes the closing CTA layout container so it stays bound safely */
-  .newsroom-footer-cta {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin: 48px 0 0 0 !important;
-    padding: 40px 24px !important;
-  }
-}
-
-</style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({ google: { families: ["Anton:300,400,500,600,700", "Inter Tight:300,400,500,600,700"] } });</script>
+  <style>
+    .rise-newsroom { --rn-ink:#172b25; --rn-muted:#65736d; --rn-green:#176b4d; --rn-dark:#104b37; --rn-lime:#d9e9a6; --rn-paper:#f7f9f6; --rn-line:#e2e9e3; color:var(--rn-ink); background:#fff; font-family:"Inter Tight",sans-serif; }
+    .rise-newsroom *, .rise-newsroom *::before, .rise-newsroom *::after { box-sizing:border-box; }
+    .rise-newsroom .rn-container { width:min(1160px,calc(100% - 48px)); margin:0 auto; }
+    /* The header is retained above. Extra top breathing room prevents hero content sitting beneath it. */
+    .rise-newsroom .rn-hero { position:relative; isolation:isolate; overflow:hidden; padding:clamp(170px,15vw,220px) 0 68px; background:var(--rn-paper); border-bottom:1px solid var(--rn-line); }
+    .rise-newsroom .rn-hero::after { content:""; position:absolute; z-index:-1; width:520px; height:520px; right:-145px; top:-190px; border-radius:50%; background:radial-gradient(circle,rgba(217,233,166,.72),rgba(217,233,166,0) 70%); pointer-events:none; }
+    .rise-newsroom .rn-hero-grid { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr); align-items:center; gap:54px; }
+    .rise-newsroom .rn-eyebrow { display:inline-flex; align-items:center; gap:10px; margin:0 0 17px; color:var(--rn-green); text-transform:uppercase; letter-spacing:.14em; font-size:11px; font-weight:700; }
+    .rise-newsroom .rn-eyebrow::before { content:""; width:26px; height:2px; background:var(--rn-green); }
+    .rise-newsroom .rn-hero h1 { max-width:650px; margin:0 0 20px; color:#101412; font-family:Anton,"Inter Tight",sans-serif; font-size:clamp(44px,5.4vw,76px); font-weight:400; line-height:.99; letter-spacing:-.025em; text-transform:uppercase; }
+    .rise-newsroom .rn-hero-copy { max-width:600px; margin:0 0 27px; color:var(--rn-muted); font-size:clamp(16px,1.55vw,19px); line-height:1.7; }
+    .rise-newsroom .rn-hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+    .rise-newsroom .rn-primary-link { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:13px 19px; border:1px solid var(--rn-green); border-radius:999px; background:var(--rn-green); color:#fff; font-size:13px; font-weight:700; text-decoration:none; transition:transform .2s ease,background .2s ease; }
+    .rise-newsroom .rn-primary-link:hover { transform:translateY(-2px); background:var(--rn-dark); }
+    .rise-newsroom .rn-secondary-link { color:var(--rn-dark); font-size:13px; font-weight:700; text-decoration:none; padding:10px 4px; }
+    .rise-newsroom .rn-hero-visual { position:relative; min-width:0; }
+    .rise-newsroom .rn-hero-photo { position:relative; overflow:hidden; aspect-ratio:4/3; border-radius:20px; background:#e5ece5; box-shadow:0 24px 60px rgba(20,48,35,.12); }
+    .rise-newsroom .rn-hero-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+    .rise-newsroom .rn-photo-caption { position:absolute; left:16px; right:16px; bottom:16px; padding:14px 16px; border:1px solid rgba(255,255,255,.45); border-radius:12px; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); }
+    .rise-newsroom .rn-photo-caption span { display:block; margin-bottom:4px; color:var(--rn-green); text-transform:uppercase; letter-spacing:.12em; font-size:9px; font-weight:800; }
+    .rise-newsroom .rn-photo-caption strong { color:var(--rn-ink); font-size:14px; line-height:1.4; }
+    .rise-newsroom .rn-pill-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:28px; }
+    .rise-newsroom .rn-pill { display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border:1px solid #dce6dd; border-radius:999px; background:rgba(255,255,255,.82); color:#41574b; font-size:12px; font-weight:600; }
+    .rise-newsroom .rn-pill::before { content:""; width:7px; height:7px; border-radius:50%; background:#6b9d6f; }
+    .rise-newsroom .rn-section { padding:68px 0; }
+    .rise-newsroom .rn-section-head { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:26px; }
+    .rise-newsroom .rn-section-head h2 { margin:0 0 9px; color:var(--rn-ink); font-size:clamp(29px,3.6vw,42px); line-height:1.1; letter-spacing:-.04em; }
+    .rise-newsroom .rn-section-head p { max-width:580px; margin:0; color:var(--rn-muted); font-size:15px; line-height:1.7; }
+    .rise-newsroom .rn-category-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:15px; }
+    .rise-newsroom .rn-category-card { min-height:158px; padding:23px 21px; border:1px solid var(--rn-line); border-radius:15px; background:#fff; transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease; }
+    .rise-newsroom .rn-category-card:hover { transform:translateY(-3px); border-color:#cbdacf; box-shadow:0 12px 30px rgba(21,47,36,.06); }
+    .rise-newsroom .rn-category-number { display:block; margin-bottom:20px; color:#7a9a83; font-size:10px; font-weight:800; letter-spacing:.12em; }
+    .rise-newsroom .rn-category-card h3 { margin:0 0 8px; font-size:18px; letter-spacing:-.02em; }
+    .rise-newsroom .rn-category-card p { margin:0; color:var(--rn-muted); font-size:13px; line-height:1.65; }
+    .rise-newsroom .rn-featured { background:#f7f9f6; border-top:1px solid var(--rn-line); border-bottom:1px solid var(--rn-line); }
+    .rise-newsroom .rn-featured-card { overflow:hidden; border:1px solid var(--rn-line); border-radius:20px; background:#fff; box-shadow:0 14px 40px rgba(20,48,35,.05); }
+    .rise-newsroom .rn-featured-head { max-width:940px; padding:clamp(24px,4vw,42px) clamp(22px,4vw,44px) 27px; }
+    .rise-newsroom .rn-label { display:inline-flex; align-items:center; gap:8px; margin:0 0 15px; color:var(--rn-green); text-transform:uppercase; letter-spacing:.12em; font-size:10px; font-weight:800; }
+    .rise-newsroom .rn-label::before { content:""; width:7px; height:7px; border-radius:50%; background:#6b9d6f; }
+    .rise-newsroom .rn-featured-title { max-width:820px; margin:0 0 13px; color:var(--rn-ink); font-size:clamp(27px,3.4vw,39px); line-height:1.15; letter-spacing:-.04em; }
+    .rise-newsroom .rn-date { margin:0 0 17px; color:#7b8981; font-size:12px; font-weight:700; }
+    .rise-newsroom .rn-featured-copy { max-width:850px; margin:0; color:#58665e; font-size:15px; line-height:1.8; }
+    .rise-newsroom .rn-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; padding:0 clamp(16px,3vw,32px); }
+    .rise-newsroom .rn-gallery figure { display:flex; align-items:center; justify-content:center; overflow:hidden; min-width:0; aspect-ratio:16/10; margin:0; border:1px solid var(--rn-line); border-radius:11px; background:#f1f4f1; }
+    .rise-newsroom .rn-gallery img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; transition:transform .35s ease; }
+    .rise-newsroom .rn-gallery figure:hover img { transform:scale(1.025); }
+    .rise-newsroom .rn-featured-footer { padding:25px clamp(22px,4vw,44px) 34px; }
+    .rise-newsroom .rn-featured-footer p { max-width:900px; margin:0; color:#58665e; font-size:14px; line-height:1.8; }
+    .rise-newsroom .rn-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .rise-newsroom .rn-info-card { padding:28px; border:1px solid var(--rn-line); border-radius:16px; background:#fff; }
+    .rise-newsroom .rn-info-card h3 { margin:0 0 11px; font-size:22px; letter-spacing:-.03em; }
+    .rise-newsroom .rn-info-card p { margin:0; color:var(--rn-muted); font-size:14px; line-height:1.75; }
+    .rise-newsroom .rn-kit-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:17px; }
+    .rise-newsroom .rn-kit-tag { padding:8px 11px; border:1px solid var(--rn-line); border-radius:999px; background:var(--rn-paper); color:#506058; font-size:11px; font-weight:600; }
+    .rise-newsroom .rn-notice { display:flex; align-items:flex-start; gap:15px; margin-bottom:25px; padding:23px 25px; border:1px solid #dce8dd; border-radius:14px; background:#f6faf5; }
+    .rise-newsroom .rn-notice-mark { display:flex; flex:0 0 34px; align-items:center; justify-content:center; width:34px; height:34px; border-radius:10px; background:#e4efe1; color:var(--rn-green); font-weight:800; }
+    .rise-newsroom .rn-notice p { margin:2px 0 0; color:#53645a; font-size:14px; line-height:1.7; }
+    .rise-newsroom .rn-cta { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:54px; padding:34px 36px; border-radius:19px; background:var(--rn-dark); color:#fff; }
+    .rise-newsroom .rn-cta h2 { margin:0 0 8px; font-size:clamp(24px,3vw,32px); line-height:1.15; letter-spacing:-.035em; }
+    .rise-newsroom .rn-cta p { max-width:650px; margin:0; color:rgba(255,255,255,.77); font-size:14px; line-height:1.7; }
+    .rise-newsroom .rn-cta a { display:inline-flex; flex-shrink:0; align-items:center; gap:10px; padding:13px 18px; border-radius:999px; background:var(--rn-lime); color:var(--rn-dark); text-decoration:none; font-size:13px; font-weight:800; }
+    .rise-newsroom [hidden] { display:none!important; }
+    @media(max-width:1000px) { .rise-newsroom .rn-hero-grid { grid-template-columns:1fr 0.85fr; gap:30px; } .rise-newsroom .rn-category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:760px) { .rise-newsroom .rn-container { width:min(100% - 32px,600px); } .rise-newsroom .rn-hero { padding:132px 0 48px; } .rise-newsroom .rn-hero-grid { grid-template-columns:1fr; gap:28px; } .rise-newsroom .rn-hero h1 { max-width:600px; font-size:clamp(43px,10vw,66px); } .rise-newsroom .rn-hero-photo { aspect-ratio:16/10; } .rise-newsroom .rn-section { padding:48px 0; } .rise-newsroom .rn-section-head { align-items:flex-start; flex-direction:column; gap:10px; } .rise-newsroom .rn-category-grid { gap:12px; } .rise-newsroom .rn-category-card { min-height:145px; padding:19px 16px; } .rise-newsroom .rn-gallery { gap:8px; } .rise-newsroom .rn-info-grid { grid-template-columns:1fr; gap:14px; } .rise-newsroom .rn-cta { align-items:flex-start; flex-direction:column; padding:27px 23px; margin-top:36px; } }
+    @media(max-width:480px) { .rise-newsroom .rn-container { width:calc(100% - 28px); } .rise-newsroom .rn-hero { padding-top:116px; } .rise-newsroom .rn-pill-row { gap:7px; margin-top:22px; } .rise-newsroom .rn-pill { padding:8px 10px; font-size:11px; } .rise-newsroom .rn-category-grid { grid-template-columns:1fr; } .rise-newsroom .rn-category-card { min-height:0; } .rise-newsroom .rn-category-number { margin-bottom:12px; } .rise-newsroom .rn-gallery { grid-template-columns:1fr 1fr; gap:7px; padding:0 12px; } .rise-newsroom .rn-featured-head { padding:23px 17px 20px; } .rise-newsroom .rn-featured-title { font-size:26px; } .rise-newsroom .rn-featured-copy { font-size:13.5px; } .rise-newsroom .rn-featured-footer { padding:20px 17px 24px; } .rise-newsroom .rn-info-card { padding:22px 19px; } .rise-newsroom .rn-notice { padding:18px 16px; } }
+    @media(prefers-reduced-motion:reduce) { .rise-newsroom *, .rise-newsroom *::before, .rise-newsroom *::after { transition-duration:.01ms!important; scroll-behavior:auto!important; } }
+  </style>
 </head>
 <body>
-  <div class="pages-wrapper">
-    
-    <!-- Premium Navbar Navigation Wrapper with Integrated Dynamic Mega Menu -->
-<div role="banner" class="navbar w-nav">
-  <div class="container w-container">
-    <div class="navbar-wrapper">
-      
-      <!-- Brand Logo -->
-      <a href="index.html" class="brand-logo w-nav-brand">
-        <img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image">
-      </a>
-      
-      <!-- Interactive Menu Group Links -->
-      <nav role="navigation" class="nav-menu w-nav-menu">
-        <div class="nav-link-wrap">
-          <a href="index.html" class="nav-link w-nav-link">Home</a>
-          <a href="about.html" class="nav-link w-nav-link">About</a>
-          
-          <!-- MEGA MENU TRIGGER: EXPERTISE -->
-          <div class="mega-menu-trigger">
-            <a href="expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
-            
-            <!-- Complete Hidden Mega Menu Card Dropdown Container -->
-            <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
-              <div class="mega-menu-inner-grid">
-                
-                <!-- Left Side Column Panel: Main Interactive Tracks (UPDATED WITH TARGET FLAGS) -->
-                <div class="mega-left-sidebar">
-                  <ul class="track-links-list">
-                    <li class="track-item active" data-tab="markets-view"><a href="#" class="track-link">Markets</a></li>
-                    <li class="track-item" data-tab="expertise-view"><a href="#" class="track-link">Expertise</a></li>
-                    <li class="track-item" data-tab="sustainability-view"><a href="#" class="track-link">Sustainability</a></li>
-                  </ul>
-                  <div class="mega-sidebar-footer">
-                    <a href="expertise.html" class="discover-btn-accent">Discover What We Do</a>
+<div class="pages-wrapper">
+  <!-- ORIGINAL RISE NAVBAR AND MEGA MENU: retained, including its original classes, IDs, and data attributes. -->
+  <div role="banner" class="navbar w-nav">
+    <div class="container w-container">
+      <div class="navbar-wrapper">
+        <a href="index.html" class="brand-logo w-nav-brand">
+          <img src="images/RISE_Logo-removebg-preview-resized.png" loading="eager" width="120" height="Auto" alt="Brand Logo Image" class="brand-logo-image">
+        </a>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <div class="nav-link-wrap">
+            <a href="index.html" class="nav-link w-nav-link">Home</a>
+            <a href="about.html" class="nav-link w-nav-link">About</a>
+            <div class="mega-menu-trigger">
+              <a href="expertise.html" id="expertise-toggle" class="nav-link w-nav-link drop-indicator">Expertise</a>
+              <div id="expertise-panel" class="mega-menu-dropdown-panel toggle-hidden">
+                <div class="mega-menu-inner-grid">
+                  <div class="mega-left-sidebar">
+                    <ul class="track-links-list">
+                      <li class="track-item active" data-tab="markets-view"><a href="#" class="track-link">Markets</a></li>
+                      <li class="track-item" data-tab="expertise-view"><a href="#" class="track-link">Expertise</a></li>
+                      <li class="track-item" data-tab="sustainability-view"><a href="#" class="track-link">Sustainability</a></li>
+                    </ul>
+                    <div class="mega-sidebar-footer"><a href="expertise.html" class="discover-btn-accent">Discover What We Do</a></div>
                   </div>
+                  <div id="markets-view" class="mega-tab-content active-panel" style="display: contents;">
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise/agriculture.html">Agriculture</a></li><li><a href="expertise/data_analysis.html">Data Analysis</a></li><li><a href="expertise/education_research.html">Education &amp; Research</a></li><li><a href="expertise/energy.html">Energy</a></li><li><a href="expertise/environmental_science.html">Environmental Science</a></li><li><a href="expertise/general_construction.html">General Construction</a></li><li><a href="expertise/geology.html">Geology</a></li>
+                    </ul></div>
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise/mining.html">Mining</a></li><li><a href="expertise/natural_resources.html">Natural Resources</a></li><li><a href="expertise/soil.html">Soil</a></li><li><a href="expertise/gis.html">Remote Sensing / GIS Service</a></li><li><a href="expertise/water.html">Water</a></li>
+                    </ul></div>
+                  </div>
+                  <div id="expertise-view" class="mega-tab-content" style="display: none;">
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise.html#agroforestry">Agroforestry and Climate Smart Agriculture</a></li><li><a href="expertise.html#renewable">Renewable energy and waste management</a></li><li><a href="expertise.html#mineral">Mineral exploration</a></li><li><a href="expertise.html#civil">Civil engineering and general construction</a></li><li><a href="expertise.html#petroleum">Integrated Petroleum advisory and Geo-services</a></li><li><a href="expertise.html#carbon">Carbon market &amp; policy</a></li><li><a href="expertise.html#awareness">Environmental Awareness and Research</a></li><li><a href="expertise.html#me">Monitoring and Evaluation</a></li><li><a href="expertise.html#governance">Natural Resource Management and Mining Governance</a></li>
+                    </ul></div>
+                    <div class="mega-content-column"><ul class="sub-category-links">
+                      <li><a href="expertise.html#sampling">Soil and water sampling and analysis</a></li><li><a href="expertise.html#gis">GIS and remote sensing</a></li><li><a href="expertise.html#restoration">Ecosystem restoration and biodiversity conservation</a></li><li><a href="expertise.html#solar">Solar installation</a></li><li><a href="expertise.html#calibration">Petroleum tank calibration</a></li><li><a href="expertise.html#education">Education and research</a></li><li><a href="expertise.html#justice">Environmental policy, governance &amp; Justice</a></li><li><a href="expertise.html#blue-carbon">Ocean Governance and blue carbon</a></li>
+                    </ul></div>
+                  </div>
+                  <div id="sustainability-view" class="mega-tab-content" style="display: none;"><div class="mega-content-column"><ul class="sub-category-links"><li><a href="expertise.html#agroforestry">Environmental</a></li><li><a href="expertise.html#renewable">Social</a></li><li><a href="expertise.html#mineral">Economic</a></li><li><a href="expertise.html#civil">Institutional</a></li></ul></div></div>
                 </div>
-                
-                <!-- CONTAINER SET A: MARKETS (Your original Aviation & Health columns untouched) -->
-                <div id="markets-view" class="mega-tab-content active-panel" style="display: contents;">
-                  <!-- Middle Column Panel: Sub-category Links List (Set A) -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise/agriculture.html">Agriculture</a></li>
-                      <li><a href="expertise/data_analysis.html">Data Analysis</a></li>
-                      <li><a href="expertise/education_research.html">Education & Research</a></li>
-                      <li><a href="expertise/energy.html">Energy</a></li>
-                      <li><a href="expertise/environmental_science.html">Environmental Science</a></li>
-                      <li><a href="expertise/general_construction.html">General Construction</a></li>
-                      <li><a href="expertise/geology.html">Geology</a></li>
-                    </ul>
-                  </div>
-                  
-                  <!-- Right Side Column Panel: Sub-category Links List (Set B) -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise/mining.html">Mining</a></li>
-                      <li><a href="expertise/natural_resources.html">Natural Resources</a></li>
-                      <li><a href="expertise/soil.html">Soil</a></li>
-                      <li><a href="expertise/gis.html">Remote Sensing / GIS Service</a></li>
-                      <li><a href="expertise/water.html">Water</a></li>
-                    </ul>
-                  </div>
-                </div> <!-- Closes markets-view -->
-
-                <!-- CONTAINER SET B: EXPERTISE (Your 17 competencies mapped straight to your grid columns) -->
-                <div id="expertise-view" class="mega-tab-content" style="display: none;">
-                  <!-- Left Side Column -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise.html#agroforestry">Agroforestry and Climate Smart Agriculture</a></li>
-                      <li><a href="expertise.html#renewable">Renewable energy and waste management</a></li>
-                      <li><a href="expertise.html#mineral">Mineral exploration</a></li>
-                      <li><a href="expertise.html#civil">Civil engineering and general construction</a></li>
-                      <li><a href="expertise.html#petroleum">Integrated Petroleum advisory and Geo-services</a></li>
-                      <li><a href="expertise.html#carbon">Carbon market &amp; policy</a></li>
-                      <li><a href="expertise.html#awareness">Environmental Awareness and Research</a></li>
-                      <li><a href="expertise.html#me">Monitoring and Evaluation</a></li>
-                      <li><a href="expertise.html#governance">Natural Resource Management and Mining Governance</a></li>
-                    </ul>
-                  </div>
-                  <!-- Right Side Column -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise.html#sampling">Soil and water sampling and analysis</a></li>
-                      <li><a href="expertise.html#gis">GIS and remote sensing</a></li>
-                      <li><a href="expertise.html#restoration">Ecosystem restoration and biodiversity conservation</a></li>
-                      <li><a href="expertise.html#solar">Solar installation</a></li>
-                      <li><a href="expertise.html#calibration">Petroleum tank calibration</a></li>
-                      <li><a href="expertise.html#education">Education and research</a></li>
-                      <li><a href="expertise.html#justice">Environmental policy, governance &amp; Justice</a></li>
-                      <li><a href="expertise.html#blue-carbon">Ocean Governance and blue carbon</a></li>
-                    </ul>
-                  </div>
-                </div> <!-- Closes expertise-view -->
-
-                <!-- CONTAINER SET B: EXPERTISE (Your 17 competencies mapped straight to your grid columns) -->
-                <div id="sustainability-view" class="mega-tab-content" style="display: none;">
-                  <!-- Left Side Column -->
-                  <div class="mega-content-column">
-                    <ul class="sub-category-links">
-                      <li><a href="expertise.html#agroforestry">Environmental</a></li>
-                      <li><a href="expertise.html#renewable">Social</a></li>
-                      <li><a href="expertise.html#mineral">Economic</a></li>
-                      <li><a href="expertise.html#civil">Institutional</a></li>
-                    </ul>
-                   </div>
-                </div>
-
-              </div> <!-- Closes .mega-menu-inner-grid -->
-            </div> <!-- Closes .mega-menu-dropdown-panel -->
-          </div> <!-- Closes .mega-menu-trigger -->
-          
-          <!-- Remaining Standard Nav Menu Links -->
-          <!-- MEGA MENU TRIGGER: PROJECTS -->
-<div class="mega-menu-trigger">
-  <a href="projects.html" id="projects-toggle" class="nav-link w-nav-link drop-indicator">Projects</a>
-  
-  <!-- Projects Flyout Dropdown Card -->
-  <div id="projects-panel" class="mega-menu-dropdown-panel toggle-hidden">
-    <div class="mega-menu-inner-grid projects-grid-layout">
-      
-      <!-- Left Column Panel: Project Links List -->
-      <div class="mega-projects-sidebar">
-        <ul class="project-track-list">
-          <!-- Item 1 (Active by Default) -->
-          <li class="project-track-item active" data-project="proj-allianz">
-            <a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
-          </li>
-          <!-- Item 2 -->
-          <li class="project-track-item" data-project="proj-auckland">
-            <a href="projects.html#mainstreamingbiodiversity" class="project-track-link">Mainstreaming Biodiversity in Sand Production</a>
-          </li>
-          <!-- Item 3 -->
-          <li class="project-track-item" data-project="proj-dyson">
-            <a href="projects.html#climateequipment" class="project-track-link">Climate Equipment Needs Assessment for Liberia</a>
-          </li>
-          <!-- Item 4 (🟢 FIXED: Assigned unique identifier data-project) -->
-          <li class="project-track-item" data-project="proj-lfsp">
-            <a href="projects.html#lfsp" class="project-track-link">The Liberia Forest Sector Project (LFSP)</a>
-          </li>
-          <!-- Item 5 (🟢 FIXED: Assigned unique identifier data-project) -->
-          <li class="project-track-item" data-project="proj-kahia">
-            <a href="projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a>
-          </li>
-        </ul>
-      </div>
-      
-      <!-- Right Column Panel: Dynamic Preview Cards Display Workspace -->
-      <div class="mega-project-preview-panel">
-        
-        <!-- Preview 01: Allianz (Visible by Default) -->
-        <div id="proj-allianz" class="project-preview-content active-preview">
-          <div class="project-preview-image-box">
-            <img src="images/trust.jpeg" loading="lazy" alt="Climate Change Trust Fund Operational Manual" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            The Liberia Climate Change Trust Fund (LCCTF) operational manual is developed under the enhancing Climate Information Systems for Resilient development (Liberia CIS Project), funded by Green Climate Fund (GCF), African Development Bank (AFDB) and the Government of Liberia. 
-          </p>
-        </div>
-
-        <!-- Preview 02: Auckland -->
-        <div id="proj-auckland" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/sand.jpeg" loading="lazy" alt="Mainstreaming Biodiversity in Sand Production Responsible Value Chains for coastal resilience in West Africa" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            The 36-month regional project, led by UNEP under the Global Biodiversity Framework Fund (GBFF) was to mainstream biodiversity conservation into productive sectors by addressing unsustainable sand extraction in Liberia and the Gambia. 
-          </p>
-        </div>
-
-        <!-- Preview 03: Dyson -->
-        <div id="proj-dyson" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/climate.jpeg" loading="lazy" alt="Climate Equipment Needs Assessment for Liberia" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            Supported the Climate Information System Project (CIS) and the ERVCCS projects to develop the climate equipment needs assessment for Liberia. 
-          </p>
-        </div>
-
-        <!-- Preview 04 (🟢 FIXED: Cleaned card wrapping ID tracking) -->
-        <div id="proj-lfsp" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/lfsp.jpeg" loading="lazy" alt="The Liberia Forest Sector Project (LFSP)" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            The (LFSP) was a multi-stakeholder initiative implemented by the Ministry of Mines and Energy (MME), in partnership with EMG Consulting Group Ltd., with support from the Swedish International Development Cooperation Agency (Sida) and the Society for the Conservation of Nature of Liberia (SCNL), to strengthen the capacity of artisanal and small-scale miners to adopt Forest-Smart Mining practices that promote environmentally sustainable mining, forest conservation, and climate resilience in Liberia.
-          </p>
-        </div>
-
-        <!-- Preview 05 (🟢 FIXED: Cleaned card wrapping ID tracking from duplicate to proj-kahia) -->
-        <div id="proj-kahia" class="project-preview-content">
-          <div class="project-preview-image-box">
-            <img src="images/kahia.jpeg" loading="lazy" alt="The Kahia II Mini Hydropower Project" class="project-preview-img">
-          </div>
-          <p class="project-preview-description">
-            Involved conducting geological and geotechnical investigations to support the feasibility assessment, engineering design, and safe development of a proposed mini-hydropower facility in Lofa County, Liberia.
-          </p>
-        </div>
-
-      </div> <!-- Closes .mega-project-preview-panel -->
-    </div> <!-- Closes .mega-menu-inner-grid -->
-  </div> <!-- Closes .mega-menu-dropdown-panel -->
-</div> <!-- Closes .mega-menu-trigger -->
-
-
-          <!-- Remaining Standard Nav Menu Links -->
-          <a href="insights.html" class="nav-link w-nav-link">Insights</a>
-          <a href="careers.html" class="nav-link w-nav-link">Career</a>
-          <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
-          
-          <a href="contact.html" class="primary-button mobile-on w-inline-block">
-            <div class="primary-button-texts nav">
-              <div class="primary-button-text">Get in Touch</div>
-              <div class="primary-button-text white">Get in Touch</div>
+              </div>
             </div>
-            <div class="primary-button-bg"></div>
-          </a>
-        </div> <!-- Closes .nav-link-wrap -->
-      </nav>
-      
-      <!-- Utility Action Section Panels -->
-      <div class="nav-button-wrap">
-        <div class="search-button-wrap">
-          <form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form>
-        </div>
-        <a href="contact.html" class="primary-button desktop-on w-inline-block">
-          <div class="primary-button-texts nav">
-            <div class="primary-button-text">Get in Touch</div>
-            <div class="primary-button-text white">Get in Touch</div>
+            <div class="mega-menu-trigger">
+              <a href="projects.html" id="projects-toggle" class="nav-link w-nav-link drop-indicator">Projects</a>
+              <div id="projects-panel" class="mega-menu-dropdown-panel toggle-hidden">
+                <div class="mega-menu-inner-grid projects-grid-layout">
+                  <div class="mega-projects-sidebar"><ul class="project-track-list">
+                    <li class="project-track-item" data-project="proj-mantrac"><a href="projects.html#propertyappraisalvaluationmantrac" class="project-track-link">Property Appraisal/Valuation for Mantrac CAT Liberia</a></li>
+                    <li class="project-track-item active" data-project="proj-allianz"><a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a></li>
+                    <li class="project-track-item" data-project="proj-auckland"><a href="projects.html#mainstreamingbiodiversity" class="project-track-link">Mainstreaming Biodiversity in Sand Production</a></li>
+                    <li class="project-track-item" data-project="proj-dyson"><a href="projects.html#climateequipment" class="project-track-link">Climate Equipment Needs Assessment for Liberia</a></li>
+                    <li class="project-track-item" data-project="proj-lfsp"><a href="projects.html#lfsp" class="project-track-link">The Liberia Forest Sector Project (LFSP)</a></li>
+                    <li class="project-track-item" data-project="proj-kahia"><a href="projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a></li>
+                  </ul></div>
+                  <div class="mega-project-preview-panel">
+                    <div id="proj-allianz" class="project-preview-content active-preview"><div class="project-preview-image-box"><img src="images/trust.jpeg" loading="lazy" alt="Climate Change Trust Fund Operational Manual" class="project-preview-img"></div><p class="project-preview-description">The Liberia Climate Change Trust Fund (LCCTF) operational manual was developed under the Liberia Climate Information Systems for Resilient Development project, funded by the Green Climate Fund, African Development Bank, and the Government of Liberia.</p></div>
+                    <div id="proj-auckland" class="project-preview-content"><div class="project-preview-image-box"><img src="images/sand.jpeg" loading="lazy" alt="Mainstreaming Biodiversity in Sand Production" class="project-preview-img"></div><p class="project-preview-description">A 36-month regional project led by UNEP under the Global Biodiversity Framework Fund, addressing unsustainable sand extraction in Liberia and The Gambia.</p></div>
+                    <div id="proj-dyson" class="project-preview-content"><div class="project-preview-image-box"><img src="images/climate.jpeg" loading="lazy" alt="Climate Equipment Needs Assessment for Liberia" class="project-preview-img"></div><p class="project-preview-description">Supported the Climate Information System and ERVCCS projects to develop Liberia's climate equipment needs assessment.</p></div>
+                    <div id="proj-lfsp" class="project-preview-content"><div class="project-preview-image-box"><img src="images/lfsp.jpeg" loading="lazy" alt="The Liberia Forest Sector Project" class="project-preview-img"></div><p class="project-preview-description">A multi-stakeholder initiative to strengthen artisanal and small-scale miners' capacity to adopt Forest-Smart Mining practices in Liberia.</p></div>
+                    <div id="proj-kahia" class="project-preview-content"><div class="project-preview-image-box"><img src="images/kahia.jpeg" loading="lazy" alt="The Kahia II Mini Hydropower Project" class="project-preview-img"></div><p class="project-preview-description">Geological and geotechnical investigations supporting the feasibility assessment and engineering design of a proposed mini-hydropower facility in Lofa County.</p></div>
+                    <div id="proj-mantrac" class="project-preview-content"><div class="project-preview-image-box"><img src="images/mantrac.jpeg" loading="lazy" alt="Property Appraisal and Valuation for Mantrac CAT Liberia" class="project-preview-img"></div><p class="project-preview-description">As a major industrial player operating heavy equipment, power systems,
+         and specialized facilities in Liberia, Mantrac required an expert,
+         certified third-party appraisal of its real estate holdings and
+         physical infrastructure. RISE Liberia evaluated the fair market value,
+         structural integrity, and asset baseline of Mantrac's properties,
+         leveraging its technical expertise and consulting competencies.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="insights.html" class="nav-link w-nav-link">Insights</a>
+            <a href="careers.html" class="nav-link w-nav-link">Career</a>
+            <a href="newsroom.html" class="nav-link w-nav-link">Newsroom</a>
+            <a href="contact.html" class="primary-button mobile-on w-inline-block"><div class="primary-button-texts nav"><div class="primary-button-text">Get in Touch</div><div class="primary-button-text white">Get in Touch</div></div><div class="primary-button-bg"></div></a>
           </div>
-          <div class="primary-button-bg"></div>
-        </a>
-        <div class="hamburger-wrap w-nav-button">
-          <div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div>
+        </nav>
+        <div class="nav-button-wrap">
+          <div class="search-button-wrap"><form action="/search" class="search-button w-form"><input type="submit" class="all-device-none w-button" value="Search"></form></div>
+          <a href="contact.html" class="primary-button desktop-on w-inline-block"><div class="primary-button-texts nav"><div class="primary-button-text">Get in Touch</div><div class="primary-button-text white">Get in Touch</div></div><div class="primary-button-bg"></div></a>
+          <div class="hamburger-wrap w-nav-button"><div data-is-ix2-target="1" class="hamburger" data-src="documents/black.json" data-renderer="svg" data-default-duration="0"></div></div>
         </div>
       </div>
-
-    </div> <!-- Closes .navbar-wrapper -->
-  </div> <!-- Closes .container -->
-</div> <!-- Closes .navbar -->
-
-          <div class="premium-newsroom-wrapper">
-
-  <!-- HERO COMPONENT: MULTI-LAYER EYE-LINE FRAME LOCK ENGINE -->
-  <header class="premium-newsroom-hero">
-    <!-- 📷 Hero Image Anchor (Using aboutheader asset as the single page graphic container) -->
-    <img src="images/newsroom.jpeg" alt="RISE Newsroom Image" class="newsroom-hero-bg-img">
-    
-    <!-- 🟢 Asymmetric Vignette Mask Layer -->
-    <div class="newsroom-hero-mask"></div>
-    
-    <!-- 📑 Foreground Headings Link Container -->
-    <div class="container w-container">
-      <div class="newsroom-hero-content">
-        <h1 class="newsroom-display-title">
-          RISE in the field.<br>RISE in the conversation.
-        </h1>
-        <p class="newsroom-hero-intro">
-          Follow official company announcements, project milestones, technical events and media updates from RISE Consulting Group.
-        </p>
-        <a href="#updates" class="discover-btn-accent w-button" style="border-radius: 4px; padding: 16px 32px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; box-shadow: 0 4px 14px rgba(34,179,138,0.2);">
-          VIEW LATEST UPDATES
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- SECTION: NEWS CATEGORIES FEED ARCHIVE -->
-  <section id="updates" class="newsroom-section">
-    <div class="container w-container">
-      <div class="asymmetric-newsroom-layout">
-        
-        <!-- Sticky Left Heading Anchor -->
-        <div>
-          <h2 class="newsroom-section-title">News categories</h2>
-          <div class="newsroom-section-subtitle">Archive Distribution</div>
-        </div>
-        
-        <!-- Right Content Block Grid -->
-        <div class="news-categories-grid">
-          
-          <div class="category-feed-node">
-            <h3>Company News</h3>
-            <p>Leadership, partnerships and institutional updates.</p>
-          </div>
-          
-          <div class="category-feed-node">
-            <h3>Project Updates</h3>
-            <p>Approved milestones, field activities and delivery highlights.</p>
-          </div>
-          
-          <div class="category-feed-node">
-            <h3>Media Releases</h3>
-            <p>Official statements and public announcements.</p>
-          </div>
-          
-          <div class="category-feed-node">
-            <h3>Events</h3>
-            <p>Conferences, trainings, workshops and technical engagements.</p>
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION: LAUNCH STATE & ENQUIRIES MATRICES -->
-  <section class="newsroom-section" style="background-color: #fafafa; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
-    <div class="container w-container">
-      
-      <!-- Launch State Notice Indicator Block -->
-      <div class="launch-state-board">
-        <p>
-          <strong>Notice:</strong> Our newsroom is being prepared. For verified updates, follow RISE Consulting Group’s official channels or contact us through the website.
-        </p>
-      </div>
-
-      <!-- Enquiries and Press kit split layout array -->
-      <div class="enquiries-split-matrix">
-        
-        <!-- Block A: Media Enquiries -->
-        <div class="enquiry-panel">
-          <h4>Media enquiries</h4>
-          <p>
-            For interviews, expert commentary, company information or approved media assets, use the website contact form and include your outlet, deadline and request.
-          </p>
-        </div>
-        
-        <!-- Block B: Press Kit Manifest tags -->
-        <div class="enquiry-panel">
-          <h4>Press kit</h4>
-          <p>Available assets after approval:</p>
-          <div class="press-kit-tags">
-            <span class="kit-tag">Company Profile</span>
-            <span class="kit-tag">Official Logo Files</span>
-            <span class="kit-tag">Leadership Biographies</span>
-            <span class="kit-tag">Approved Photographs</span>
-            <span class="kit-tag">Media Contact Details</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- High-End Section Closing CTA Element Block -->
-      <div class="newsroom-footer-cta">
-        <h3>Need a technical perspective?</h3>
-        <a href="contact.html" class="discover-btn-accent w-button" style="border-radius: 4px; padding: 18px 36px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">
-          CONTACT RISE
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-</div>
-
-
     </div>
   </div>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const trackItems = document.querySelectorAll(".track-item");
-    
-    trackItems.forEach(item => {
-      item.addEventListener("mouseenter", function () {
-        const targetTabId = this.getAttribute("data-tab");
 
-        // Toggle active menu indicators
-        trackItems.forEach(i => i.classList.remove("active"));
-        this.classList.add("active");
+  
+  <div class="premium-newsroom-wrapper">
+    <main class="rise-newsroom">
+      <section class="rn-hero">
+        <div class="rn-container rn-hero-grid">
+          <div class="rn-hero-content">
+            <span class="rn-eyebrow">RISE Liberia · Newsroom</span>
+            <h1>RISE in the field.<br>RISE in the conversation.</h1>
+            <p class="rn-hero-copy">Follow official company announcements, project milestones, field activities, and media updates from RISE Consulting Group—sharing the work and ideas supporting sustainable development across Liberia.</p>
+            <div class="rn-hero-actions"><a class="rn-primary-link" href="#updates">Explore latest update <span aria-hidden="true">↘</span></a><a class="rn-secondary-link" href="#news-categories">Browse news categories&nbsp; ↗</a></div>
+            <div class="rn-pill-row"><span class="rn-pill">Company announcements</span><span class="rn-pill">Project milestones</span><span class="rn-pill">Field activities</span></div>
+          </div>
+          <div class="rn-hero-visual">
+            <div class="rn-hero-photo"><img src="images/newsroom.jpeg" alt="RISE Liberia newsroom and field work" loading="eager"><div class="rn-photo-caption"><span>Science · People · Progress</span><strong>Stories from our work across Liberia</strong></div></div>
+          </div>
+        </div>
+      </section>
 
-        // Toggle visibility between columns
-        document.getElementById("markets-view").style.display = (targetTabId === "markets-view") ? "contents" : "none";
-        document.getElementById("expertise-view").style.display = (targetTabId === "expertise-view") ? "contents" : "none";
-        document.getElementById("sustainability-view").style.display = (targetTabId === "sustainability-view") ? "contents" : "none";
+      <section id="news-categories" class="rn-section">
+        <div class="rn-container">
+          <div class="rn-section-head"><div><span class="rn-eyebrow">Explore the newsroom</span><h2>News, by focus</h2><p>Explore the updates that share our work, partnerships, public announcements, and technical engagements.</p></div></div>
+          <div class="rn-category-grid">
+            <article class="rn-category-card"><span class="rn-category-number">01 / INSTITUTION</span><h3>Company News</h3><p>Leadership, partnerships, and institutional updates.</p></article>
+            <article class="rn-category-card"><span class="rn-category-number">02 / DELIVERY</span><h3>Project Updates</h3><p>Approved milestones, field activities, and delivery highlights.</p></article>
+            <article class="rn-category-card"><span class="rn-category-number">03 / PUBLIC</span><h3>Media Releases</h3><p>Official statements and public announcements.</p></article>
+            <article class="rn-category-card"><span class="rn-category-number">04 / ENGAGEMENT</span><h3>Events</h3><p>Conferences, trainings, workshops, and technical engagements.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="updates" class="rn-section rn-featured">
+        <div class="rn-container">
+          <div class="rn-section-head"><div><span class="rn-eyebrow">Latest announcement</span><h2>Updates from RISE</h2><p>News and milestones from our work with partners across Liberia.</p></div></div>
+          <article id="mantrac-contract-announcement" class="rn-featured-card">
+            <header class="rn-featured-head"><span class="rn-label">Company news · Project milestone</span><h3 class="rn-featured-title">RISE Liberia Signs Property Valuation Agreement with Mantrac CAT</h3><p class="rn-date">September 30, 2026</p><p class="rn-featured-copy">On September 30, 2026, the Resilience Institute for Sustainability and Environment Consulting Group signed a contract agreement with Mantrac CAT, Liberia to undertake a property valuation assignment. Our Founder and Technical Manager Pope Alexander G. Wrehyou signed on behalf of RISE, marking an important milestone in our commitment to providing professional, evidence-based consultancy services in Liberia.</p></header>
+            <div class="rn-gallery" aria-label="Mantrac CAT contract signing photographs">
+              <figure><img src="images/mantrac-contract-signing-1.jpeg" alt="RISE Liberia and Mantrac CAT representatives during the property valuation contract signing" loading="lazy"></figure>
+              <figure><img src="images/mantrac-contract-signing-2.jpeg" alt="Representatives of RISE Liberia and Mantrac CAT at the agreement signing" loading="lazy"></figure>
+              <figure><img src="images/mantrac-contract-signing-3.jpeg" alt="RISE Liberia team members marking the Mantrac CAT property valuation assignment" loading="lazy"></figure>
+              <figure><img src="images/mantrac-contract-signing-4.jpeg" alt="Additional photograph from the Mantrac CAT Liberia contract signing event" loading="lazy"></figure>
+            </div>
+            <footer class="rn-featured-footer"><p>We thank the dedicated RISE team for their hard work and commitment, and extend our sincere appreciation to Mantrac CAT, Liberia for trusting us with this assignment. We look forward to a productive working relationship and delivering a thorough assessment that supports informed decisions about their property.</p></footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="rn-section">
+        <div class="rn-container">
+          <div class="rn-notice"><span class="rn-notice-mark" aria-hidden="true">i</span><p><strong>Stay informed.</strong> Follow RISE Consulting Group for official announcements, project milestones, partnerships, and updates on our consultancy work across Liberia.</p></div>
+          <div class="rn-info-grid">
+            <article class="rn-info-card"><h3>Media enquiries</h3><p>For interviews, expert commentary, company information, or approved media assets, use the website contact form and include your outlet, deadline, and request.</p></article>
+            <article class="rn-info-card"><h3>Press kit</h3><p>Approved media resources may be requested from the RISE team.</p><div class="rn-kit-tags"><span class="rn-kit-tag">Company profile</span><span class="rn-kit-tag">Official logo files</span><span class="rn-kit-tag">Leadership biographies</span><span class="rn-kit-tag">Approved photographs</span><span class="rn-kit-tag">Media contact details</span></div></article>
+          </div>
+          <section class="rn-cta"><div><h2>Need a technical perspective?</h2><p>Connect with RISE Liberia for expert commentary and science-led insight on environmental, climate, and engineering challenges.</p></div><a href="contact.html">Contact RISE <span aria-hidden="true">↗</span></a></section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const trackItems = document.querySelectorAll('.track-item');
+      trackItems.forEach(item => item.addEventListener('mouseenter', function () {
+        const targetTabId = this.getAttribute('data-tab');
+        trackItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+        ['markets-view','expertise-view','sustainability-view'].forEach(id => {
+          const panel = document.getElementById(id);
+          if (panel) panel.style.display = id === targetTabId ? 'contents' : 'none';
+        });
+      }));
+      const projectItems = document.querySelectorAll('.mega-projects-sidebar .project-track-item');
+      const previews = document.querySelectorAll('.mega-project-preview-panel .project-preview-content');
+      projectItems.forEach(item => item.addEventListener('mouseenter', function () {
+        const targetId = this.getAttribute('data-project');
+        projectItems.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+        previews.forEach(panel => panel.classList.remove('active-preview'));
+        const target = document.getElementById(targetId);
+        if (target) target.classList.add('active-preview');
+      }));
+      const mobileTrigger = document.querySelector('.w-nav-button');
+      const layoutMenu = document.querySelector('.w-nav-menu');
+      if (mobileTrigger && layoutMenu) mobileTrigger.addEventListener('click', event => {
+        event.preventDefault(); event.stopPropagation(); layoutMenu.classList.toggle('is-mobile-active');
       });
     });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const projectItems = document.querySelectorAll(".project-track-item");
-    const projectPreviews = document.querySelectorAll(".project-preview-content");
-
-    projectItems.forEach(item => {
-      // Listens for instant desktop mouse hover events
-      item.addEventListener("mouseenter", function () {
-        const targetProjId = this.getAttribute("data-project");
-
-        // Clear active classes from track records
-        projectItems.forEach(i => i.classList.remove("active"));
-        this.classList.add("active");
-
-        // Compress and hide all previews
-        projectPreviews.forEach(p => panel = p.classList.remove("active-preview"));
-        
-        // Target specific preview element box and light it up active
-        const targetPreview = document.getElementById(targetProjId);
-        if (targetPreview) {
-          targetPreview.classList.add("active-preview");
-        }
-      });
-    });
-  });
-</script>
-<!-- Lightweight Non-Webflow Menu Animation Handler -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Hooks clean selectors targetting your exact navbar buttons and menus
-    const mobileTrigger = document.querySelector('.w-nav-button') || document.querySelector('.menu-button');
-    const layoutMenu = document.querySelector('.w-nav-menu') || document.querySelector('.nav-menu');
-    
-    if (mobileTrigger && layoutMenu) {
-      mobileTrigger.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        
-        // Safely toggles active layout view states
-        layoutMenu.classList.toggle('is-mobile-active');
-      });
-    }
-  });
-</script>
-<!-- SYSTEM REVERSION SCRIPT: FORCE-FIX MOBILE BLOCKS -->
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    function enforceMobileStack() {
-      // Run ONLY if device screen viewport is tablet/mobile size (under 992px)
-      if (window.innerWidth < 992) {
-        
-        // 1. Force Break the Matrix Grid apart into independent vertical block structures
-        var matrix = document.querySelector('.enquiries-split-matrix');
-        if (matrix) {
-          matrix.style.setProperty('display', 'block', 'important');
-          matrix.style.setProperty('height', 'auto', 'important');
-          matrix.style.setProperty('min-height', '0px', 'important');
-        }
-
-        // 2. Force Break the Launch State / Notice banner box free from all anchors
-        var board = document.querySelector('.launch-state-board');
-        if (board) {
-          board.style.setProperty('display', 'block', 'important');
-          board.style.setProperty('position', 'relative', 'important');
-          board.style.setProperty('width', '100%', 'important');
-          board.style.setProperty('height', 'auto', 'important');
-          board.style.setProperty('margin', '0px 0px 48px 0px', 'important');
-          board.style.setProperty('clear', 'both', 'important');
-          board.style.setProperty('float', 'none', 'important');
-        }
-
-        // 3. Force isolate individual Panels to stack correctly
-        var panels = document.querySelectorAll('.enquiry-panel');
-        panels.forEach(function(panel) {
-          panel.style.setProperty('display', 'block', 'important');
-          panel.style.setProperty('width', '100%', 'important');
-          panel.style.setProperty('height', 'auto', 'important');
-          panel.style.setProperty('margin', '0px 0px 40px 0px', 'important');
-          panel.style.setProperty('position', 'relative', 'important');
-        });
-
-        // 4. Transform Press Kit Tag groups into full horizontal wide rows
-        var tagGroup = document.querySelector('.press-kit-tags');
-        if (tagGroup) {
-          tagGroup.style.setProperty('display', 'block', 'important');
-          tagGroup.style.setProperty('width', '100%', 'important');
-          tagGroup.style.setProperty('height', 'auto', 'important');
-        }
-
-        var tags = document.querySelectorAll('.kit-tag');
-        tags.forEach(function(tag) {
-          tag.style.setProperty('display', 'block', 'important');
-          tag.style.setProperty('width', '100%', 'important');
-          tag.style.setProperty('margin', '0px 0px 10px 0px', 'important');
-          tag.style.setProperty('text-align', 'center', 'important');
-        });
-
-        // 5. Demolish layout constraints on the closing footer CTA block section container
-        var cta = document.querySelector('.newsroom-footer-cta');
-        if (cta) {
-          cta.style.setProperty('display', 'block', 'important');
-          cta.style.setProperty('width', '100%', 'important');
-          cta.style.setProperty('height', 'auto', 'important');
-          cta.style.setProperty('position', 'relative', 'important');
-          cta.style.setProperty('margin', '60px 0px 0px 0px', 'important');
-          cta.style.setProperty('padding', '40px 24px', 'important');
-          cta.style.setProperty('clear', 'both', 'important');
-        }
-      }
-    }
-
-    // Initialize layout stack on initial execution load line
-    enforceMobileStack();
-    
-    // Add real-time event listener to monitor display canvas tracking changes
-    window.addEventListener('resize', enforceMobileStack);
-  });
-</script>
-
+  </script>
 </body>
 </html>

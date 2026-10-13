@@ -127,6 +127,639 @@
       }
     }
   </style>
+
+<style id="rise-content-redesign-v4">
+/*
+  RISE Liberia homepage content redesign v4.
+  Intentionally scoped to sections AFTER the existing hero.
+  The original navbar, mega menus, hero markup, hero styles and scripts remain untouched.
+*/
+:root {
+  --rise-v4-forest: #103b2d;
+  --rise-v4-deep: #08291f;
+  --rise-v4-green: #198452;
+  --rise-v4-lime: #d6e8a9;
+  --rise-v4-paper: #f4f5ef;
+  --rise-v4-ink: #17251e;
+  --rise-v4-muted: #66746c;
+  --rise-v4-line: rgba(16, 59, 45, .17);
+}
+
+/* ABOUT / EXPERTISE: make the logo asset feel intentional, not like a squeezed photo. */
+.premium-about-features {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(76px, 8.5vw, 126px) clamp(22px, 4vw, 60px) !important;
+  background:
+    radial-gradient(ellipse at 8% 18%, rgba(214,232,169,.22), transparent 28%),
+    linear-gradient(135deg, #fff 0%, #f7f8f3 100%) !important;
+}
+.premium-about-features::before {
+  content: "FIELD NOTES / 01";
+  position: absolute;
+  top: 36px;
+  left: clamp(22px, 4vw, 60px);
+  color: #6d8575;
+  font: 700 10px/1.2 "Inter Tight", Inter, sans-serif;
+  letter-spacing: .2em;
+}
+.premium-about-features::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -9vw;
+  width: 34vw;
+  height: 34vw;
+  min-width: 280px;
+  min-height: 280px;
+  border: 1px solid rgba(25,132,82,.12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(25,132,82,.025), 0 0 0 56px rgba(25,132,82,.02);
+  pointer-events: none;
+  z-index: -1;
+}
+.premium-about-features .features-container {
+  width: min(1280px, 100%) !important;
+  margin-inline: auto !important;
+}
+.premium-about-features .features-wrapper {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.04fr) minmax(380px, .96fr) !important;
+  align-items: center !important;
+  gap: clamp(34px, 5.4vw, 84px) !important;
+}
+.premium-about-features .features-image-box {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  min-height: clamp(420px, 43vw, 610px) !important;
+  padding: clamp(28px, 5vw, 72px) !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.94), rgba(235,241,230,.96)),
+    #eef2e9 !important;
+  border: 1px solid rgba(16,59,45,.12) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 28px 70px rgba(16,59,45,.09) !important;
+  isolation: isolate;
+}
+.premium-about-features .features-image-box::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(16,59,45,.12);
+  pointer-events: none;
+}
+.premium-about-features .features-image-box::after {
+  content: "SCIENCE  •  COMMUNITY  •  RESILIENCE";
+  position: absolute;
+  left: 28px;
+  bottom: 26px;
+  color: #476657;
+  font: 700 9px/1.4 "Inter Tight", Inter, sans-serif;
+  letter-spacing: .16em;
+  background: rgba(255,255,255,.72);
+  padding: 9px 12px;
+  border: 1px solid rgba(16,59,45,.1);
+  z-index: 2;
+}
+.premium-about-features .featured-display-img {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: 360px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  filter: drop-shadow(0 18px 24px rgba(16,59,45,.08));
+  transition: transform .45s ease !important;
+  z-index: 1;
+}
+.premium-about-features .features-image-box:hover .featured-display-img {
+  transform: translateY(-4px) scale(1.015) !important;
+}
+.premium-about-features .features-content-box {
+  display: block !important;
+  align-self: center !important;
+}
+.premium-about-features .interactive-accordion-group {
+  width: 100% !important;
+  border-top: 1px solid var(--rise-v4-line) !important;
+}
+.premium-about-features .accordion-row {
+  position: relative;
+  padding: 25px 22px !important;
+  border-bottom: 1px solid var(--rise-v4-line) !important;
+  background: transparent;
+  transition: background .28s ease, transform .28s ease, padding .28s ease !important;
+}
+.premium-about-features .accordion-row:hover {
+  background: rgba(255,255,255,.75);
+}
+.premium-about-features .accordion-row.active {
+  padding: 30px 24px 28px !important;
+  background: #eaf0e5 !important;
+  border-bottom-color: rgba(16,59,45,.2) !important;
+  box-shadow: inset 3px 0 0 var(--rise-v4-green);
+}
+.premium-about-features .accordion-title {
+  max-width: 360px;
+  color: var(--rise-v4-ink) !important;
+  font-size: clamp(1.2rem, 1.65vw, 1.58rem) !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.045em !important;
+}
+.premium-about-features .accordion-row.active .accordion-title {
+  color: var(--rise-v4-green) !important;
+}
+.premium-about-features .interactive-circle-btn {
+  flex: 0 0 46px !important;
+  width: 46px !important;
+  height: 46px !important;
+  border: 1px solid rgba(16,59,45,.2) !important;
+  background: #fff !important;
+  transition: all .25s ease !important;
+}
+.premium-about-features .accordion-row.active .interactive-circle-btn {
+  background: var(--rise-v4-forest) !important;
+  border-color: var(--rise-v4-forest) !important;
+}
+.premium-about-features .accordion-text {
+  max-width: 470px;
+  color: #5b6c62 !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+}
+
+/* MISSION: a richer editorial feature band with fine-line scientific motif. */
+.premium-services-intro {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  padding: clamp(90px, 10vw, 150px) clamp(22px, 5vw, 76px) !important;
+  color: #fff !important;
+  background:
+    radial-gradient(ellipse at 90% 20%, rgba(62,143,95,.24), transparent 34%),
+    linear-gradient(118deg, #08291f 0%, #103b2d 58%, #164a35 100%) !important;
+}
+.premium-services-intro::before {
+  content: "";
+  position: absolute;
+  width: min(52vw, 760px);
+  aspect-ratio: 1;
+  right: -13%;
+  top: -48%;
+  border: 1px solid rgba(214,232,169,.25);
+  border-radius: 50%;
+  box-shadow: 0 0 0 42px rgba(214,232,169,.035), 0 0 0 84px rgba(214,232,169,.03), 0 0 0 126px rgba(214,232,169,.02);
+  z-index: -1;
+  pointer-events: none;
+}
+.premium-services-intro::after {
+  content: "RISE / LIBERIA";
+  position: absolute;
+  right: clamp(22px, 5vw, 76px);
+  bottom: 30px;
+  color: rgba(255,255,255,.34);
+  font: 700 10px/1 "Inter Tight", Inter, sans-serif;
+  letter-spacing: .22em;
+}
+.premium-services-intro .services-intro-container {
+  width: min(1280px, 100%) !important;
+  margin-inline: auto !important;
+}
+.premium-services-intro .services-intro-wrapper {
+  position: relative;
+  max-width: 1100px !important;
+}
+.premium-services-intro .services-intro-tagline {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(24px, 3vw, 42px) !important;
+  color: var(--rise-v4-lime) !important;
+  font-size: .72rem !important;
+  font-weight: 750 !important;
+  letter-spacing: .2em !important;
+}
+.premium-services-intro .services-intro-tagline::before {
+  width: 36px !important;
+  height: 2px !important;
+  background: var(--rise-v4-lime) !important;
+}
+.premium-services-intro .services-intro-heading {
+  max-width: 1000px !important;
+  margin: 0 0 clamp(30px, 4vw, 48px) !important;
+  color: #fff !important;
+  font-size: clamp(3rem, 7.1vw, 7.2rem) !important;
+  font-weight: 550 !important;
+  line-height: .94 !important;
+  letter-spacing: -.075em !important;
+  text-wrap: balance;
+}
+.premium-services-intro .services-intro-subtext {
+  max-width: 660px !important;
+  margin: 0 0 0 auto !important;
+  padding: 18px 0 18px 24px !important;
+  border-left: 2px solid var(--rise-v4-lime) !important;
+  color: rgba(255,255,255,.78) !important;
+  font-size: clamp(1rem, 1.35vw, 1.15rem) !important;
+  line-height: 1.85 !important;
+}
+
+/* CORE VALUES: sharp type, intentional composition, and a designed text panel. */
+.premium-trust-section {
+  position: relative !important;
+  overflow: hidden;
+  padding: clamp(86px, 9vw, 136px) clamp(22px, 5vw, 76px) !important;
+  background:
+    linear-gradient(90deg, rgba(16,59,45,.035) 1px, transparent 1px),
+    linear-gradient(rgba(16,59,45,.035) 1px, transparent 1px),
+    #f4f5ef !important;
+  background-size: 44px 44px, 44px 44px, auto !important;
+}
+.premium-trust-section::after {
+  content: "02";
+  position: absolute;
+  right: clamp(18px, 5vw, 78px);
+  top: clamp(35px, 5vw, 76px);
+  color: rgba(16,59,45,.06);
+  font: 700 clamp(7rem, 18vw, 17rem)/.8 "Inter Tight", Inter, sans-serif;
+  letter-spacing: -.1em;
+  pointer-events: none;
+}
+.premium-trust-section .trust-container {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, 100%) !important;
+  margin-inline: auto !important;
+}
+.premium-trust-section .trust-header-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+  column-gap: clamp(36px, 7vw, 110px);
+  align-items: end;
+  max-width: none !important;
+}
+.premium-trust-section .trust-tagline {
+  grid-column: 1 / -1;
+  color: var(--rise-v4-green) !important;
+  margin-bottom: 32px !important;
+  font-size: .72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .2em !important;
+}
+.premium-trust-section .trust-main-heading {
+  grid-column: 1;
+  max-width: 900px !important;
+  margin: 0 !important;
+  color: var(--rise-v4-ink) !important;
+  font-size: clamp(2.7rem, 6.2vw, 6rem) !important;
+  font-weight: 600 !important;
+  line-height: .98 !important;
+  letter-spacing: -.075em !important;
+  text-wrap: balance;
+}
+.premium-trust-section .trust-subtext {
+  grid-column: 2;
+  align-self: end;
+  margin: 0 0 7px !important;
+  padding: 22px 0 22px 24px !important;
+  border-left: 2px solid #9fbd7e !important;
+  color: #5e6d63 !important;
+  font-size: clamp(.98rem, 1.2vw, 1.08rem) !important;
+  line-height: 1.9 !important;
+}
+
+/* CTA SECTION: Elegant, Centered, and Beautiful Minimalist Design */
+.section.cta {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  /* Balanced, symmetrical padding to create a clean banner look */
+  padding: clamp(80px, 8vw, 120px) 24px !important; 
+  background:
+    radial-gradient(circle at 50% 50%, rgba(16, 59, 45, 0.04), transparent 50%),
+    linear-gradient(135deg, #eaf2dc, #f4f7ee) !important; /* Softened background for a premium look */
+}
+
+/* Elegant, faint background geometric accent */
+.section.cta::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -100px;
+  bottom: -150px;
+  border: 1px dashed rgba(16, 59, 45, 0.1); /* Subtle dashed lines feel premium */
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* CENTERED INNER CONTAINER */
+.section.cta .w-layout-blockcontainer.container {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  max-width: 850px !important; /* Narrowed down so lines wrap beautifully when centered */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important; /* Stack text and button vertically for elegant centering */
+  align-items: center !important; 
+  justify-content: center !important;
+  gap: 36px !important; /* Breathing room between text and button */
+}
+
+/* Bypass helper wrapper styling completely */
+.section.cta .cta-wrapper,
+.section.cta .cta-wrap {
+  display: contents !important;
+}
+
+/* TYPOGRAPHY ARCHITECTURE: Elegant, Faint, and Editorial */
+.section.cta .cta-title {
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 !important;
+  text-align: center !important; /* Perfectly center-aligned */
+  
+  /* Color Strategy: Using a deep forest slate with an elegant 0.82 opacity to make it look intentionally soft/faint without losing readability */
+  color: var(--rise-v4-forest, #103b2d) !important;
+  opacity: 0.82 !important; 
+  
+  /* Font Family Selection: Switched to a gorgeous serif/display combination. 
+     Using Playfair Display, Garamond, or Inter Tight if you prefer sans-serif. 
+     (If you want a modern look, keep 'Inter Tight'. If you want editorial elegance, 'Playfair Display' or 'Merriweather' will look breathtaking here) */
+  font-family: "Playfair Display", "Garamond", "Inter Tight", sans-serif !important;
+  
+  /* Sizing and Proportions */
+  font-size: clamp(2.2rem, 4.8vw, 3.6rem) !important; /* Pulled back slightly so it's sophisticated, not screaming */
+  font-weight: 500 !important; /* Slightly lighter weight pairs beautifully with serif fonts and look fainter */
+  line-height: 1.25 !important; /* Luxurious spacing between lines */
+  letter-spacing: -0.01em !important; /* Subtle tightening for display text */
+  text-transform: none !important;
+}
+
+/* CENTERED CTA BUTTON */
+.section.cta .cta-button {
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.section.cta .primary-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 52px !important;
+  padding: 0 40px !important; /* Wider horizontal padding gives the button a high-end look */
+  border-radius: 50px !important; /* Fully rounded "pill" button for a modern, approachable aesthetic */
+  background: var(--rise-v4-forest, #103b2d) !important;
+  color: #ffffff !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 10px 25px rgba(16, 59, 45, 0.12) !important;
+  white-space: nowrap !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Micro-interaction on hover */
+.section.cta .primary-button:hover {
+  transform: translateY(-2px) !important;
+  background: #164f3d !important; /* Slight glow up on color */
+  box-shadow: 0 14px 30px rgba(16, 59, 45, 0.2) !important;
+}
+
+/* Seamless Mobile Responsiveness */
+@media (max-width: 767px) {
+  .section.cta {
+    padding: 64px 20px !important;
+  }
+  .section.cta .cta-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+    line-height: 1.3 !important;
+  }
+}
+
+
+
+/* FOOTER: strong grid, fine rules, clear contact hierarchy. */
+.section.footer {
+  position: relative !important;
+  overflow: hidden;
+  padding: clamp(60px, 6vw, 90px) clamp(22px, 5vw, 76px) 28px !important;
+  color: #fff !important;
+  background:
+    radial-gradient(ellipse at 95% 0%, rgba(55,117,78,.23), transparent 34%),
+    linear-gradient(135deg, #09271e, #103b2d) !important;
+}
+.section.footer::before {
+  content: "RISE";
+  position: absolute;
+  right: -1vw;
+  top: 8%;
+  color: rgba(255,255,255,.035);
+  font: 700 clamp(9rem, 25vw, 25rem)/.8 "Inter Tight", Inter, sans-serif;
+  letter-spacing: -.1em;
+  pointer-events: none;
+}
+.section.footer .w-layout-blockcontainer.container {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, 100%) !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+.section.footer .footer-wrap { padding: 0 0 clamp(42px, 6vw, 78px) !important; }
+.section.footer .footer-left-wrap { width: 100% !important; }
+.section.footer .footer-title {
+  max-width: 900px !important;
+  margin: 0 0 clamp(42px, 6vw, 76px) !important;
+  color: #f7f8f2 !important;
+  font-family: "Inter Tight", Inter, sans-serif !important;
+  font-size: clamp(1.9rem, 4vw, 3.8rem) !important;
+  font-weight: 550 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.06em !important;
+}
+.section.footer .footer-item-wrapper {
+  display: grid !important;
+  grid-template-columns: minmax(200px, .7fr) minmax(280px, 1fr) !important;
+  gap: clamp(28px, 6vw, 90px) !important;
+  max-width: 920px !important;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+.section.footer .footer-item-title {
+  margin: 0 0 16px !important;
+  color: var(--rise-v4-lime) !important;
+  font-size: .72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .19em !important;
+  text-transform: uppercase;
+}
+.section.footer .footer-item-text {
+  color: rgba(255,255,255,.76) !important;
+  font-size: .96rem !important;
+  line-height: 1.9 !important;
+  overflow-wrap: anywhere;
+}
+.section.footer .footer-bottom-wrap {
+  position: relative;
+  z-index: 1;
+  padding-top: 22px !important;
+  border-top: 1px solid rgba(255,255,255,.16) !important;
+}
+.section.footer .footer-bottom-content {
+  max-width: 920px !important;
+  color: rgba(255,255,255,.55) !important;
+  font-size: .75rem !important;
+  line-height: 1.8 !important;
+}
+.section.footer .footer-logo-image {
+  opacity: .07 !important;
+  max-width: 230px !important;
+  pointer-events: none;
+}
+
+/* Breakpoints: avoid awkward text wraps and keep every section balanced. */
+@media (max-width: 991px) {
+  .premium-about-features .features-wrapper {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 36px !important;
+  }
+  .premium-about-features .features-image-box { min-height: 390px !important; }
+  .premium-about-features .featured-display-img { max-height: 290px !important; }
+  .premium-trust-section .trust-header-block {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+  .premium-trust-section .trust-tagline,
+  .premium-trust-section .trust-main-heading,
+  .premium-trust-section .trust-subtext { grid-column: 1; }
+  .premium-trust-section .trust-subtext { max-width: 650px; }
+  .section.cta .cta-wrap { grid-template-columns: 1fr; align-items: start !important; }
+  .section.cta .cta-button { justify-self: start; }
+}
+@media (max-width: 600px) {
+  .premium-about-features { padding: 72px 18px !important; }
+  .premium-about-features::before { top: 25px; left: 18px; font-size: 8px; }
+  .premium-about-features .features-image-box {
+    min-height: 300px !important;
+    padding: 28px !important;
+  }
+  .premium-about-features .features-image-box::after {
+    left: 22px; bottom: 20px; font-size: 7px;
+  }
+  .premium-about-features .featured-display-img { max-height: 220px !important; }
+  .premium-about-features .accordion-row { padding: 21px 10px !important; }
+  .premium-about-features .accordion-row.active { padding: 24px 14px !important; }
+  .premium-services-intro { padding: 78px 22px !important; }
+  .premium-services-intro .services-intro-heading {
+    font-size: clamp(2.8rem, 12vw, 4.4rem) !important;
+    line-height: .97 !important;
+  }
+  .premium-services-intro .services-intro-subtext { margin-left: 0 !important; }
+  .premium-trust-section { padding: 76px 22px !important; }
+  .premium-trust-section::after { top: 22px; right: 16px; }
+  .premium-trust-section .trust-main-heading {
+    font-size: clamp(2.65rem, 11.5vw, 4rem) !important;
+    line-height: .99 !important;
+  }
+  .section.cta { padding: 68px 22px !important; }
+  .section.cta .cta-title {
+    font-size: clamp(2.8rem, 12vw, 4.3rem) !important;
+    line-height: .98 !important;
+  }
+  .section.footer { padding: 58px 22px 24px !important; }
+  .section.footer .footer-item-wrapper { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .section.footer .footer-title { font-size: clamp(1.9rem, 8vw, 2.6rem) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .premium-about-features *, .section.cta * { transition: none !important; }
+}
+
+  /* RISE homepage refinement: compact, balanced spacing below the original hero.
+     Header, mega-menu, and hero markup/styles are intentionally left untouched. */
+  .premium-about-features {
+    padding: 62px clamp(22px, 4vw, 54px) !important;
+  }
+  .premium-about-features::before { top: 22px; }
+  .premium-about-features .features-wrapper {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .95fr) !important;
+    gap: clamp(28px, 4vw, 56px) !important;
+  }
+  .premium-about-features .features-image-box {
+    min-height: 340px !important;
+    padding: 26px !important;
+    box-shadow: 0 16px 40px rgba(16,59,45,.07) !important;
+  }
+  .premium-about-features .featured-display-img { max-height: 285px !important; }
+  .premium-about-features .features-image-box::before { inset: 10px; }
+  .premium-about-features .features-image-box::after {
+    left: 18px; bottom: 17px; font-size: 8px; padding: 7px 9px;
+  }
+  .premium-about-features .accordion-row { padding: 17px 18px !important; }
+  .premium-about-features .accordion-row p,
+  .premium-about-features .accordion-content { line-height: 1.6 !important; }
+  .premium-services-intro { padding: 64px clamp(22px, 5vw, 64px) !important; }
+  .premium-services-intro .services-intro-tagline { margin-bottom: 18px !important; }
+  .premium-services-intro .services-intro-heading {
+    font-size: clamp(2rem, 4.1vw, 3.65rem) !important;
+    line-height: 1.06 !important;
+    max-width: 820px !important;
+    margin-bottom: 18px !important;
+  }
+  .premium-services-intro .services-intro-description,
+  .premium-services-intro .services-intro-copy {
+    max-width: 760px !important; font-size: 15px !important; line-height: 1.7 !important;
+  }
+  .premium-services-intro .services-grid,
+  .premium-services-intro .services-cards-grid { gap: 14px !important; }
+  .premium-trust-section { padding: 64px clamp(22px, 5vw, 64px) !important; }
+  .premium-trust-section .trust-tagline { margin-bottom: 18px !important; }
+  .premium-trust-section .trust-main-heading {
+    font-size: clamp(2.2rem, 4.7vw, 4.6rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.055em !important;
+  }
+  .premium-trust-section .trust-header-block {
+    column-gap: clamp(24px, 4vw, 56px) !important;
+  }
+  .premium-trust-section .trust-subtext {
+    padding: 12px 0 12px 18px !important; font-size: 14px !important; line-height: 1.65 !important;
+  }
+  .premium-trust-section .trust-grid,
+  .premium-trust-section .trust-cards-grid { gap: 16px !important; }
+  .section.cta { padding-top: 58px !important; padding-bottom: 58px !important; }
+  .section.footer { padding-top: 42px !important; }
+  @media (max-width: 900px) {
+    .premium-about-features { padding-top: 54px !important; padding-bottom: 54px !important; }
+    .premium-about-features .features-wrapper { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .premium-about-features .features-image-box { min-height: 290px !important; }
+    .premium-about-features .featured-display-img { max-height: 250px !important; }
+    .premium-services-intro, .premium-trust-section { padding-top: 52px !important; padding-bottom: 52px !important; }
+    .premium-trust-section .trust-header-block { grid-template-columns: 1fr !important; row-gap: 16px !important; }
+    .premium-trust-section .trust-main-heading, .premium-trust-section .trust-subtext { grid-column: 1 !important; }
+  }
+  @media (max-width: 560px) {
+    .premium-about-features { padding: 48px 18px !important; }
+    .premium-about-features .features-image-box { min-height: 245px !important; padding: 18px !important; }
+    .premium-about-features .featured-display-img { max-height: 210px !important; }
+    .premium-services-intro, .premium-trust-section { padding: 46px 18px !important; }
+    .premium-services-intro .services-intro-heading { font-size: clamp(1.9rem, 8vw, 2.7rem) !important; }
+    .premium-trust-section .trust-main-heading { font-size: clamp(2rem, 9vw, 3rem) !important; }
+  }
+</style>
 </head>
 <body>
   <div class="pages-wrapper">
@@ -253,6 +886,11 @@
       <!-- Left Column Panel: Project Links List -->
       <div class="mega-projects-sidebar">
         <ul class="project-track-list">
+          <!-- Item 6: Mantrac CAT Liberia -->
+          <li class="project-track-item" data-project="proj-mantrac">
+            <a href="projects.html#propertyappraisalvaluationmantrac"
+               class="project-track-link">Property Appraisal/Valuation for Mantrac CAT Liberia</a>
+          </li>
           <!-- Item 1 (Active by Default) -->
           <li class="project-track-item active" data-project="proj-allianz">
             <a href="projects.html#climatechangetrustfundoperationalmanual" class="project-track-link">Climate Change Trust Fund Operational Manual</a>
@@ -273,6 +911,8 @@
           <li class="project-track-item" data-project="proj-kahia">
             <a href="projects.html#kahia" class="project-track-link">The Kahia II Mini Hydropower Project</a>
           </li>
+          
+
         </ul>
       </div>
       
@@ -328,6 +968,28 @@
             Involved conducting geological and geotechnical investigations to support the feasibility assessment, engineering design, and safe development of a proposed mini-hydropower facility in Lofa County, Liberia.
           </p>
         </div>
+
+        
+        <!-- Preview 06: Property Appraisal/Valuation for Mantrac CAT Liberia -->
+        <div id="proj-mantrac" class="project-preview-content">
+         <div class="project-preview-image-box">
+           <img
+             src="images/mantrac.jpeg"
+             loading="lazy"
+             alt="Property Appraisal and Valuation for Mantrac CAT Liberia"
+             class="project-preview-img"
+           >
+         </div>
+         <p class="project-preview-description">
+         As a major industrial player operating heavy equipment, power systems,
+         and specialized facilities in Liberia, Mantrac required an expert,
+         certified third-party appraisal of its real estate holdings and
+         physical infrastructure. RISE Liberia evaluated the fair market value,
+         structural integrity, and asset baseline of Mantrac's properties,
+         leveraging its technical expertise and consulting competencies.
+         </p>
+       </div>
+
 
       </div> <!-- Closes .mega-project-preview-panel -->
     </div> <!-- Closes .mega-menu-inner-grid -->
@@ -517,7 +1179,7 @@
       <div class="w-layout-blockcontainer container w-container">
         <div class="cta-wrapper">
           <div class="cta-wrap">
-            <h2 data-w-id="5a2c3193-db7b-3dbd-3995-f938e7794c0b" style="opacity:0" class="cta-title">Building a liberia that&#x27;s inclusive and climate-resilient</h2>
+            <h2 data-w-id="5a2c3193-db7b-3dbd-3995-f938e7794c0b" style="opacity:0" class="cta-title">Building a Liberia that&#x27;s inclusive and climate-resilient</h2>
             <div data-w-id="a5ce7d7c-b2ec-ee55-e309-e7b2619fb8fa" style="opacity:0" class="cta-button">
               <a href="contact.html" class="primary-button w-inline-block">
                 <div class="primary-button-texts">
@@ -554,7 +1216,7 @@
             </div>
           </div>
           <div data-w-id="d414bd12-39bb-683d-39e9-a352048dcc0d" class="footer-bottom-wrap">
-            <div data-w-id="8dd1d8ad-ecb5-abb0-f157-77c64ed789f0" class="footer-bottom-content">© Copyright 2026 | All Rights Reserved | Resilience Institue for Sustainability and Environment (RISE)</div>
+            <div data-w-id="8dd1d8ad-ecb5-abb0-f157-77c64ed789f0" class="footer-bottom-content">© Copyright 2026 | All Rights Reserved | Resilience Institute for Sustainability and Environment (RISE ) - Consulting Group</div>
           </div>
         </div>
       </div><img src="images/Screenshot_2026-03-18_131456-removebg-preview.png" loading="lazy" data-w-id="d414bd12-39bb-683d-39e9-a352048dcc17" alt="Footer Logo Image" class="footer-logo-image">
